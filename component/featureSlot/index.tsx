@@ -2,11 +2,11 @@ import React, { FC, useEffect } from 'react'
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import PhishingIcon from '@mui/icons-material/Phishing';
-import { Wrapper, FeatureBox, FeatureBoxs, FeatureImage } from './featureContainer.style'
+import { Wrapper, FeatureBox, FeatureBoxs, FeatureImage } from './featureSlot.style'
 import { H3, H4, H5, H6 } from "../commonStyle"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-const FeatureContainer: FC = () => {
+const FeatureSlot: FC = () => {
     useEffect(() => { AOS.init(); },)
     return <Wrapper>
         <H3> WHAT WE DO</H3>
@@ -17,7 +17,7 @@ const FeatureContainer: FC = () => {
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-out">
                 <FeatureImage>
-                    <AutoStoriesIcon sx={{ fontSize: 50 }} />
+                    <AutoStoriesIcon sx={{ fontSize: 40 }} />
                 </FeatureImage>
                 <H5>NEW STORIES!</H5>
                 <H6>What’s biting? Get updated about different fisheries and trending fishing news.</H6>
@@ -28,7 +28,7 @@ const FeatureContainer: FC = () => {
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-out">
                 <FeatureImage>
-                    <StorefrontIcon sx={{ fontSize: 50 }} />
+                    <StorefrontIcon sx={{ fontSize: 40 }} />
                 </FeatureImage>
                 <H5>WHAT’S IN STORE?</H5>
                 <H6>Come check out our gear for all your fishing needs!</H6>
@@ -39,7 +39,7 @@ const FeatureContainer: FC = () => {
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-out">
                 <FeatureImage>
-                    <PhishingIcon sx={{ fontSize: 50 }} />
+                    <PhishingIcon sx={{ fontSize: 40 }} />
                 </FeatureImage>
                 <H5>YOUR NEXT ADVENTURE!</H5>
                 <H6>Looking for an awesome fishing trip? We got you covered.</H6>
@@ -50,4 +50,4 @@ const FeatureContainer: FC = () => {
 }
 
 
-export default FeatureContainer
+export default FeatureSlot

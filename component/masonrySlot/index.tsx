@@ -2,7 +2,8 @@ import React, { FC,useEffect } from 'react';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import Image from "next/image"
+import {Wrapper} from "./masonrySlot.style"
+import Image from 'next/image'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 interface Props {
@@ -59,10 +60,10 @@ const itemData = [
   //   title: 'Coffee table',
   // },
 ];
-const MasonryContainer: FC = () => {
+const MasonrySlot: FC = () => {
   useEffect(()=> { AOS.init();},)
   return (
-    <Box sx={{ width: "90%", height: 600, overflowY: 'hidden' }}>
+    <Wrapper>
       <ImageList variant="masonry" cols={4} gap={8}>
         {itemData.map((item) => (
           <ImageListItem key={item.img} 
@@ -81,10 +82,10 @@ const MasonryContainer: FC = () => {
           </ImageListItem>
         ))}
       </ImageList>
-    </Box>
+    </Wrapper>
   );
 }
-export default MasonryContainer
+export default MasonrySlot
 
 
 

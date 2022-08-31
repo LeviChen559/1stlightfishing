@@ -1,6 +1,6 @@
 import React, { FC, useEffect } from 'react'
 import Image from 'next/image'
-import { Wrapper, ImageBox, TextContainer, ButtonContainer } from './heroContainer.style'
+import { Wrapper, ImageBox, TextContainer, ButtonContainer } from './hereSlot.style'
 import { H1, H4, H5 } from '../commonStyle'
 import BasicButtons from '../button'
 import AOS from 'aos';
@@ -9,28 +9,25 @@ import styles from '../../styles/home.module.scss'
 
 
 
-const HeroContainer: FC = () => {
+const HeroSlot: FC = () => {
   useEffect(() => { AOS.init(); },)
 
   return <Wrapper>
 
 
-    <ImageBox 
-     data-aos="fade-up"
-     data-aos-easing="ease-in"
-     data-aos-duration="3000">
+    <ImageBox >
       <Image src="/hero-min.png" objectFit="cover" alt="hero image" layout="fill"
-       
+       priority
       />
     </ImageBox>
     <TextContainer>
       <H5>Come to meet us</H5>
       <H1 data-aos="slide-left"
         data-aos-offset="200"
-        data-aos-delay="500"
+        data-aos-delay="2500"
         data-aos-duration="1250"
         data-aos-easing="ease-in-out">LIVE. LOVE. FISH.</H1>
-      <H4 >First Light Tackle</H4>
+      <H4 >First Light Fishing & Tackle</H4>
       <H4>Best Fishing Store at Burnaby</H4>
       <ButtonContainer>
         <BasicButtons text="Explore Now" />
@@ -41,4 +38,4 @@ const HeroContainer: FC = () => {
 }
 
 
-export default HeroContainer
+export default HeroSlot

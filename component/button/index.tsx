@@ -1,10 +1,15 @@
-import * as React from 'react';
+import React,{ FC} from 'react';
 import Button from '@mui/material/Button';
 
-export const BasicButtons=({text}:{text:string,})=> {
+interface Props{
+  text?: string;
+  background?:string;
+  width?:number;
+}
+const BasicButtons:FC<Props> =({text, background, width})=> {
   return (
     
-      <Button variant="contained" sx={{background:'#F3BC2D'}}>{text}</Button>
+      <Button variant="contained" sx={{background:background,width:width}}>{text}</Button>
      
    
   );

@@ -7,8 +7,9 @@ export const Wrapper = styled.div({
     justifyContent: "space-between",
     width: "75%",
     height: 300,
-    margin:"5%",
-    '@media (min-width: 1440px)': {
+    margin:"7.5% 0",
+    "@media(max-width:768px)": {
+        height: "100%",
     }
 })
 
@@ -19,7 +20,7 @@ export const FeatureBoxs = styled.div({
     justifyContent: "space-evenly",
     width: "100%",
     height: "100%",
-  
+    "@media(max-width:768px)": { flexDirection: "column", }
 })
 export const FeatureImage = styled.div({
     display: "flex",
@@ -30,7 +31,9 @@ export const FeatureImage = styled.div({
     height: 100,
     border: "2px solid white",
     borderRadius: "50%",
-    margin: "5% 0%"
+    margin: "5% 0%",
+    boxShadow: "5px 5px 5px 5px rgba(0,0,0,0.15)",
+  
   
 })
 export const FeatureBox = styled.div({
@@ -41,5 +44,10 @@ export const FeatureBox = styled.div({
     width: "30%",
     height: 200,
    textAlign:"center",
+   "@media(max-width:768px)": {
+    margin:"5% 0%",
+    width: "60%",
+    
+}
   
 })
