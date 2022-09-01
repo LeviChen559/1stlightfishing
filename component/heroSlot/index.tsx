@@ -13,8 +13,6 @@ const HeroSlot: FC = () => {
   useEffect(() => { AOS.init(); },)
 
   return <Wrapper>
-
-
     <ImageBox >
       <Image src="/hero-min.png" objectFit="cover" alt="hero image" layout="fill"
        priority
@@ -22,9 +20,9 @@ const HeroSlot: FC = () => {
     </ImageBox>
     <TextContainer>
       <H5>Come to meet us</H5>
-      <H1 data-aos="slide-left"
+      <H1 data-aos="fade-left"
         data-aos-offset="200"
-        data-aos-delay="2500"
+        data-aos-delay="1500"
         data-aos-duration="1250"
         data-aos-easing="ease-in-out">LIVE. LOVE. FISH.</H1>
       <H4 >First Light Fishing & Tackle</H4>
