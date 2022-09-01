@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-
+import {theme} from "../../utility/theme"
 interface Style {
     opacity?: number;
     fontWeight?: number;
@@ -14,6 +14,7 @@ export const H1 = styled.h1({
     fontFamily: 'Merienda One',
     fontSize: '60px',
     textShadow: '2px 2px 2px rgba(0, 0, 0, 0.25)',
+    color: theme.palette.common.white,
     '@media (max-width: 1440px)': {
         fontSize: "36px",
    },
@@ -24,14 +25,15 @@ export const H1 = styled.h1({
 export const H2 = styled.h2({
     margin: 0,
     fontSize: '48px',
-    fontFamily: 'Baloo Bhai 2'
-
+    fontFamily: 'Baloo Bhai 2',
+    color: theme.palette.common.white,
 })
 export const H3 = styled.h3({
     margin: 0,
     fontSize: '36px',
     fontWeight: 300,
-    fontFamily: 'Baloo Bhai 2'
+    fontFamily: 'Baloo Bhai 2',
+    color: theme.palette.common.white,
 
 })
 export const H4 = styled.h4({
@@ -40,6 +42,7 @@ export const H4 = styled.h4({
     fontWeight: 300,
     fontFamily: 'Baloo Bhai 2',
     marginTop: '10px',
+    color: theme.palette.common.white,
     '@media (max-width: 1440px)': {
         fontSize: "18px",
    },
@@ -53,7 +56,7 @@ export const H5 = styled.h5({
     fontWeight: 300,
     fontFamily: 'Baloo Bhai 2',
     margin: 0,
-   
+    color: theme.palette.common.white,
    
 })
 
@@ -62,7 +65,7 @@ export const H6 = styled.h6<Style>({
     fontWeight: 300,
     fontFamily: 'Baloo Bhai 2',
     margin: 0,
-
+    color: theme.palette.common.white,
 }, props => ({
     opacity: props.opacity,
     fontWeight: props.fontWeight,

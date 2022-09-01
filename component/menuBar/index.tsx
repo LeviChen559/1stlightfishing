@@ -32,7 +32,6 @@ const MenuBar: FC = () => {
       <ImageContainer >
         <Logo />
       </ImageContainer>
-
       <PageContainer >
         {router.pathname === "/en" ?
           <PageItem borderBottom="2px solid #03a9f4"><Link href="/en">HOME</Link></PageItem> :

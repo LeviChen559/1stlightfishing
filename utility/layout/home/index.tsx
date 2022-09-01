@@ -22,11 +22,7 @@ const Layout: FC<Props> = ({ children }: Props) => {
             <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
           </Head>
           <Header>
-            {router.pathname ==='/en'?
             <MenuBar />
-            :
-            <MenuZH/>
-          }
           </Header>
           <Content>
             {children}
