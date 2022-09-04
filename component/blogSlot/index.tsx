@@ -4,9 +4,8 @@ import { ImageBox, Style, Wrapper, TextContainer, TextBox } from './serviceSlot.
 import { H3, H5 } from "../commonStyle"
 import BasicButtons from '../button'
 import { theme } from "../../utility/theme"
-import { SportsRugbySharp } from '@mui/icons-material'
 
-const ServiceSlot: FC<Style> = ({ height, width }) => {
+const BlogSlot: FC<Style> = ({ height, width }) => {
   const H5_style = { color: theme.palette.background.default, 
                       background: "rgba(255, 255, 255, 0.8)",
                     padding:"2.5%" }
@@ -15,10 +14,9 @@ const ServiceSlot: FC<Style> = ({ height, width }) => {
     <Wrapper >
       <TextContainer>
         <TextBox>
-          <H3>Service</H3>
-          <H5 style={H5_style}>Whether you and your friends are new to fishing or are experienced anglers... here at First Light Tackle, we provide exciting and rewarding opportunities for everyone to develop their fishing skills further and ultimately share their mutual passion for fishing.</H5>
+          <H3>Blog</H3>
         </TextBox>
-        <TextBox flex={.5} alignItems="center" justifyContent='center' >
+        <TextBox flex={1.25} alignItems="center" justifyContent='center' backgroundColor="lightpink">
           <BasicButtons text="JOIN US NOW" />
         </TextBox>
       </TextContainer>
@@ -30,4 +28,4 @@ const ServiceSlot: FC<Style> = ({ height, width }) => {
   )
 }
 
-export default ServiceSlot
+export default BlogSlot

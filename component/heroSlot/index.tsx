@@ -14,7 +14,7 @@ const HeroSlot: FC = () => {
 
   return <Wrapper>
     <ImageBox >
-      <Image src="/hero-min.png" objectFit="cover" alt="hero image" layout="fill"
+      <Image src="/hero2-min.png" objectFit="cover" alt="hero image" layout="fill"
        priority
       />
     </ImageBox>

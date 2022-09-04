@@ -6,7 +6,9 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { Palette } from '@mui/icons-material';
+import { theme } from '../../utility/theme';
 
 interface Props {
   img: string,
@@ -85,9 +87,11 @@ const itemData = [
 
 
     const BrandSlot: FC = () => {
+      const matches = useMediaQuery('(max-width:768px)');
       useEffect(() => { AOS.init(); },)
-      return <Wrapper>
-        <ImageList variant="masonry" cols={8} gap={15}>
+      return <Wrapper >
+        {matches ?
+        <ImageList variant="masonry" cols={4} gap={15}>
           {itemData.map((item) => (
             <ImageListItem key={item.img}
             >
@@ -105,6 +109,25 @@ const itemData = [
             </ImageListItem>
           ))}
         </ImageList>
+        :
+        <ImageList variant="masonry" cols={8} gap={15}>
+          {itemData.map((item) => (
+            <ImageListItem key={item.img}
+            >
+              <img
+              data-aos="flip-up"
+              data-aos-offset="200"
+              data-aos-delay="100"
+              data-aos-duration="500"
+              data-aos-easing="ease-in-out"
+                src={`${item.img}?w=248&fit=crop&auto=format`}
+                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>}
       </Wrapper>
 
     }

@@ -13,7 +13,7 @@ export const MenuContainer = styled.div({
   flexDirection: "row",
   justifyContent: "space-between",
   alignItems: "center",
-  backgroundColor: "#233D4D",
+  // backgroundColor: "#233D4D",
 })
 
 export const ImageContainer = styled.div({
@@ -31,15 +31,19 @@ export const PageContainer = styled.div({
   marginRight: "5%",
   '@media(min-width: 960px)': {
     color: 'orange'
+  },
+  "@media(max-width:768px)":{
+    display: "none",
   }
 })
 
-export const MenuItem = styled.div<Props>({
+export const PageItem = styled.div<Props>({
   color: "white",
   fontSize: "16px",
   fontWeight: 400,
   padding: "12px 5px",
   borderBottom: "0px",
+  cursor:"pointer",
   '&:hover': {
     borderBottom: "1px solid white"
   }
@@ -55,6 +59,22 @@ export const Languages = styled.div({
   flexDirection: "column",
   justifyContent: "space-evenly",
   alignItems: "center",
+  cursor: 'pointer',
+  '&:hover': {
+    "&H6": {
+      cursor: 'pointer',
+      color: "orange",
+    }
+  }
 
 })
 
+export const Hamberger = styled.div({
+
+  display: "none",
+  "@media(max-width:768px)":{
+    display: "flex",
+    marginRight: "10%",
+  }
+
+})

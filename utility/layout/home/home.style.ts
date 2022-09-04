@@ -26,6 +26,7 @@ export const Header = styled.div({
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
+    
 })
 
 export const Content = styled.div({
@@ -34,7 +35,7 @@ export const Content = styled.div({
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
-    "@media(min-width: 1500px)": { width: 1440 }
+    "@media(min-width: 1920px)": { width: 1440 }
 })
 
 export const Footer = styled.div({

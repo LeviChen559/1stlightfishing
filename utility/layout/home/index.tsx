@@ -1,16 +1,30 @@
-import React, { FC } from 'react'
+import React, { FC, useState,useEffect } from 'react'
 import MenuBar from '../../../component/menuBar'
 import MenuZH from '../../../component/menuZH'
 import Footer from '../../../component/footer'
 import { BackgroundContainer, Wrapper, Header, Content } from './home.style'
 import Head from 'next/head'
 import {useRouter} from 'next/router'
+import StickyBox from "react-sticky-box";
+import {theme} from"../../theme"
+
 interface Props {
   children: JSX.Element,
 };
-
 const Layout: FC<Props> = ({ children }: Props) => {
-  const router = useRouter()
+  const [bgcolor,setBgcolor]=useState<string>(theme.palette.background.default)
+  const listenScrollEvent = () => {
+    if (window.scrollY > 100) {
+      setBgcolor(theme.palette.primary.light)
+    } else {
+      setBgcolor( theme.palette.background.default)
+    }
+  }
+  useEffect(()=>{
+    window.addEventListener('scroll', listenScrollEvent)
+  },[])
+
+  const {pathname} = useRouter()
   return <BackgroundContainer>
     <Wrapper>
       <Head>
@@ -21,9 +35,15 @@ const Layout: FC<Props> = ({ children }: Props) => {
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
             <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
           </Head>
+            
+          <StickyBox  style={{width: '100vw',zIndex: 1000,backgroundColor: bgcolor,}}>
           <Header>
+            
             <MenuBar />
+           
+            
           </Header>
+          </StickyBox>
           <Content>
             {children}
           </Content>

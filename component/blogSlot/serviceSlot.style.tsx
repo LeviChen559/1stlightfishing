@@ -5,6 +5,7 @@ export interface Style {
     flex?: number,
     justifyContent?:string,
     alignItems?:string,
+    backgroundColor?:string,
 }
 export const Wrapper = styled.div({
     width: "100%",
@@ -46,7 +47,6 @@ export const ImageBox = styled.div<Style>({
     justifyContent: "space-between",
     alignItems: "flex-start",
     marginTop: "2.5%",
-   
     "@media (max-width: 1200px)":{
         width:"75%",
     },
@@ -74,4 +74,5 @@ export const ImageBox = styled.div<Style>({
     justifyContent: props.justifyContent,
     alignItems: props.alignItems,
     height: props.height,
+    backgroundColor: props.backgroundColor
  }))  

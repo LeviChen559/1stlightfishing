@@ -7,7 +7,6 @@ const Home: NextPage = () => {
   return <Layout>
 
     <>
-    <div>zh</div>
     <HeroContainer />
     <FeatureContainer/>
     </>

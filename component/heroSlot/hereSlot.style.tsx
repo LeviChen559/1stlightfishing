@@ -5,12 +5,15 @@ export const Wrapper = styled.div({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    width: "95%",
+    width: 1440,
     height: 600,
     overflow: "hidden",
+    '@media (max-width: 1920px)': {
+        justifyContent: "center",
+    },
     '@media (max-width: 1440px)': {
         height: "100%",
-        justifyContent: "center",
+        width: "90%",
     },
     '@media (max-width: 768px)': {
         flexDirection: "column",

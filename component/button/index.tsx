@@ -9,7 +9,7 @@ interface Props{
 const BasicButtons:FC<Props> =({text, background, width})=> {
   return (
     
-      <Button variant="contained" sx={{background:background,width:width}}>{text}</Button>
+      <Button variant="contained" color='warning' sx={{background:background,width:width}}>{text}</Button>
      
    
   );

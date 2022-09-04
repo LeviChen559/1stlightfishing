@@ -1,11 +1,16 @@
 import styled from "@emotion/styled"
 
 export const Wrapper = styled.div({
-    width: "90%", 
+    label:"wrapper",
+    width: 1440,
     height: 600, 
     overflowY: 'hidden',
+    "@media(max-width:1440px)":{
+        width: "90%"
+    },
     '@media (max-width: 768px)': {
-        height: "100%",
-        paddingBottom:"10%",
+        height: 300,
+        paddingBottom:"2.5%",
+        marginBottom:"2.5%"
     }
 })

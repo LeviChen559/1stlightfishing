@@ -8,11 +8,14 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Image from 'next/image';
 import BasicButtons from '../button';
+ import {theme} from '../../utility/theme' 
 const ProductSlot: FC = () => {
     useEffect(() => { AOS.init(); },)
     return <Wrapper>
+       
         <H3>POPULAR ITEMS</H3>
         <H4>Some of our most loved products.</H4>
+       
         <ProductBoxs>
             <ProductBox data-aos="fade-up"
                 data-aos-offset="200"
@@ -22,7 +25,7 @@ const ProductSlot: FC = () => {
                 <FeatureImage>
                     <Image src="/onsale.png" alt="onsale" layout='fill' />
                 </FeatureImage>
-                <BasicButtons text="ON SALE" width={185}/>
+                <BasicButtons text="ON SALE" width={185} background="warning"/>
             </ProductBox>
             <ProductBox data-aos="fade-up"
                 data-aos-offset="200"

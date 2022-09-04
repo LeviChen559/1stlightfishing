@@ -10,6 +10,7 @@ export const Wrapper = styled.div({
     margin:"7.5% 0",
     "@media(max-width:768px)": {
         height: "100%",
+        margin:"2.5% 0",
     }
 })
 
@@ -33,7 +34,7 @@ export const FeatureImage = styled.div({
     borderRadius: "50%",
     margin: "5% 0%",
     boxShadow: "5px 5px 5px 5px rgba(0,0,0,0.15)",
-  
+    color: "white",
   
 })
 export const FeatureBox = styled.div({
@@ -42,12 +43,12 @@ export const FeatureBox = styled.div({
     alignItems: "center",
     justifyContent: "space-between",
     width: "30%",
-    height: 200,
+    height: "100%",
    textAlign:"center",
    "@media(max-width:768px)": {
     margin:"5% 0%",
     width: "60%",
-    
+    height: "100%",
 }
   
 })

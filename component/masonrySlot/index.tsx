@@ -6,7 +6,7 @@ import {Wrapper} from "./masonrySlot.style"
 import Image from 'next/image'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-interface Props {
+import useMediaQuery from '@mui/material/useMediaQuery';interface Props {
   img:string,
   title:string,
 }
@@ -62,8 +62,27 @@ const itemData = [
 ];
 const MasonrySlot: FC = () => {
   useEffect(()=> { AOS.init();},)
+  const matches= useMediaQuery("(max-width: 768px)")
   return (
     <Wrapper>
+    {matches?  <ImageList variant="masonry" cols={3} gap={8}>
+        {itemData.map((item) => (
+          <ImageListItem key={item.img} 
+          data-aos="flip-up"
+    data-aos-offset="200"
+    data-aos-delay="100"
+    data-aos-duration="500"
+    data-aos-easing="ease-in-out"
+          >
+            <img
+              src={`${item.img}?w=248&fit=crop&auto=format`}
+              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              alt={item.title}
+              loading="lazy"
+            />
+          </ImageListItem>
+        ))}
+      </ImageList>:
       <ImageList variant="masonry" cols={4} gap={8}>
         {itemData.map((item) => (
           <ImageListItem key={item.img} 
@@ -81,7 +100,7 @@ const MasonrySlot: FC = () => {
             />
           </ImageListItem>
         ))}
-      </ImageList>
+      </ImageList>}
     </Wrapper>
   );
 }
