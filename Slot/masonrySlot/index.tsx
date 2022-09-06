@@ -90,7 +90,7 @@ const MasonrySlot: FC = () => {
   const matches= useMediaQuery("(max-width: 768px)")
   return (
     <Wrapper>
-    {matches?  <ImageList variant="masonry" cols={3} gap={8}>
+    {matches?  <ImageList variant="masonry" cols={4} gap={8}>
         {itemData.map((item) => (
           <ImageListItem key={item.img} 
           data-aos="flip-up"

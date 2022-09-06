@@ -1,6 +1,5 @@
 import React, { FC, useState,useEffect } from 'react'
 import MenuBar from '../../../component/menuBar'
-import MenuZH from '../../../component/menuZH'
 import Footer from '../../../component/footer'
 import { BackgroundContainer, Wrapper, Header, Content } from './home.style'
 import Head from 'next/head'
@@ -35,13 +34,10 @@ const Layout: FC<Props> = ({ children }: Props) => {
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
             <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
           </Head>
-            
-          <StickyBox  style={{width: '100vw',zIndex: 1000,backgroundColor: bgcolor,}}>
+  
+          <StickyBox  style={{width: '100vw',zIndex: 90,backgroundColor: bgcolor, height: 100, opacity: 0.8}}>
           <Header>
-            
             <MenuBar />
-           
-            
           </Header>
           </StickyBox>
           <Content>

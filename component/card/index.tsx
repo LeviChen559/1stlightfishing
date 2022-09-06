@@ -33,7 +33,7 @@ interface Props {
     data-aos-delay={blogContent.delay}
     data-aos-duration="500"
     data-aos-easing="ease-in-out"
-    sx={{ maxWidth: 275,borderRadius:2,backgroundColor:themePalette.main }}>
+    sx={{ maxWidth: 275,borderRadius:2,backgroundColor:themePalette.main,boxShadow:"5px 5px 10px 2px rgba(0,0,0,0.25)" }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500],  }} aria-label="recipe">
@@ -67,13 +67,14 @@ interface Props {
        data-aos-delay={blogContent.delay}
        data-aos-duration="500"
        data-aos-easing="ease-in-out"
-       sx={{ maxWidth:400,borderRadius:2,backgroundColor:themePalette.main,display:"flex",justifyContent: 'space-between',margin:1}}>
+       sx={{ maxWidth:375,borderRadius:2,backgroundColor:themePalette.main,display:"flex",
+       justifyContent: 'space-between',margin:1,boxShadow:"5px 5px 10px 2px rgba(0,0,0,0.25)" }}>
          <Box sx={{ display: 'flex', flexDirection: 'column',}}>
         <CardContent sx={{ flex: '10 auto' }}>
-          <Typography component="div" variant="h5">
+          <Typography component="div" variant="h6">
           {blogContent.title}
           </Typography>
-          <Typography variant="subtitle1" color="text.secondary" component="div">
+          <Typography variant="subtitle2" color="text.secondary" component="div">
           {blogContent.subheader}
           </Typography>
         </CardContent>

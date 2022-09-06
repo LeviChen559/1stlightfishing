@@ -6,17 +6,20 @@ export const Wrapper = styled.div({
     alignItems: "center",
     justifyContent: "space-between",
     width: 1440,
-    height: 600,
+    height: 700,
     overflow: "hidden",
+    marginTop: -100,
     '@media (max-width: 1920px)': {
         justifyContent: "center",
     },
     '@media (max-width: 1440px)': {
         height: "100%",
         width: "90%",
+        marginTop: -80,
     },
     '@media (max-width: 768px)': {
         flexDirection: "column",
+        marginTop: -70,
     },
 })
 
@@ -49,8 +52,8 @@ export const ImageBox = styled.div({
 
 export const TextContainer = styled.div({
     textAlign: 'right',
-    // flex: 1.25
     width: "40%",
+    marginTop: "7.5%",
     '@media (max-width: 1440px)': {
         width: "30%",
     },

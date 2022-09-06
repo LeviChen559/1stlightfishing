@@ -7,6 +7,9 @@ type Props = {
 }
 
 export const MenuContainer = styled.div({
+  position: "absolute",
+  marginTop: 100,
+  zIndex: 100,
   width: "100%",
   height: 100,
   display: "flex",

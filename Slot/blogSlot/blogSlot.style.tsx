@@ -44,7 +44,7 @@ export const ImageBox = styled.div<Style>({
 
 export const TextContainer = styled.div({
     position: "absolute",
-    zIndex: 100,
+    zIndex: 50,
     width: 1440,
     display: "flex",
     flexDirection: "row",

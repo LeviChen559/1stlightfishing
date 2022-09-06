@@ -91,7 +91,7 @@ const itemData = [
       useEffect(() => { AOS.init(); },)
       return <Wrapper >
         {matches ?
-        <ImageList variant="masonry" cols={4} gap={15}>
+        <ImageList variant="masonry" cols={5} gap={15}>
           {itemData.map((item) => (
             <ImageListItem key={item.img}
             >
