@@ -7,6 +7,11 @@ interface PaletteColor {
   dark?: string;
   contrastText?: string;
 }
+export const themePalette ={
+  main:'#233D4D',
+}
+
+
 
 export const theme = createTheme({
   palette: {

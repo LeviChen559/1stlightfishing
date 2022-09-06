@@ -1,12 +1,12 @@
 import type { NextPage } from 'next'
-import HeroSlot from '../../component/heroSlot'
-import FeatureSlot from '../../component/featureSlot'
+import HeroSlot from '../../Slot/heroSlot'
+import FeatureSlot from '../../Slot/featureSlot'
 import Layout from '../../utility/layout/home'
-import MasonrySlot from '../../component/masonrySlot'
-import ServiceSlot from '../../component/serviceSlot'
-import BlogSlot from '../../component/blogSlot'
-import BrandSlot from '../../component/brandsSlot'
-import ProductSlot from '../../component/productSlot'
+import MasonrySlot from '../../Slot/masonrySlot'
+import ServiceSlot from '../../Slot/serviceSlot'
+import BlogSlot from '../../Slot/blogSlot'
+import BrandSlot from '../../Slot/brandsSlot'
+import ProductSlot from '../../Slot/productSlot'
 const Home: NextPage = () => {
   return <Layout>
 

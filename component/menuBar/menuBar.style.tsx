@@ -13,12 +13,13 @@ export const MenuContainer = styled.div({
   flexDirection: "row",
   justifyContent: "space-between",
   alignItems: "center",
-  // backgroundColor: "#233D4D",
+  "@media(max-width:768px)":{
+    height: 60,
+  }
 })
 
 export const ImageContainer = styled.div({
   marginLeft: "5%",
-  // flex:1,
 })
 
 export const PageContainer = styled.div({

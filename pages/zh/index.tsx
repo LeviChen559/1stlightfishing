@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
-import HeroContainer from '../../component/heroSlot'
-import FeatureContainer from '../../component/featureSlot'
+import HeroContainer from '../../Slot/heroSlot'
+import FeatureContainer from '../../Slot/featureSlot'
 import Layout from '../../utility/layout/home'
 
 const Home: NextPage = () => {
