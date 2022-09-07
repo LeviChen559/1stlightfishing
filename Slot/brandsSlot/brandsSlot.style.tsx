@@ -10,7 +10,7 @@ export const Wrapper = styled.div<Style>({
     flexWrap: "wrap",
     alignItems: "center",
     justifyContent: "space-between",
-    width: 1440,
+    width: "100%",
     padding:"2.5%",
     margin:"5% 0",
     backgroundColor: "#EEE5E9",

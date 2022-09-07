@@ -35,7 +35,7 @@ export const Content = styled.div({
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
-    "@media(min-width: 1920px)": { width: 1440 }
+    "@media(min-width: 1920px)": { width: 1680 }
 })
 
 export const Footer = styled.div({

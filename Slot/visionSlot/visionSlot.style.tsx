@@ -13,8 +13,8 @@ export const Wrapper = styled.div({
     overflow: "hidden",
     display: "flex",
     flexDirection: "row",
+    marginTop: -100,
     justifyContent: "center",
-    margin:"5% 0",
     "@media(max-width:768px)":{
         height: 450,
     }
@@ -23,13 +23,14 @@ export const Wrapper = styled.div({
 
 export const ImageBox = styled.div<Style>({
     width: "100%",
-    height: 700,
+    height: 400,
     position: "relative",
+    backgroundPosition: "0% 100%",
     "@media(max-width:1440px)":{
         // width: "90%"
     },
     "@media(max-width:768px)":{
-        height: 450,
+        height: 250,
     }
     
 },
@@ -43,7 +44,7 @@ export const ImageBox = styled.div<Style>({
     label:"TextContainer",
     position: "absolute",
     zIndex: 100,
-    width:1680,
+    width:1440,
     height:600,
     display: "flex",
     flexDirection: "row",

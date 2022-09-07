@@ -25,7 +25,7 @@ export const Wrapper = styled.div({
 
 
 export const ImageBox = styled.div<Style>({
-    width: 1440,
+    width: "100%",
     height: 700,
     position: "relative",
     "@media(max-width:1440px)": {
@@ -45,7 +45,7 @@ export const ImageBox = styled.div<Style>({
 export const TextContainer = styled.div({
     position: "absolute",
     zIndex: 50,
-    width: 1440,
+    width: 1680,
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",

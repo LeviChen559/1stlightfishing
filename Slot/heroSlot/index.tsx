@@ -20,7 +20,7 @@ const HeroSlot: FC = () => {
     </ImageBox>
     <TextContainer>
       <H5>Come to meet us</H5>
-      <H1 data-aos="fade-left"
+      <H1 data-aos="fade-up"
         data-aos-offset="200"
         data-aos-delay="1500"
         data-aos-duration="1250"

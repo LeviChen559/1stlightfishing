@@ -4,8 +4,8 @@ export const Wrapper = styled.div({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
-    width: 1440,
+    justifyContent: "space-evenly",
+    width: "100%",
     height: 700,
     overflow: "hidden",
     marginTop: -100,
@@ -25,8 +25,8 @@ export const Wrapper = styled.div({
 
 
 export const ImageBox = styled.div({
-    width: 900,
-    height: 1000,
+    width: 990,
+    height: 1100,
     position: "relative",
     animation: "fade-in",
     animationTimingFunction: "ease-in",

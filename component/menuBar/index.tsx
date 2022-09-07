@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';;
 import Image from 'next/image';
-import { MenuContainer, ImageContainer, PageContainer, PageItem, LanguagesEN,LanguagesZH, Hamberger } from './menuBar.style';
+import { Wrapper, ImageContainer, PageContainer, PageItem, LanguagesEN,LanguagesZH, Hamberger,WrapperBackground } from './menuBar.style';
 import Link from 'next/link';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useRouter } from 'next/router'
@@ -41,9 +41,11 @@ const menuText: Props = {
   Contact_en: "CONTACT",
   Contact_zh: "聯繫我",
 }
+interface MenuBarProps{
+  opacity?: number
+}
 
-
-const MenuBar: FC = () => {
+const MenuBar: FC<MenuBarProps> = ({opacity}) => {
 
 
   const router = useRouter();
@@ -56,8 +58,9 @@ const MenuBar: FC = () => {
     setAnchorEl(null);
   };
   return (
-
-    <MenuContainer>
+      <>
+       <WrapperBackground opacity={opacity}/>
+    <Wrapper>
       <ImageContainer >
         <Logo />
       </ImageContainer>
@@ -183,7 +186,9 @@ const MenuBar: FC = () => {
           {/* <Divider /> */}
         </Menu>
       </Hamberger>
-    </MenuContainer>
+     
+    </Wrapper>
+    </>
   );
 }
 

@@ -4,9 +4,10 @@ type Props = {
   src?: string
   width?: number,
   borderBottom?: string
+  opacity?:number
 }
 
-export const MenuContainer = styled.div({
+export const Wrapper = styled.div({
   position: "absolute",
   marginTop: 100,
   zIndex: 100,
@@ -94,3 +95,16 @@ export const Hamberger = styled.div({
   }
 
 })
+
+export const WrapperBackground = styled.div<Props>({
+width: "100%",
+position:"absolute",
+marginTop: 100,
+zIndex:1,
+height:100, opacity:1,
+backgroundColor:theme.palette.background.default
+// backgroundColor:"black"
+
+},props=>({
+  opacity:props.opacity
+}))
