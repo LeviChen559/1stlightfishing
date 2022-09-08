@@ -5,7 +5,6 @@ import ImageListItem from '@mui/material/ImageListItem';
 import {Wrapper} from "./masonrySlot.style"
 import Image from 'next/image'
 import AOS from 'aos';
-import 'aos/dist/aos.css';
 import useMediaQuery from '@mui/material/useMediaQuery';interface Props {
   img:string,
   title:string,

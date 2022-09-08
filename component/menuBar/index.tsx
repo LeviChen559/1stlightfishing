@@ -64,7 +64,7 @@ const MenuBar: FC<MenuBarProps> = ({opacity}) => {
       <ImageContainer >
         <Logo />
       </ImageContainer>
-      {router.pathname.includes("/en")?
+      {!router.pathname.includes("/zh")?
       <PageContainer >
         {router.pathname === "/en" ?
           <PageItem borderBottom="2px solid #03a9f4"><Link href="/en">{menuText.Home_en}</Link></PageItem> :
@@ -87,7 +87,7 @@ const MenuBar: FC<MenuBarProps> = ({opacity}) => {
          
         {router.pathname === "/en/service" ?
           <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/service">{menuText.Service_en}</Link></PageItem> :
-          <PageItem> <Link href="/en/services">{menuText.Service_en}</Link></PageItem>}
+          <PageItem> <Link href="/en/service">{menuText.Service_en}</Link></PageItem>}
           
         {router.pathname === "/en/contact" ?
           <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/contact">{menuText.Contact_en}</Link></PageItem> :

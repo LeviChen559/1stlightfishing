@@ -5,7 +5,7 @@ import VisionSlot from '../../../Slot/visionSlot'
 
 const  About:NextPage=()=> {
   return <Layout>
-    <VisionSlot/>
+    <VisionSlot src="/aboutme.jpeg"/>
 
       </Layout>
 }

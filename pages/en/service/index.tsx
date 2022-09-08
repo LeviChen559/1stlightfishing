@@ -3,11 +3,11 @@ import type { NextPage } from 'next'
 import Layout from '../../../utility/layout/home'
 import VisionSlot from '../../../Slot/visionSlot'
 
-const  Products:NextPage=()=> {
+const  About:NextPage=()=> {
   return <Layout>
-    <VisionSlot src="/product.avif"/>
+    <VisionSlot src="/service.avif"/>
 
       </Layout>
 }
 
-export default Products
+export default About

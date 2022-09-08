@@ -5,7 +5,6 @@ import PhishingIcon from '@mui/icons-material/Phishing';
 import { Wrapper, ProductBox, ProductBoxs, FeatureImage } from './productSlot.style'
 import { H3, H4, H5, H6 } from "../../component/commonStyle"
 import AOS from 'aos';
-import 'aos/dist/aos.css';
 import Image from 'next/image';
 import BasicButtons from '../../component/button';
  import {theme} from '../../utility/theme' 

@@ -25,7 +25,9 @@ export const ImageBox = styled.div<Style>({
     width: "100%",
     height: 400,
     position: "relative",
-    backgroundPosition: "0% 100%",
+    display: "flex",
+    justifyContent: "center",
+    backgroundPosition: "0% -100%",
     "@media(max-width:1440px)":{
         // width: "90%"
     },
