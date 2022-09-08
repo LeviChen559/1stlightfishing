@@ -177,11 +177,35 @@ const MenuBar: FC<MenuBarProps> = ({opacity}) => {
           transformOrigin={{ horizontal: 'right', vertical: 'top' }}
           anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
         >
-          <MenuItem>
-            Profile
+          <MenuItem sx={{fontSize:14}}>
+          <Link href="/en/">
+            HOME
+          </Link>
           </MenuItem>
-          <MenuItem>
-            My account
+          <MenuItem sx={{fontSize:14}}>
+          <Link href="/en/about">
+           ABOUT
+           </Link>
+          </MenuItem >
+          <MenuItem sx={{fontSize:14}}>
+          <Link href="/en/product">
+           PRODUCT
+           </Link>
+          </MenuItem>
+          <MenuItem sx={{fontSize:14}}> 
+          <Link href="/en/blog">
+          BLOG
+          </Link>
+          </MenuItem>
+          <MenuItem sx={{fontSize:14}}>
+          <Link href="/en/service">
+          SERVICE
+          </Link>
+          </MenuItem>
+          <MenuItem sx={{fontSize:14}}>
+          <Link href="/en/contact">
+         CONTACT
+         </Link>
           </MenuItem>
           {/* <Divider /> */}
         </Menu>
