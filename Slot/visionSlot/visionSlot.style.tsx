@@ -8,16 +8,13 @@ export interface Style {
     alignItems?:string,
 }
 export const Wrapper = styled.div({
-    width: "100%",
-    height: 600,
+    width: "100vw",
+    height: "100%",
     overflow: "hidden",
     display: "flex",
     flexDirection: "row",
     marginTop: -100,
     justifyContent: "center",
-    "@media(max-width:768px)":{
-        height: 450,
-    }
   })
 
 

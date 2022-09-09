@@ -10,12 +10,11 @@ export const Wrapper = styled.div<Style>({
     flexWrap: "wrap",
     alignItems: "center",
     justifyContent: "space-between",
-    width: "100%",
-    padding:"2.5%",
+    width: "100vw",
+    padding:"5% 27.5%",
     margin:"5% 0",
     backgroundColor: "#EEE5E9",
-    "@media(max-width:1440px)":{
-        width: "100%",
+    "@media(max-width:1960px)":{
         padding:"2.5% 5%",
     },
     '@media (max-width: 768px)': {

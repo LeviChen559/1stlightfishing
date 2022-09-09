@@ -7,6 +7,7 @@ interface Style {
     height?: number;
     alignItems?: string;
     justifyContent?: string;
+    color?: string;
 }
 
 export const H1 = styled.h1({
@@ -28,14 +29,17 @@ export const H2 = styled.h2({
     fontFamily: 'Baloo Bhai 2',
     color: theme.palette.common.white,
 })
-export const H3 = styled.h3({
+export const H3 = styled.h3<Style>({
     margin: 0,
     fontSize: '36px',
     fontWeight: 300,
     fontFamily: 'Baloo Bhai 2',
     color: theme.palette.common.white,
 
-})
+},props=>({
+    color: props.color,
+    fontWeight: props.fontWeight
+}))
 export const H4 = styled.h4({
     margin: 0,
     fontSize: '24px',
