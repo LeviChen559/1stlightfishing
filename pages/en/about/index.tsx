@@ -6,7 +6,7 @@ import IntroSlot from '../../../Slot/introSlot'
 import MapSlot from '../../../Slot/mapSlot'
 import StaffSlot from '../../../Slot/staffSlot'
 const  About:NextPage=()=> {
-  return <Layout>
+  return <Layout title="First Light Fishing & Tackle/About">
     <>
     <VisionSlot src="/aboutme.jpeg"/>
     <IntroSlot />

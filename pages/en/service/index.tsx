@@ -4,7 +4,7 @@ import Layout from '../../../utility/layout/home'
 import VisionSlot from '../../../Slot/visionSlot'
 
 const  About:NextPage=()=> {
-  return <Layout>
+  return <Layout title="First Light Fishing & Tackle/Service">
     <VisionSlot src="/service.avif"/>
 
       </Layout>

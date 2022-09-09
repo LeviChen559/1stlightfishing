@@ -9,9 +9,10 @@ import {theme} from"../../theme"
 
 interface Props {
   children: JSX.Element,
+  title: string
 };
 
-const Layout: FC<Props> = ({ children }: Props) => {
+const Layout: FC<Props> = ({ children,title }: Props) => {
   const [bgcolor,setBgcolor]=useState<string>(theme.palette.background.default)
   const [opacity,setOpacity]=useState<number>(0)
   const listenScrollEvent = () => {
@@ -31,7 +32,7 @@ const Layout: FC<Props> = ({ children }: Props) => {
   return <BackgroundContainer>
     <Wrapper>
       <Head>
-        <title>First Light Fishing & Tackle</title>
+        <title>{title}</title>
         <meta charSet="utf-8" name="description" content="1stLightTackle is the best fishing store in Burnaby,BC." />
         <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Merienda+One&family=Rock+Salt&display=swap" rel="stylesheet"></link>
         <link rel="alternate" hrefLang="en-ca" href="https://1stlightfishing.vercel.app/en.html"></link>
