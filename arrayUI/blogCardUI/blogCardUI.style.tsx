@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
-
-export const Wrapper = styled.div({
+import { IStyle } from "../../utility/type"
+export const Wrapper = styled.div<IStyle>({
     width: "100%",
     // height: "100%",
     display: "flex",
@@ -14,4 +14,6 @@ export const Wrapper = styled.div({
     "@media(max-width:768px)":{
         height: 600,
     }
-  })
+  }, props=>({
+    justifyContent:props.justifyContent
+  }))

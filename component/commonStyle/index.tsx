@@ -102,8 +102,14 @@ export const FlexCol = styled.div<IStyle>({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
+        width: "100%",
+        height: "100%",
+        margin: "0 0 0 0",
     },
         props => ({
             alignItems: props.alignItems,
             justifyContent: props.justifyContent,
+            width:props.width,
+            height:props.height,
+            margin: props.margin,
         }))

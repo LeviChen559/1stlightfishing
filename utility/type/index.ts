@@ -21,4 +21,5 @@ export interface ICard {
     opacity?: number;
     fontWeight?: number;
     color?: string;
+    margin?: string;
 }

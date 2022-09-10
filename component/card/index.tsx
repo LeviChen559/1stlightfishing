@@ -33,7 +33,7 @@ interface Props {
     data-aos-delay={blogContent.delay}
     data-aos-duration="500"
     data-aos-easing="ease-in-out"
-    sx={{ maxWidth: 275,borderRadius:2,backgroundColor:themePalette.main,boxShadow:"5px 5px 10px 2px rgba(0,0,0,0.25)" }}>
+    sx={{ maxWidth: 300,borderRadius:2,backgroundColor:themePalette.main,boxShadow:"5px 5px 10px 2px rgba(0,0,0,0.25)" }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500],  }} aria-label="recipe">
