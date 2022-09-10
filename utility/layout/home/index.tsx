@@ -1,4 +1,5 @@
 import React, { FC, useState,useEffect } from 'react'
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import MenuBar from '../../../component/menuBar'
 import Footer from '../../../component/footer'
 import { BackgroundContainer, Wrapper, Header, Content } from './home.style'
@@ -27,14 +28,13 @@ const Layout: FC<Props> = ({ children,title }: Props) => {
   useEffect(()=>{
     window.addEventListener('scroll', listenScrollEvent)
   },[])
-
+ 
   const {pathname} = useRouter()
   return <BackgroundContainer>
     <Wrapper>
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" name="description" content="1stLightTackle is the best fishing store in Burnaby,BC." />
-        <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Merienda+One&family=Rock+Salt&display=swap" rel="stylesheet"></link>
         <link rel="alternate" hrefLang="en-ca" href="https://1stlightfishing.vercel.app/en.html"></link>
         <link rel="alternate" hrefLang="zh-tw" href="https://1stlightfishing.vercel.app/zh.html"></link>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"></link>
@@ -57,7 +57,7 @@ const Layout: FC<Props> = ({ children,title }: Props) => {
           `,
             }}
           />
-         
+        
           </Head>
           <StickyBox  style={{width: '100vw',zIndex: 90, height: 100, }}>
           <Header>
@@ -70,6 +70,7 @@ const Layout: FC<Props> = ({ children,title }: Props) => {
           <Footer />
         </Wrapper>
       </BackgroundContainer>
+     
 }
 
 

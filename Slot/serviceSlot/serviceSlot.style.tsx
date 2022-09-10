@@ -1,12 +1,7 @@
 import styled from "@emotion/styled"
 import {themePalette} from"../../utility/theme"
-export interface Style {
-    width?: number,
-    height?: number,
-    flex?: number,
-    justifyContent?:string,
-    alignItems?:string,
-}
+import { IStyle } from "../../utility/type"
+
 export const Wrapper = styled.div({
     width: "100%",
     height: 600,
@@ -21,7 +16,7 @@ export const Wrapper = styled.div({
   })
 
 
-export const ImageBox = styled.div<Style>({
+export const ImageBox = styled.div<IStyle>({
     width: "100%",
     height: 700,
     position: "relative",
@@ -60,7 +55,7 @@ export const ImageBox = styled.div<Style>({
         height:450,
     }
  })    
- export const TextBox = styled.div<Style>({
+ export const TextBox = styled.div<IStyle>({
     width: "100%",
     height:500,
     display: "flex",

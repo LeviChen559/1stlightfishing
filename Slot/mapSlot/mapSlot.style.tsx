@@ -22,7 +22,7 @@ export const Wrapper = styled.div({
     justifyContent: "center",
     backgroundColor: "#EEE5E9",
     margin: "0",
-    padding:"5% 0 15% 0",
+    padding:"0 0 5% 0",
     "@media(max-width:768px)": {
         // height: 450,
     }
@@ -61,8 +61,6 @@ export const TextContainer = styled.div({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingTop: "2.5% 0 0 2.5%",
-    
     "@media (max-width: 1440px)": {
         width: "100%",
     },
@@ -96,7 +94,7 @@ export const TextBox = styled.div<Style>({
         justifyContent: "space-evenly",
         alignItems: "center",
         width: "100%",
-        padding: 0 ,
+        // padding: 0 ,
       
     }
 }, props => ({

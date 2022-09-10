@@ -7,6 +7,9 @@ import ServiceSlot from '../Slot/serviceSlot'
 import BlogSlot from '../Slot/blogSlot'
 import BrandSlot from '../Slot/brandsSlot'
 import ProductSlot from '../Slot/productSlot'
+
+
+
 const Home: NextPage = () => {
   return <Layout title="First Light Fishing & Tackle/Home">
 

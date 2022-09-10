@@ -1,14 +1,7 @@
 import styled from "@emotion/styled";
 import {theme} from "../../utility/theme"
-interface Style {
-    opacity?: number;
-    fontWeight?: number;
-    width?: number;
-    height?: number;
-    alignItems?: string;
-    justifyContent?: string;
-    color?: string;
-}
+import {IStyle} from "../../utility/type"
+
 
 export const H1 = styled.h1({
     margin: 0,
@@ -29,7 +22,7 @@ export const H2 = styled.h2({
     fontFamily: 'Baloo Bhai 2',
     color: theme.palette.common.white,
 })
-export const H3 = styled.h3<Style>({
+export const H3 = styled.h3<IStyle>({
     margin: 0,
     fontSize: '36px',
     fontWeight: 300,
@@ -64,7 +57,7 @@ export const H5 = styled.h5({
    
 })
 
-export const H6 = styled.h6<Style>({
+export const H6 = styled.h6<IStyle>({
     fontSize: '14px',
     fontWeight: 300,
     fontFamily: 'Baloo Bhai 2',
@@ -75,7 +68,7 @@ export const H6 = styled.h6<Style>({
     fontWeight: props.fontWeight,
 }))
 
-export const ImageBox = styled.div<Style>({
+export const ImageBox = styled.div<IStyle>({
     width: 130,
     height: 50,
     position: "relative"
@@ -84,8 +77,17 @@ export const ImageBox = styled.div<Style>({
         width: props.width,
         height: props.height,
     }))
-
-export const FlexCol = styled.div<Style>({
+    export const TextBox = styled.div<IStyle>({
+        width: "100%",
+        height:"100%",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "flex-start",
+        padding:" 5%",
+    
+    })
+export const FlexCol = styled.div<IStyle>({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -95,7 +97,7 @@ export const FlexCol = styled.div<Style>({
         alignItems: props.alignItems,
         justifyContent: props.justifyContent,
     }))
-    export const FlexRow = styled.div<Style>({
+    export const FlexRow = styled.div<IStyle>({
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
