@@ -4,7 +4,7 @@ import FeatureContainer from '../../Slot/featureSlot'
 import Layout from '../../utility/layout/home'
 
 const Home: NextPage = () => {
-  return <Layout>
+  return <Layout >
 
     <>
     <HeroContainer />
