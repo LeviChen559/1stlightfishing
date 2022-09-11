@@ -1,11 +1,13 @@
-import React, { FC,useEffect } from 'react'
+import React, { FC,useEffect,useState } from 'react'
 import Image from 'next/image'
 import { ImageBox, Style, Wrapper, TextContainer, TextBox } from './blogSlot.style'
 import { H3, H5 } from "../../component/commonStyle"
 import BasicButtons from '../../component/button'
 import { theme } from "../../utility/theme"
-import BlogCard from '../../component/card'
+import BlogCard from '../../component/blogCard'
 import BlogCardUI from '../../arrayUI/blogCardUI'
+import { ICard } from '../../utility/type'
+import axios from 'axios'
 
 const blogList = [{
   title: "Hello to the Internet!",
@@ -32,7 +34,7 @@ const blogList = [{
 
 
 const BlogSlot: FC<Style> = ({ height, width }) => {
- 
+
   const H5_style = {
     color: theme.palette.background.default,
     background: "rgba(255, 255, 255, 0.8)",

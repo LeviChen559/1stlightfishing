@@ -8,7 +8,6 @@ export const Wrapper = styled.div({
     justifyContent: "space-evenly",
     width: 1440,
     height: 600,
-    padding:"5% 0%",
     '@media (max-width: 1440px)': {
         height: "100%",
         width: "90%",

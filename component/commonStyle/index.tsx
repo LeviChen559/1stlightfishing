@@ -19,14 +19,14 @@ export const H1 = styled.h1({
 export const H2 = styled.h2({
     margin: 0,
     fontSize: '48px',
-    fontFamily: 'Baloo Bhai 2',
+    fontFamily: 'Philosopher',
     color: theme.palette.common.white,
 })
 export const H3 = styled.h3<IStyle>({
     margin: 0,
     fontSize: '36px',
     fontWeight: 300,
-    fontFamily: 'Baloo Bhai 2',
+    fontFamily: 'Philosopher',
     color: theme.palette.common.white,
 
 },props=>({
@@ -37,7 +37,7 @@ export const H4 = styled.h4({
     margin: 0,
     fontSize: '24px',
     fontWeight: 300,
-    fontFamily: 'Baloo Bhai 2',
+    fontFamily: "Roboto",
     marginTop: '10px',
     color: theme.palette.common.white,
     '@media (max-width: 1440px)': {
@@ -51,7 +51,7 @@ export const H4 = styled.h4({
 export const H5 = styled.h5({
     fontSize: '18px',
     fontWeight: 300,
-    fontFamily: 'Baloo Bhai 2',
+    fontFamily: "Roboto",
     margin: 0,
     color: theme.palette.common.white,
    
@@ -60,7 +60,7 @@ export const H5 = styled.h5({
 export const H6 = styled.h6<IStyle>({
     fontSize: '14px',
     fontWeight: 300,
-    fontFamily: 'Baloo Bhai 2',
+    fontFamily: "Roboto",
     margin: 0,
     color: theme.palette.common.white,
 }, props => ({

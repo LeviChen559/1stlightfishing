@@ -1,5 +1,5 @@
 import React,{ FC,useEffect} from 'react'
-import BlogCard from '../../component/card'
+import BlogCard from '../../component/blogCard'
 import {ICard} from '../../utility/type'
 import {Wrapper} from"./blogCardUI.style"
 interface Props{

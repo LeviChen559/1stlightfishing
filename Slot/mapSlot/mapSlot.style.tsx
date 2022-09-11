@@ -89,7 +89,7 @@ export const TextBox = styled.div<Style>({
     lineHeight:"30px",
     fontSize: "18px",
     color:themePalette.main,
-    padding: " 5% 10% 5% 10%",
+    // padding: " 5% 10% 5% 10%",
     "@media (max-width: 768px)": {
         justifyContent: "space-evenly",
         alignItems: "center",

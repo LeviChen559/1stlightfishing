@@ -4,7 +4,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import {theme} from "../utility/theme"
 import { useRouter, } from "next/router";
 import { useEffect } from "react";
-import * as gtag from "../lib/gtag";
+import * as gtag from "../utility/gtag";
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     };
   }, [router.events]);
   return  <ThemeProvider theme={theme}>
-
+   
     <Component {...pageProps} />
 
   </ThemeProvider> 
