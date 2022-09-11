@@ -1,12 +1,12 @@
 import React, { FC } from 'react'
 import Image from 'next/image'
-import { ImageBox, Style, Wrapper, TextContainer, TextBox } from './serviceSlot.style'
+import { ImageBox, Wrapper, TextContainer, TextBox } from './serviceSlot.style'
 import { H3, H5 } from "../../component/commonStyle"
 import BasicButtons from '../../component/button'
 import { theme } from "../../utility/theme"
 import { SportsRugbySharp } from '@mui/icons-material'
-
-const ServiceSlot: FC<Style> = ({ height, width }) => {
+import { IStyle } from '../../utility/type'
+const ServiceSlot: FC<IStyle> = ({ height, width }) => {
   const H5_style = { color: theme.palette.background.default, 
                       background: "rgba(255, 255, 255, 0.8)",
                     padding:"2.5%" }
