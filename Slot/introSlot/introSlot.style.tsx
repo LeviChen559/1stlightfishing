@@ -90,7 +90,7 @@ export const TextBox = styled.div<Style>({
     alignItems: "flex-start",
     lineHeight: "30px",
     fontSize: "18px",
-    padding: " 5% 10% 5% 10%",
+    padding: " 5% 2.5% 5% 2.5%",
     "@media (max-width: 1220px)": {
         lineHeight: "24px",
         fontSize: "16px",

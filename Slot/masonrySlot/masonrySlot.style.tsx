@@ -5,7 +5,7 @@ export const Wrapper = styled.div({
     width: '100%',
     height: 700, 
     overflowY: 'hidden',
-    margin:"5% 0",
+    // margin:"5% 0",
     "@media(max-width:1440px)":{
         width: "100%"
     },

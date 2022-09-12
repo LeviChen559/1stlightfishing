@@ -39,7 +39,7 @@ export const H4 = styled.h4({
     fontWeight: 300,
     fontFamily: "Roboto",
     marginTop: '10px',
-    color: theme.palette.common.white,
+    // color: theme.palette.common.white,
     '@media (max-width: 1440px)': {
         fontSize: "18px",
    },
@@ -53,7 +53,7 @@ export const H5 = styled.h5({
     fontWeight: 300,
     fontFamily: "Roboto",
     margin: 0,
-    color: theme.palette.common.white,
+    // color: theme.palette.common.white,
    
 })
 

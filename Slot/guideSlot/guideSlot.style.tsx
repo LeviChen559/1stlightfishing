@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import {theme, themePalette} from"../../utility/theme"
 export interface Style {
     width?: number,
     height?: number,
@@ -8,16 +9,20 @@ export interface Style {
     alignItems?: string,
     backgroundColor?: string,
     padding?: string,
+    color?: string,
 
 }
 export const Wrapper = styled.div({
-    width: "100%",
+    width: "100vw",
     height: "100%",
     overflow: "hidden",
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
+    alignItems: "center",
     justifyContent: "center",
-    // margin: "5% 0",
+    // backgroundColor: "#EEE5E9",
+    margin: "0",
+    padding:"0 0 5% 0",
     "@media(max-width:768px)": {
         // height: 450,
     }
@@ -25,14 +30,21 @@ export const Wrapper = styled.div({
 
 
 export const ImageBox = styled.div<Style>({
-    width: "100%",
-    height: 600,
+    flex:1,
+    width: 600,
+    height: 450,
     position: "relative",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    margin:"0 2.5%",
     "@media(max-width:1440px)": {
         // width: "90%"
     },
     "@media(max-width:768px)": {
-        // height: 450,
+        flex:1,
+        width: "90%",
+        margin:"0 5%",
     }
 
 },
@@ -43,16 +55,14 @@ export const ImageBox = styled.div<Style>({
 
 
 export const TextContainer = styled.div({
-    position: "absolute",
-    zIndex: 50,
+    label: "TextContainer",
     width: 1680,
+    height:500,
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "flex-start",
-    // padding: "2.5% 0 0 2.5%",
-   
-    "@media (max-width: 1680px)": {
+    alignItems: "center",
+    "@media (max-width: 1440px)": {
         width: "100%",
     },
     "@media (max-width: 768px)": {
@@ -71,19 +81,25 @@ export const TextContainer = styled.div({
     }
 })
 export const TextBox = styled.div<Style>({
-    "&:last-child": { flex: 3.5 },
-    flex: 1,
-    height: 600,
+    flex:1,
+    height: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "flex-start",
-    padding: " 5% 0 0 5%",
+    lineHeight:"30px",
+    fontSize: "18px",
+    color:themePalette.main,
+    padding: " 2.5%",
+    "@media (max-width: 1440px)": {
+        fontSize: "16px",
+    },
     "@media (max-width: 768px)": {
         justifyContent: "space-evenly",
         alignItems: "center",
         width: "100%",
-        padding: 0 ,
+        padding: "5%",
+        fontSize: "14px",
       
     }
 }, props => ({
@@ -93,5 +109,6 @@ export const TextBox = styled.div<Style>({
     height: props.height,
     backgroundColor: props.backgroundColor,
     flexDirection: props.flexDirection,
-    padding: props.padding
+    padding: props.padding,
+    color: props.color
 }))  

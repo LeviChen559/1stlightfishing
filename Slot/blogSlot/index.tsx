@@ -49,7 +49,7 @@ const BlogSlot: FC<Style> = ({ height, width }) => {
         </TextBox>
         <TextBox 
           flexDirection="row" alignItems="center"
-          justifyContent='space-evenly' backgroundColor="#EEE5E9" padding="0%">
+          justifyContent='center' backgroundColor="#EEE5E9" padding="0%">
           <BlogCardUI  blogList={blogList} />
         </TextBox>
       </TextContainer>

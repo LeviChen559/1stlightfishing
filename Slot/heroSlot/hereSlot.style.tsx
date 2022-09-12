@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { keyframes } from '@emotion/react'
+
 export const Wrapper = styled.div({
     display: "flex",
     flexDirection: "row",
@@ -36,7 +37,7 @@ export const ImageBox = styled.div({
         '50%': { opacity: .3 },
         '100%': { opacity: 1 },
     },
-    '@media (max-width: 1440px)': {
+    '@media (max-width: 1680px)': {
         width: 720,
         height: 800,
     },
@@ -54,6 +55,10 @@ export const TextContainer = styled.div({
     textAlign: 'right',
     width: "40%",
     marginTop: "7.5%",
+    '@media (max-width: 1680px)': {
+        width: "35%",
+        marginRight: "5%",
+    },
     '@media (max-width: 1440px)': {
         width: "30%",
     },

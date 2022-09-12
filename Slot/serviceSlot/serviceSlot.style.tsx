@@ -9,7 +9,7 @@ export const Wrapper = styled.div({
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    margin:"5% 0",
+    // margin:"5% 0",
     "@media(max-width:768px)":{
         height: 450,
     }
