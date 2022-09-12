@@ -30,7 +30,7 @@ const HeroSlot: FC = () => {
         <H4 >First Light Fishing & Tackle</H4>
         <H4>Best Fishing Store in Burnaby</H4>
         <ButtonContainer>
-          <BasicButtons text="Explore Now" hrefLink="/en/about"/>
+          <BasicButtons text="Explore Now" handleLinkClick={()=>router.push("/en/about")}/>
         </ButtonContainer>
       </TextContainer>
       :
@@ -44,7 +44,7 @@ const HeroSlot: FC = () => {
         <H4 >First Light Fishing & Tackle</H4>
         <H4>大溫地區最專業釣魚店</H4>
         <ButtonContainer>
-          <BasicButtons text="開始探索" hrefLink="/zh/about"/>
+          <BasicButtons text="開始探索" handleLinkClick={()=>router.push("/zh/about")}/>
         </ButtonContainer>
       </TextContainer>
 

@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react'
+import React, { FC, useEffect,MouseEvent } from 'react'
 import Image from 'next/image'
 import { ImageBox,  Wrapper, TextContainer, TextBox } from './contactSlot.style'
 import { H3, H5, H6, H4 } from "../../component/commonStyle"
@@ -17,6 +17,11 @@ const ContactSlot: FC<IStyle> = ({ height, width }) => {
     background: "rgba(255, 255, 255, 0.8)",
     padding: "2.5%"
   }
+  const handleSubmit = (event: MouseEvent<HTMLButtonElement>): void => {
+    event.preventDefault();
+   
+
+  }
 
   return (
     <Wrapper >
@@ -33,8 +38,8 @@ const ContactSlot: FC<IStyle> = ({ height, width }) => {
           marginBottom: 2, height: 200, overflow: "auto"
         }} />
         <FlexRow >
-          <BasicButtons width={100} text="Cancle" margin="0 2.5%" />
-          <BasicButtons width={100} text="Submit" margin="0 2.5%" />
+          <BasicButtons width="100px" text="Cancle" margin="0 2.5%" handleLinkClick={handleSubmit} />
+          <BasicButtons width="100px" text="Submit" margin="0 2.5%" handleLinkClick={handleSubmit}/>
         </FlexRow>
       </TextContainer>
       <Divider variant="middle" sx={{ backgroundColor: theme.palette.background.default, width: "70%", maxWidth: 800, margin: 5 }} />

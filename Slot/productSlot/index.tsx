@@ -26,7 +26,7 @@ const ProductSlot: FC = () => {
                 <FeatureImage>
                     <Image src="/onsale.png" alt="onsale" layout='fill' />
                 </FeatureImage>
-                <BasicButtons text="ON SALE" width={185} background="warning"/>
+                <BasicButtons text="ON SALE" width="185px" background="warning"/>
             </ProductBox>
             <ProductBox data-aos="fade-up"
                 data-aos-offset="200"
@@ -36,7 +36,7 @@ const ProductSlot: FC = () => {
                 <FeatureImage>
                     <Image src="/bestsale.png" alt="onsale" layout='fill' />
                 </FeatureImage>
-                <BasicButtons text="BEST SALE" width={185}/>
+                <BasicButtons text="BEST SALE" width="185px"/>
             </ProductBox>
             <ProductBox data-aos="fade-up"
                 data-aos-offset="200"
@@ -46,7 +46,7 @@ const ProductSlot: FC = () => {
                 <FeatureImage>
                     <Image src="/newitems.png" alt="onsale" layout='fill' />
                 </FeatureImage>
-                <BasicButtons text="NEW ITEMS" width={185}/>
+                <BasicButtons text="NEW ITEMS" width="185px"/>
             </ProductBox>
             <ProductBox data-aos="fade-up"
                 data-aos-offset="250"
@@ -56,7 +56,7 @@ const ProductSlot: FC = () => {
                 <FeatureImage>
                     <Image src="/seasonal.png" alt="onsale" layout='fill' />
                 </FeatureImage>
-                <BasicButtons text="SEASONAL" width={185}/>
+                <BasicButtons text="SEASONAL" width="185px"/>
             </ProductBox>
             <ProductBox data-aos="fade-up"
                 data-aos-offset="200"
@@ -66,7 +66,7 @@ const ProductSlot: FC = () => {
                 <FeatureImage>
                     <Image src="/clearance.png" alt="onsale" layout='fill' />
                 </FeatureImage>
-                <BasicButtons text="CLEARANCE" width={185}/>
+                <BasicButtons text="CLEARANCE" width="185px"/>
             </ProductBox>
             
         </ProductBoxs>
@@ -84,7 +84,7 @@ const ProductSlot: FC = () => {
                 <FeatureImage>
                     <Image src="/onsale.png" alt="onsale" layout='fill' />
                 </FeatureImage>
-                <BasicButtons text="特價商品" width={185} background="warning"/>
+                <BasicButtons text="特價商品" width="185px" background="warning"/>
             </ProductBox>
             <ProductBox data-aos="fade-up"
                 data-aos-offset="200"
@@ -94,7 +94,7 @@ const ProductSlot: FC = () => {
                 <FeatureImage>
                     <Image src="/bestsale.png" alt="onsale" layout='fill' />
                 </FeatureImage>
-                <BasicButtons text="熱銷商品" width={185}/>
+                <BasicButtons text="熱銷商品" width="185px"/>
             </ProductBox>
             <ProductBox data-aos="fade-up"
                 data-aos-offset="200"
@@ -104,7 +104,7 @@ const ProductSlot: FC = () => {
                 <FeatureImage>
                     <Image src="/newitems.png" alt="onsale" layout='fill' />
                 </FeatureImage>
-                <BasicButtons text="新鮮貨" width={185}/>
+                <BasicButtons text="新鮮貨" width="185px"/>
             </ProductBox>
             <ProductBox data-aos="fade-up"
                 data-aos-offset="250"
@@ -114,7 +114,7 @@ const ProductSlot: FC = () => {
                 <FeatureImage>
                     <Image src="/seasonal.png" alt="onsale" layout='fill' />
                 </FeatureImage>
-                <BasicButtons text="季節商品" width={185}/>
+                <BasicButtons text="季節商品" width="185px"/>
             </ProductBox>
             <ProductBox data-aos="fade-up"
                 data-aos-offset="200"
@@ -124,7 +124,7 @@ const ProductSlot: FC = () => {
                 <FeatureImage>
                     <Image src="/clearance.png" alt="onsale" layout='fill' />
                 </FeatureImage>
-                <BasicButtons text="清倉商品" width={185}/>
+                <BasicButtons text="清倉商品" width="185px"/>
             </ProductBox>
             
         </ProductBoxs>
