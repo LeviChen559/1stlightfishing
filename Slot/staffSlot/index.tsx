@@ -2,7 +2,7 @@ import React, { FC, useEffect } from 'react'
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import PhishingIcon from '@mui/icons-material/Phishing';
-import { Wrapper, ProductBox, ProductBoxs, FeatureImage } from './staffSlot.style'
+import { Wrapper } from './staffSlot.style'
 import { H3, H4, H5, H6 } from "../../component/commonStyle"
 import AOS from 'aos';
 import Image from 'next/image';

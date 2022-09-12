@@ -19,7 +19,7 @@ export const Wrapper = styled.div({
     justifyContent: "center",
     // margin: "5% 0",
     "@media(max-width:768px)": {
-        // height: 450,
+       
     }
 })
 
@@ -61,12 +61,6 @@ export const TextContainer = styled.div({
         justifyContent: "space-between",
         width: "100%",
         height: 700,
-        // "&:first-child": {
-        //     height: 200
-        // },
-        // "&:last-child": {
-        //     height: 300
-        // },
 
     }
 })
@@ -84,6 +78,7 @@ export const TextBox = styled.div<Style>({
         alignItems: "center",
         width: "100%",
         padding: 0 ,
+        height: 550,
       
     }
 }, props => ({

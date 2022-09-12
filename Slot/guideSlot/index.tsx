@@ -9,7 +9,7 @@ import BlogCardUI from '../../arrayUI/blogCardUI'
 
 
 
-const GuideSlot: FC<Style> = ({ height, width }) => {
+const zoomClassSlot: FC<Style> = ({ height, width }) => {
 
   const H5_style = {
     color: theme.palette.background.default,
@@ -42,4 +42,4 @@ const GuideSlot: FC<Style> = ({ height, width }) => {
   )
 }
 
-export default GuideSlot
+export default zoomClassSlot

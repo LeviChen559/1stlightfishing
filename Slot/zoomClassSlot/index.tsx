@@ -1,6 +1,6 @@
 import React, { FC, useEffect } from 'react'
 import Image from 'next/image'
-import { ImageBox, Style, Wrapper, TextContainer, TextBox } from './zoomClassSlot.style'
+import { ImageBox, Style, Wrapper, TextContainer, TextBox } from './contactSlot.style'
 import { H3, H5,H6,H4} from "../../component/commonStyle"
 import BasicButtons from '../../component/button'
 import { theme } from "../../utility/theme"
@@ -9,7 +9,7 @@ import BlogCardUI from '../../arrayUI/blogCardUI'
 
 
 
-const GuideSlot: FC<Style> = ({ height, width }) => {
+const ContactSlot: FC<Style> = ({ height, width }) => {
 
   const H5_style = {
     color: theme.palette.background.default,
@@ -45,4 +45,4 @@ const GuideSlot: FC<Style> = ({ height, width }) => {
   )
 }
 
-export default GuideSlot
+export default ContactSlot

@@ -1,7 +1,7 @@
 import React, { FC,useEffect,useState } from 'react'
 import Image from 'next/image'
 import { ImageBox, Style, Wrapper, TextContainer, TextBox } from './blogSlot.style'
-import { H3, H5 } from "../../component/commonStyle"
+import { H3, H4, H5 } from "../../component/commonStyle"
 import BasicButtons from '../../component/button'
 import { theme } from "../../utility/theme"
 import BlogCard from '../../component/blogCard'

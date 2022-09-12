@@ -52,7 +52,8 @@ export const ImageBox = styled.div<IStyle>({
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-between",
-        height:450,
+        height:350,
+        marginTop:100
     }
  })    
  export const TextBox = styled.div<IStyle>({
@@ -64,7 +65,7 @@ export const ImageBox = styled.div<IStyle>({
     alignItems: "flex-start",
     padding:" 5% 0 0 5%",
     H3:{
-        color:themePalette.main,
+        // color:themePalette.main,
         fontWeight: 400
      },
     '&[data-active="true"]':{
@@ -72,12 +73,12 @@ export const ImageBox = styled.div<IStyle>({
         padding:0,
     },
     "@media (max-width: 768px)":{
-        justifyContent: "space-around",
+        justifyContent: "space-evenly",
         alignItems: "center",
         padding: 0 ,
-        height:350,
+        height:250,
         '&[data-active="true"]':{
-            height:125,
+            height:100,
             width:"100%",
         },
         

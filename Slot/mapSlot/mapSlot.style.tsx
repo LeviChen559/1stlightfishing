@@ -21,8 +21,6 @@ export const Wrapper = styled.div({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#EEE5E9",
-    margin: "0",
-    padding:"0 0 5% 0",
     "@media(max-width:768px)": {
         // height: 450,
     }
@@ -37,13 +35,14 @@ export const ImageBox = styled.div<Style>({
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    margin:"0 5%",
+    margin:"2.5% 2.5%",
     "@media(max-width:1440px)": {
         // width: "90%"
     },
     "@media(max-width:768px)": {
         flex:1,
         width: "90%",
+        margin:"5% 5%",
     }
 
 },
@@ -56,7 +55,7 @@ export const ImageBox = styled.div<Style>({
 export const TextContainer = styled.div({
     label: "TextContainer",
     width: 1680,
-    height:500,
+    height:"100%",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
@@ -89,12 +88,12 @@ export const TextBox = styled.div<Style>({
     lineHeight:"30px",
     fontSize: "18px",
     color:themePalette.main,
-    // padding: " 5% 10% 5% 10%",
+    padding: "2.5%",
     "@media (max-width: 768px)": {
         justifyContent: "space-evenly",
         alignItems: "center",
         width: "100%",
-        // padding: 0 ,
+        padding: "5%" ,
       
     }
 }, props => ({

@@ -19,7 +19,7 @@ const MapSlot: FC<Style> = ({ height, width }) => {
 
   return (
     <Wrapper >
-      <TextBox padding="5%">
+      <TextBox >
       <H3 color={theme.palette.background.default} fontWeight={400}>Location</H3>
       </TextBox>
       <TextContainer>
