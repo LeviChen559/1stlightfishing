@@ -6,11 +6,11 @@ import BasicButtons from '../../component/button'
 import { theme } from "../../utility/theme"
 import BlogCard from '../../component/blogCard'
 import BlogCardUI from '../../arrayUI/blogCardUI'
-
+import { useRouter } from 'next/router'
 
 
 const MapSlot: FC<Style> = ({ height, width }) => {
-
+  const router = useRouter()
   const H5_style = {
     color: theme.palette.background.default,
     background: "rgba(255, 255, 255, 0.8)",
@@ -20,7 +20,9 @@ const MapSlot: FC<Style> = ({ height, width }) => {
   return (
     <Wrapper >
       <TextBox >
-      <H3 color={theme.palette.background.default} fontWeight={400}>Location</H3>
+        {router.pathname.includes('/en') ?
+      <H3 color={theme.palette.background.default} fontWeight={400}>Location</H3>:
+      <H3 color={theme.palette.background.default} fontWeight={400}>我們的地址</H3>}
       </TextBox>
       <TextContainer>
         <ImageBox height={height} width={width}>
@@ -28,6 +30,7 @@ const MapSlot: FC<Style> = ({ height, width }) => {
           boxShadow: "10px 10px 10px 5px rgba(0,0,0,0.2)",
           borderRadius: "15px" }} loading="lazy" ></iframe>
         </ImageBox>
+        {router.pathname.includes('/en') ?
         <TextBox
           flexDirection="column" alignItems="center"
           justifyContent='space-evenly' >
@@ -40,6 +43,20 @@ const MapSlot: FC<Style> = ({ height, width }) => {
            <div>Satarday : 10a.m.–6p.m.</div>
            <div>Sunday : 11a.m.–5p.m.</div>
         </TextBox>
+        :
+         <TextBox
+         flexDirection="column" alignItems="center"
+         justifyContent='space-evenly' >
+          <strong>營業時間</strong>
+          <div>星期一 : 10a.m.–6p.m.</div> 
+          <div>星期二 : 10a.m.–6p.m.</div> 
+          <div>星期三 : 10a.m.–6p.m.</div> 
+          <div>星期四 : 10a.m.–6p.m.</div> 
+          <div>星期五 : 10a.m.–6p.m.</div> 
+          <div>星期六 : 10a.m.–6p.m.</div>
+          <div>星期天 : 11a.m.–5p.m.</div>
+       </TextBox>  
+        }
       </TextContainer>
 
     </Wrapper>

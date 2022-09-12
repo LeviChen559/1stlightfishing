@@ -1,3 +1,5 @@
+import { Url, UrlObject } from "url";
+
 export interface ICard {
     title: string;
     subheader: string;
@@ -10,6 +12,7 @@ export interface ICard {
     name: string;
     img: string;
     intro: string;
+    nickname: string;
 
   }
   export interface IStyle {
@@ -26,6 +29,7 @@ export interface ICard {
     margin?: string;
     padding?: string,
     text?: string;
+    hrefLink?: string;
     border?: string;
     borderRadius?: string;
 }

@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import{IStaff} from"../../utility/type"
 import Image from 'next/image'
+import {Box} from"@mui/material"
 interface Props{
     staffContent:IStaff;
     staffList:Array<IStaff>;
@@ -24,9 +25,14 @@ const Staff:FC<Props>=({staffContent,staffList})=> {
           objectFit="cover"
         />
         <CardContent>
+          <Box sx={{display:"flex", flexDirection:"row", justifyContent:"flex-start",alignItems:"flex-end",}}>
           <Typography gutterBottom variant="h5" component="div">
             {staffContent.name}
           </Typography>
+          <Typography gutterBottom variant="body1" component="p" sx={{marginLeft:2,color:"gray"}}>
+            {staffContent.nickname}
+          </Typography>
+          </Box>
           <Typography variant="body2" color="text.secondary">
            {staffContent.intro}
           </Typography>

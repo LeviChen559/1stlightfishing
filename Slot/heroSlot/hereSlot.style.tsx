@@ -23,7 +23,6 @@ export const Wrapper = styled.div({
         flexDirection: "column",
         marginTop: -70,
         width: "100%",
-        
     },
 })
 

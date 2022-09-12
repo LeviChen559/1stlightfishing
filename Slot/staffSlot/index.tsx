@@ -9,40 +9,36 @@ import Image from 'next/image';
 import StaffUI from '../../arrayUI/staffUI';
  import {theme} from '../../utility/theme' 
 import {TextBox} from"../../component/commonStyle"
+import { useRouter } from 'next/router';
 const staffList=[{
     name:"Steven",
     img:"/steven.png",
-    intro:`"The Guru"
-    Midnight. Tenkara Carp. 
-    Single single coffee. 
-    Strawberry Strudel.
-    English & Mandarin`,
+    nickname:`"The Guru"`,
+    intro:"Midnight. Tenkara Carp.Single single coffee.Strawberry Strudel.English & Mandarin",
 },
 {
     name:"Steven",
     img:"/steven.png",
-    intro:`"The Guru"
-    Midnight. Tenkara Carp. 
-    Single single coffee. 
-    Strawberry Strudel.
-    English & Mandarin`,
+    nickname:`"The Guru"`,
+    intro:"Midnight. Tenkara Carp.Single single coffee.Strawberry Strudel.English & Mandarin",
 },
 {
     name:"Steven",
     img:"/steven.png",
-    intro:`"The Guru"
-    Midnight. Tenkara Carp. 
-    Single single coffee. 
-    Strawberry Strudel.
-    English & Mandarin`,
+    nickname:`"The Guru"`,
+    intro:"Midnight. Tenkara Carp.Single single coffee.Strawberry Strudel.English & Mandarin",
 },
 ]
 
 const StaffSlot: FC = () => {
+    const router= useRouter()
     useEffect(() => { AOS.init(); },)
     return <Wrapper>
        <TextBox>
-        <H3>Meet out Awesome Staff</H3>
+       {router.pathname.includes("/en")?
+       <H3>Meet out Awesome Staff</H3>:
+       <H3>我們的專業團隊</H3>
+    } 
        </TextBox>
       
         <StaffUI staffList={staffList}/>

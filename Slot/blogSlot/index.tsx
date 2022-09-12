@@ -8,6 +8,7 @@ import BlogCard from '../../component/blogCard'
 import BlogCardUI from '../../arrayUI/blogCardUI'
 import { ICard } from '../../utility/type'
 import axios from 'axios'
+import { useRouter } from 'next/router'
 
 const blogList = [{
   title: "Hello to the Internet!",
@@ -34,18 +35,21 @@ const blogList = [{
 
 
 const BlogSlot: FC<Style> = ({ height, width }) => {
-
+  const router =useRouter()
   const H5_style = {
     color: theme.palette.background.default,
     background: "rgba(255, 255, 255, 0.8)",
     padding: "2.5%"
   }
-
   return (
     <Wrapper >
       <TextContainer>
         <TextBox>
+          {!router.pathname.includes("/zh")?
           <H3>Blog</H3>
+          :
+          <H3>部落格</H3>
+          }
         </TextBox>
         <TextBox 
           flexDirection="row" alignItems="center"

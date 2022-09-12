@@ -120,10 +120,10 @@ const MenuBar: FC<MenuBarProps> = ({opacity}) => {
          <PageItem><Link href="/zh/service">{menuText.Service_zh}</Link></PageItem>}
          
        {router.pathname === "/zh/contact" ?
-         <PageItem borderBottom="2px solid #03a9f4"> <Link href="/zh/contact">{menuText.Contact_en}</Link></PageItem> :
-         <PageItem> <Link href="/zh/contact">{menuText.Contact_en}</Link></PageItem>}
+         <PageItem borderBottom="2px solid #03a9f4"> <Link href="/zh/contact">{menuText.Contact_zh}</Link></PageItem> :
+         <PageItem> <Link href="/zh/contact">{menuText.Contact_zh}</Link></PageItem>}
        <PageItem ><a  href="/zh/contact" onClick={() => { router.push("/en/contact") }}><ShoppingCartIcon /></a> </PageItem>
-       <LanguagesZH ><H6 data-comp="en" fontWeight={300} opacity={.5} onClick={() => router.push("/en")}>EN</H6> <H6 data-comp="zh" fontWeight={400}  >ZH</H6></LanguagesZH>
+       <LanguagesZH ><H6 data-comp="en" fontWeight={300} opacity={.5} onClick={() => router.push("/en")}>英文</H6> <H6 data-comp="zh" fontWeight={400}  >中文</H6></LanguagesZH>
      </PageContainer>
       
       
@@ -207,7 +207,6 @@ const MenuBar: FC<MenuBarProps> = ({opacity}) => {
          CONTACT
          </Link>
           </MenuItem>
-          {/* <Divider /> */}
         </Menu>
       </Hamberger>
      
