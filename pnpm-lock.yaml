@@ -17,6 +17,7 @@ specifiers:
   dotenv: ^16.0.2
   eslint: 8.23.0
   eslint-config-next: 12.2.5
+  lottie-react: ^2.3.1
   next: 12.2.5
   react: 18.2.0
   react-dom: 18.2.0
@@ -31,6 +32,7 @@ dependencies:
   aos: 3.0.0-beta.6
   axios: 0.27.2
   dotenv: 16.0.2
+  lottie-react: 2.3.1_biqbaboplfbrettd7655fr4n2y
   next: 12.2.5_rlaikcoslzwwtqyk7brpdzej5y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -3048,6 +3050,21 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
+
+  /lottie-react/2.3.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-8cxd6XZZtECT6LoAhCftRdYrEpHxiouvB5EPiYA+TtCG5LHNYAdMS9IVIHcxKtWnpo7x16QfCLj1XLXZpaN81A==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      lottie-web: 5.9.6
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /lottie-web/5.9.6:
+    resolution: {integrity: sha512-JFs7KsHwflugH5qIXBpB4905yC1Sub2MZWtl/elvO/QC6qj1ApqbUZJyjzJseJUtVpgiDaXQLjBlIJGS7UUUXA==}
+    dev: false
 
   /lru-cache/6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
