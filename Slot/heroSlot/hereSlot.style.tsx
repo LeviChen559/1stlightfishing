@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { keyframes } from '@emotion/react'
 
 export const Wrapper = styled.div({
+    label:"Wrapper",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
@@ -21,6 +22,8 @@ export const Wrapper = styled.div({
     '@media (max-width: 768px)': {
         flexDirection: "column",
         marginTop: -70,
+        width: "100%",
+        
     },
 })
 
