@@ -25,6 +25,8 @@ const ContactSlot: FC<IStyle> = ({ height, width }) => {
       </TextBox>
       <TextContainer>
         <TextField required id="outlined-basic" label="Email" variant="outlined" sx={{ backgroundColor: theme.palette.background.default, width: "75%", maxWidth: 800, marginBottom: 2 }} />
+        <TextField required id="filled-basic" label="Subline" variant="outlined" sx={{ backgroundColor: theme.palette.background.default, width: "75%", maxWidth: 800, marginBottom: 2 }} />
+        <TextField  id="filled-basic" label="Phone" variant="outlined" sx={{ backgroundColor: theme.palette.background.default, width: "75%", maxWidth: 800, marginBottom: 2 }} />
         <TextField required id="filled-basic" label="Name" variant="outlined" sx={{ backgroundColor: theme.palette.background.default, width: "75%", maxWidth: 800, marginBottom: 2 }} />
         <TextField multiline required id="standard-basic" label="Message" variant="outlined" sx={{
           backgroundColor: theme.palette.background.default, width: "75%", maxWidth: 800,

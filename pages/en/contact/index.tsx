@@ -7,7 +7,7 @@ import ContactSlot from '../../../Slot/contactSlot'
 const  About:NextPage=()=> {
   return <Layout title="First Light Fishing & Tackle/Contact">
     <>
-    <VisionSlot src="/contact.png"/>
+    <VisionSlot src="/contact-min.png"/>
       <ContactSlot/>
       </>
       </Layout>

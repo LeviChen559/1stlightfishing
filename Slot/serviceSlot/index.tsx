@@ -23,7 +23,7 @@ const ServiceSlot: FC<IStyle> = ({ height, width }) => {
         </TextBox>
       </TextContainer>
       <ImageBox height={height} width={width}>
-        <Image src="/service/service1.jpeg" objectFit="cover" alt="logo" layout='fill' />
+        <Image src="/service/service-min.jpeg" objectFit="cover" alt="logo" layout='fill' />
       </ImageBox>
     </Wrapper>
 
