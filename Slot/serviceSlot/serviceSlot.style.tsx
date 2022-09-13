@@ -37,7 +37,7 @@ export const ImageBox = styled.div<IStyle>({
  export const TextContainer = styled.div({
     label:"TextContainer",
     position: "absolute",
-    zIndex: 100,
+    zIndex: 50,
     width:1680,
     height:600,
     display: "flex",

@@ -53,16 +53,22 @@ export const PageItem = styled.div<Props>({
   color: "white",
   fontSize: "16px",
   fontWeight: 400,
-  margin: "12px 5px",
+  margin: "10px 5px",
   borderBottom: "0px",
-  width:55,
+  width:75,
   textAlign: "center",
   '&:hover': {
     borderBottom: "1px solid white"
   },
   "@media(max-width:768px)": {
     fontSize: "14px",
-    width:45,
+    width:60,
+    margin: "10px 2%",
+  },
+  "@media(max-width:400px)": {
+    fontSize: "12px",
+    width:60,
+    margin: "10px 1%",
   }
 },
   props => ({
@@ -80,7 +86,8 @@ export const LanguagesEN = styled.div({
   width:100,
   height:50,
   '&:hover [data-comp="zh"]' :{
-    color: "orange"
+    color: "orange",
+    opacity:1
   },
   
 })
@@ -94,6 +101,7 @@ export const LanguagesZH = styled.div({
   width:100,
   height:50,
   '&:hover [data-comp="en"]' :{
-    color: "orange"
+    color: "orange",
+    opacity:1
   }
 })

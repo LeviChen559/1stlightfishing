@@ -43,6 +43,7 @@ export const ImageBox = styled.div<Style>({
         flex:1,
         width: "90%",
         margin:"5% 5%",
+        // height: "100%",
     }
 
 },

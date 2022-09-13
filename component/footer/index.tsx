@@ -25,7 +25,7 @@ const Footer:FC=()=> {
     <Wrapper >
       <FlexCol>
       <Logo height={45} width={95}/>
-      {router.pathname.includes("/en")?
+      {!router.pathname.includes("/zh")?
       <PageContainer >
         {router.pathname === "/en" ?
           <PageItem borderBottom="2px solid #03a9f4"><Link href="/en">HOME</Link></PageItem> :
@@ -114,10 +114,10 @@ const Footer:FC=()=> {
           <Image src="/socialMedia/email.png" alt="Line" layout='fill'/>
           </ImageBox>
         </SocialMedia>
-        {router.pathname.includes("/en")?
-        <LanguagesEN ><H6 data-comp="en" fontWeight={400}>EN</H6> <H6 data-comp="zh" fontWeight={300} opacity={.5} onClick={() => router.push("/zh")}>ZH</H6></LanguagesEN>
+        {!router.pathname.includes("/zh")?
+        <LanguagesEN ><H5 data-comp="en" fontWeight={400}>EN</H5> <H5 data-comp="zh" fontWeight={300} opacity={0.25} onClick={() => router.push("/zh")}>ZH</H5></LanguagesEN>
         :
-        <LanguagesZH ><H6 data-comp="en" fontWeight={300} opacity={.5} onClick={() => router.push("/en")}>英文</H6> <H6 data-comp="zh" fontWeight={400}  >中文</H6></LanguagesZH>
+        <LanguagesZH ><H5 data-comp="en" fontWeight={300} opacity={.25} onClick={() => router.push("/en")}>英文</H5> <H6 data-comp="zh" fontWeight={400}  >中文</H6></LanguagesZH>
       }
       </FlexCol>
       <FlexRow margin='5%' onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })}><ChangeHistoryIcon/><H5>Top</H5></FlexRow>

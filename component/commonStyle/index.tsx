@@ -71,7 +71,8 @@ export const H5 = styled.h5<IStyle>({
     }
 }, props => ({
     color: props.color,
-    fontWeight: props.fontWeight
+    fontWeight: props.fontWeight,
+    opacity: props.opacity,
 }))
 
 export const H6 = styled.h6<IStyle>({
@@ -120,11 +121,16 @@ export const FlexCol = styled.div<IStyle>({
     borderRadius: "10px",
     padding: " 2.5%",
     background: theme.palette.background.default,
+    width:"75%",
+    maxWidth: 800,
+    height:125
 
 },
     props => ({
         alignItems: props.alignItems,
         justifyContent: props.justifyContent,
+        width: props.width,
+        height: props.height
     }))
 export const FlexRow = styled.div<IStyle>({
     display: "flex",
