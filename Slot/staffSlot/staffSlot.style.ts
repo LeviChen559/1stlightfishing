@@ -14,37 +14,7 @@ export const Wrapper = styled.div({
     }
 })
 
-export const ProductBoxs = styled.div({
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-evenly",
-    width: "100%",
-    height: "100%",
-    "@media(max-width:1440px)   ":{
-        marginTop: "2.5%",
-    },
-    "@media(max-width:1200px)   ":{
-      flexWrap: "wrap",
-      justifyContent: "flex-start",
-      width: 800,
-      marginTop: "2.5%",
-  },
-  "@media(max-width:960px)   ":{
-    flexWrap: "wrap",
-    justifyContent: "flex-start",
-    width: 600,
-},
-"@media(max-width:600px)   ":{
-    flexWrap: "wrap",
-    justifyContent: "flex-start",
-    width: 400,
-},
-  "@media(max-width:420px)   ":{
-    flexDirection: "column",
-    flexWrap: "wrap",
-}
-})
+
 export const FeatureImage = styled.div({
     width: 185,
     height: 150,

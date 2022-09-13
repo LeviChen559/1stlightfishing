@@ -142,6 +142,7 @@ const MenuBar: FC<MenuBarProps> = ({opacity}) => {
             <MenuIcon sx={{ width: 32, height: 32, color: "white" }} />
           </IconButton>
         </Tooltip>
+        {router.pathname.includes("/en")?
         <Menu
           anchorEl={anchorEl}
           id="account-menu"
@@ -208,6 +209,75 @@ const MenuBar: FC<MenuBarProps> = ({opacity}) => {
          </Link>
           </MenuItem>
         </Menu>
+        :
+        <Menu
+        anchorEl={anchorEl}
+        id="account-menu"
+        open={open}
+        onClose={handleClose}
+        onClick={handleClose}
+        PaperProps={{
+          elevation: 0,
+          sx: {
+            overflow: 'visible',
+            filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+            mt: 1.5,
+            '& .MuiAvatar-root': {
+              width: 32,
+              height: 32,
+              ml: -0.5,
+              mr: 1,
+            },
+            '&:before': {
+              content: '""',
+              display: 'block',
+              position: 'absolute',
+              top: 0,
+              right: 14,
+              width: 10,
+              height: 10,
+              bgcolor: 'background.paper',
+              transform: 'translateY(-50%) rotate(45deg)',
+              zIndex: 0,
+            },
+          },
+        }}
+        transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+        anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+      >
+        <MenuItem sx={{fontSize:14}}>
+        <Link href="/en/">
+          首頁
+        </Link>
+        </MenuItem>
+        <MenuItem sx={{fontSize:14}}>
+        <Link href="/en/about">
+         關於我
+         </Link>
+        </MenuItem >
+        <MenuItem sx={{fontSize:14}}>
+        <Link href="/en/product">
+         商品
+         </Link>
+        </MenuItem>
+        <MenuItem sx={{fontSize:14}}> 
+        <Link href="/en/blog">
+       部落格
+        </Link>
+        </MenuItem>
+        <MenuItem sx={{fontSize:14}}>
+        <Link href="/en/service">
+        服務
+        </Link>
+        </MenuItem>
+        <MenuItem sx={{fontSize:14}}>
+        <Link href="/en/contact">
+       聯絡我
+       </Link>
+        </MenuItem>
+      </Menu>
+
+}
       </Hamberger>
      
     </Wrapper>

@@ -67,9 +67,7 @@ export const LanguagesEN = styled.div({
   '&:hover [data-comp="zh"]' :{
     color: "orange"
   },
-  // '&:hover [data-comp="en"]' :{
-  //   color: "orange"
-  // }
+  
 })
 export const LanguagesZH = styled.div({
 
@@ -78,9 +76,6 @@ export const LanguagesZH = styled.div({
   justifyContent: "space-evenly",
   alignItems: "center",
   cursor: 'pointer',
-  // '&:hover [data-comp="zh"]' :{
-  //   color: "orange"
-  // },
   '&:hover [data-comp="en"]' :{
     color: "orange"
   }

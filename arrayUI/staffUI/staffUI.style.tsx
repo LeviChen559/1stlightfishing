@@ -25,6 +25,7 @@ export const Wrapper = styled.div({
     "@media(max-width:650px)   ": {
         flexDirection: "column",
         flexWrap: "wrap",
+        width: "100%",
     }
 
 })

@@ -25,7 +25,7 @@ const ContactSlot: FC<Style> = ({ height, width }) => {
       </TextBox>
       <TextContainer>
         <ImageBox height={height} width={width}>
-          <Image src="/zoom.avif" alt="rainbow" layout='fill' objectFit='cover' />
+          <Image src="/zoom-min.jpg" alt="rainbow" layout='fill' objectFit='cover' />
         </ImageBox>
         <TextBox
           flexDirection="column" alignItems="center"

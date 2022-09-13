@@ -3,13 +3,14 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Image from 'next/image';
 import Logo from '../logo';
-import {H6,ImageBox} from "../commonStyle" 
-import {Wrapper,FlexCol,SocialMedia,PageContainer,PageItem} from "./footer.style"
+import {H6,ImageBox,H5,FlexRow} from "../commonStyle" 
+import {Wrapper,FlexCol,SocialMedia,PageContainer,PageItem,LanguagesEN,LanguagesZH} from "./footer.style"
 import MenuBar from '../menuBar';
 import { useRouter } from 'next/router';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from 'next/link';
+import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
 const Footer:FC=()=> {
   const [value, setValue] = useState('HOME');
   const router = useRouter();
@@ -24,6 +25,7 @@ const Footer:FC=()=> {
     <Wrapper >
       <FlexCol>
       <Logo height={45} width={95}/>
+      {router.pathname.includes("/en")?
       <PageContainer >
         {router.pathname === "/en" ?
           <PageItem borderBottom="2px solid #03a9f4"><Link href="/en">HOME</Link></PageItem> :
@@ -34,32 +36,42 @@ const Footer:FC=()=> {
           <PageItem><Link href="/en/about"> ABOUT</Link></PageItem>
         }
         {router.pathname === "/en/products" ?
-          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/products"> PRODUCTS</Link> </PageItem> :
-          <PageItem><Link href="/en/products"> PRODUCTS</Link> </PageItem>}
+          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/products"> PRODUCT</Link> </PageItem> :
+          <PageItem><Link href="/en/products"> PRODUCT</Link> </PageItem>}
         {router.pathname === "/en/blogs" ?
-          <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/blogs"> BLOGS</Link></PageItem> :
-          <PageItem ><Link href="/en/blogs"> BLOGS</Link></PageItem>}
+          <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/blogs"> BLOG</Link></PageItem> :
+          <PageItem ><Link href="/en/blogs"> BLOG</Link></PageItem>}
         {router.pathname === "/en/services" ?
-          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/services"> SERVICES</Link></PageItem> :
-          <PageItem> <Link href="/en/services"> SERVICES</Link></PageItem>}
+          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/services"> SERVICE</Link></PageItem> :
+          <PageItem> <Link href="/en/services"> SERVICE</Link></PageItem>}
         {router.pathname === "/en/contact" ?
           <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/contact"> CONTACT</Link></PageItem> :
           <PageItem> <Link href="/en/contact"> CONTACT</Link></PageItem>}
       </PageContainer>
-      {/* <Tabs sx={{width:400}}
-        value={value}
-        onChange={handleChange}
-        textColor="secondary"
-        indicatorColor="secondary"
-        aria-label="secondary tabs example"
-      >
-        <Tab value="HOME" label="HOME"  sx={{color: "white"}}/>
-        <Tab value="ABOUT" label="ABOUT"  sx={{color: "white"}}/>
-        <Tab value="PRODUCTS" label="PRODUCTS" sx={{color: "white"}}/>
-        <Tab value="BLOGS" label="BLOGS" sx={{color: "white"}}/>
-        <Tab value="SERVICES" label="SERVICES" sx={{color: "white"}}/>
-        <Tab value="CONTACT" label="CONTACT"sx={{color: "white"}} />
-      </Tabs> */}
+      :
+      <PageContainer >
+        {router.pathname === "/en" ?
+          <PageItem borderBottom="2px solid #03a9f4"><Link href="/en">首頁</Link></PageItem> :
+          <PageItem ><Link href="/en">首頁</Link></PageItem>
+        }
+        {router.pathname === "/en/about" ?
+          <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/about"> 關於我</Link></PageItem> :
+          <PageItem><Link href="/en/about">關於我</Link></PageItem>
+        }
+        {router.pathname === "/en/products" ?
+          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/products">商品</Link> </PageItem> :
+          <PageItem><Link href="/en/products">商品</Link> </PageItem>}
+        {router.pathname === "/en/blogs" ?
+          <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/blogs">部落格</Link></PageItem> :
+          <PageItem ><Link href="/en/blogs">部落格</Link></PageItem>}
+        {router.pathname === "/en/services" ?
+          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/services">服務</Link></PageItem> :
+          <PageItem> <Link href="/en/services">服務</Link></PageItem>}
+        {router.pathname === "/en/contact" ?
+          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/contact">聯絡我</Link></PageItem> :
+          <PageItem> <Link href="/en/contact">聯絡我</Link></PageItem>}
+      </PageContainer>
+}
         <SocialMedia>
           <ImageBox width={30} height={30}
            data-aos="fade-up"
@@ -101,10 +113,15 @@ const Footer:FC=()=> {
               data-aos-easing="ease-in-out">
           <Image src="/socialMedia/email.png" alt="Line" layout='fill'/>
           </ImageBox>
-
         </SocialMedia>
+        {router.pathname.includes("/en")?
+        <LanguagesEN ><H6 data-comp="en" fontWeight={400}>EN</H6> <H6 data-comp="zh" fontWeight={300} opacity={.5} onClick={() => router.push("/zh")}>ZH</H6></LanguagesEN>
+        :
+        <LanguagesZH ><H6 data-comp="en" fontWeight={300} opacity={.5} onClick={() => router.push("/en")}>英文</H6> <H6 data-comp="zh" fontWeight={400}  >中文</H6></LanguagesZH>
+      }
       </FlexCol>
-      <H6>© Copyright by first light fishing & tackle 2022</H6>
+      <FlexRow margin='5%' onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })}><ChangeHistoryIcon/><H5>Top</H5></FlexRow>
+      <H6 >© Copyright by first light fishing & tackle 2022</H6>
     </Wrapper>
   );
 }
