@@ -11,18 +11,28 @@ import StaffUI from '../../arrayUI/staffUI';
 import {TextBox} from"../../component/commonStyle"
 import { useRouter } from 'next/router';
 const staffList=[{
+    id:"1",
     name:"Steven",
     img:"/steven.png",
     nickname:`"The Guru"`,
     intro:"Midnight. Tenkara Carp.Single single coffee.Strawberry Strudel.English & Mandarin",
 },
-{
+{   
+    id:"2",
     name:"Steven",
     img:"/steven.png",
     nickname:`"The Guru"`,
     intro:"Midnight. Tenkara Carp.Single single coffee.Strawberry Strudel.English & Mandarin",
 },
-{
+{   
+    id:"3",
+    name:"Steven",
+    img:"/steven.png",
+    nickname:`"The Guru"`,
+    intro:"Midnight. Tenkara Carp.Single single coffee.Strawberry Strudel.English & Mandarin",
+},
+{   
+    id:"4",
     name:"Steven",
     img:"/steven.png",
     nickname:`"The Guru"`,

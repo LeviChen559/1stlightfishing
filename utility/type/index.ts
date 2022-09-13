@@ -13,6 +13,7 @@ export interface ICard {
     img: string;
     intro: string;
     nickname: string;
+    id:string
 
   }
   export interface IStyle {
