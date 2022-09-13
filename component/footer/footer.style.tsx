@@ -12,7 +12,7 @@ export const Wrapper = styled.div({
   flexDirection: "column",
   justifyContent: 'space-evenly',
   alignItems: 'center',
-  padding:'5%'
+  padding:'5% 2.5%'
 
 })
 
@@ -45,7 +45,7 @@ export const PageContainer = styled.div({
   },
   "@media(max-width:768px)": {
     justifyContent: "center",
-    width: "95%",
+    width:'100%',
   }
 })
 
@@ -53,14 +53,16 @@ export const PageItem = styled.div<Props>({
   color: "white",
   fontSize: "16px",
   fontWeight: 400,
-  padding: "12px 5px",
+  margin: "12px 5px",
   borderBottom: "0px",
+  width:55,
+  textAlign: "center",
   '&:hover': {
     borderBottom: "1px solid white"
   },
   "@media(max-width:768px)": {
     fontSize: "14px",
-    padding: "12px 1%",
+    width:45,
   }
 },
   props => ({

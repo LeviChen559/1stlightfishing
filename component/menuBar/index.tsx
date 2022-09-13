@@ -246,32 +246,32 @@ const MenuBar: FC<MenuBarProps> = ({opacity}) => {
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
         <MenuItem sx={{fontSize:14}}>
-        <Link href="/en/">
+        <Link href="/zh/">
           首頁
         </Link>
         </MenuItem>
         <MenuItem sx={{fontSize:14}}>
-        <Link href="/en/about">
+        <Link href="/zh/about">
          關於我
          </Link>
         </MenuItem >
         <MenuItem sx={{fontSize:14}}>
-        <Link href="/en/product">
+        <Link href="/zh/product">
          商品
          </Link>
         </MenuItem>
         <MenuItem sx={{fontSize:14}}> 
-        <Link href="/en/blog">
+        <Link href="/zh/blog">
        部落格
         </Link>
         </MenuItem>
         <MenuItem sx={{fontSize:14}}>
-        <Link href="/en/service">
+        <Link href="/zh/service">
         服務
         </Link>
         </MenuItem>
         <MenuItem sx={{fontSize:14}}>
-        <Link href="/en/contact">
+        <Link href="/zh/contact">
        聯絡我
        </Link>
         </MenuItem>
