@@ -1,7 +1,17 @@
 import React,{FC} from "react";
-import Lottie from "lottie-react";
-import construction from "../../public/construction.json";
+import { Player } from '@lottiefiles/react-lottie-player';
+const ConstructionAnim:FC = () => {
+return <>
+<Player
+src="/construction.json"
+className="player"
+loop
+autoplay
+style={{ height: '80%', width: '80%' }}
+/>
+</>
 
-const ConstructionAnim:FC = () => <Lottie animationData={construction} loop={true} />;
+}
+
 
 export default ConstructionAnim;

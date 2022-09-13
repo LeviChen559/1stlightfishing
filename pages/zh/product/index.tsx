@@ -7,7 +7,7 @@ import ConstructionAnim from '../../../component/construction'
 const  Products:NextPage=()=> {
   return <Layout title="First Light Fishing & Tackle/產品">
     <>
-    <VisionSlot src="/product.avif"/>
+    <VisionSlot src="/product-min.png"/>
     <ConstructionAnim/>
     </>
       </Layout>

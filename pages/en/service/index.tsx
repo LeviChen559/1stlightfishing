@@ -8,7 +8,7 @@ import ZoomClassSlot from '../../../Slot/zoomClassSlot'
 const  About:NextPage=()=> {
   return <Layout title="First Light Fishing & Tackle/Service">
     <>
-    <VisionSlot src="/service.avif"/>
+    <VisionSlot src="/service/service-min.png"/>
       <GuideSlot/>
       <ZoomClassSlot/>
     </>

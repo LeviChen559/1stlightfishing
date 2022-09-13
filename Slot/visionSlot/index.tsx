@@ -18,6 +18,7 @@ const VisionSlot: FC<Props> = ({ height, width ,src }) => {
     <Wrapper >
       <ImageBox height={height} width={width}>
         <Image src={src} objectFit="cover" alt="visionSlot" layout='fill'quality={80}
+        priority={true}
         />
       </ImageBox>
     </Wrapper>

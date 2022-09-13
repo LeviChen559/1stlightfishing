@@ -7,7 +7,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styles from '../../styles/home.module.scss'
 import { useRouter } from 'next/router'
-
+import { theme } from '../../utility/theme'
 
 const HeroSlot: FC = () => {
   useEffect(() => { AOS.init(); },)
@@ -21,28 +21,28 @@ const HeroSlot: FC = () => {
     </ImageBox>
     {!router.pathname.includes('/zh') ?
       <TextContainer>
-        <H5>Come to meet us</H5>
+        <H5 >Come to meet us</H5>
         <H1 data-aos="fade-up"
           data-aos-offset="200"
           data-aos-delay="1500"
           data-aos-duration="1250"
           data-aos-easing="ease-in-out">LIVE. LOVE. FISH.</H1>
         <H4 >First Light Fishing & Tackle</H4>
-        <H4>Best Fishing Store in Burnaby</H4>
+        <H4 >Best Fishing Store in Burnaby</H4>
         <ButtonContainer>
           <BasicButtons text="Explore Now" handleLinkClick={()=>router.push("/en/about")}/>
         </ButtonContainer>
       </TextContainer>
       :
       <TextContainer>
-        <H5>拜訪我們</H5>
+        <H5 >拜訪我們</H5>
         <H1 data-aos="fade-up"
           data-aos-offset="200"
           data-aos-delay="1500"
           data-aos-duration="1250"
           data-aos-easing="ease-in-out">有愛也有漁，這就是生活</H1>
         <H4 >First Light Fishing & Tackle</H4>
-        <H4>大溫地區最專業釣魚店</H4>
+        <H4 >大溫地區最專業釣魚店</H4>
         <ButtonContainer>
           <BasicButtons text="開始探索" handleLinkClick={()=>router.push("/zh/about")}/>
         </ButtonContainer>
