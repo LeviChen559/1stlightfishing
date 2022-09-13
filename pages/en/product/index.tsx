@@ -8,7 +8,7 @@ const  Products:NextPage=()=> {
   return <Layout title="First Light Fishing & Tackle/Product">
     <>
     <VisionSlot src="/product-min.png"/>
-    {/* <ConstructionAnim/> */}
+    <ConstructionAnim/>
     </>
       </Layout>
 }
