@@ -61,7 +61,7 @@ export const TextContainer = styled.div({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    "@media (max-width: 1440px)": {
+    "@media (max-width: 1680px)": {
         width: "100%",
     },
     "@media (max-width: 768px)": {

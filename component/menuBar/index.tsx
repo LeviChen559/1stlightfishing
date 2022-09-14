@@ -61,7 +61,7 @@ const MenuBar: FC<MenuBarProps> = ({opacity}) => {
       <>
        <WrapperBackground opacity={opacity}/>
     <Wrapper>
-      <ImageContainer >
+      <ImageContainer onClick={()=>router.push("/")}>
         <Logo />
       </ImageContainer>
       {!router.pathname.includes("/zh")?
@@ -142,7 +142,7 @@ const MenuBar: FC<MenuBarProps> = ({opacity}) => {
             <MenuIcon sx={{ width: 32, height: 32, color: "white" }} />
           </IconButton>
         </Tooltip>
-        {router.pathname.includes("/en")?
+        {!router.pathname.includes("/zh")?
         <Menu
           anchorEl={anchorEl}
           id="account-menu"

@@ -44,19 +44,19 @@ const Layout: FC<Props> = ({ children,title }: Props) => {
         description: "Burnaby Fishing Store - Fishing Is Our Life! Here at First Light Tackle, we provide all your essentials and knowledge for local BC fishing.",
         images: [
           {
-            url:  '/apple-touch-icon.png',
+            url:  '/siteIcon/apple-touch-icon.png',
             width: 180,
             height: 180,
             alt: 'site icon',
           },
           {
-            url: '/favicon-32x32.png',
+            url: '/siteIcon/favicon-32x32.png',
             width: 32,
             height: 32,
             alt: 'site icon',
           },
           {
-            url: '/favicon-16x16.png',
+            url: '/siteIcon/favicon-16x16.png',
             width: 16,
             height: 16,
             alt: 'site icon',
@@ -84,15 +84,15 @@ const Layout: FC<Props> = ({ children,title }: Props) => {
        
      }}
      images={[
-       '/apple-touch-icon.png',
-       '/favicon-32x32.png',
-       '/favicon-16x16.png',
+       '/siteIcon/apple-touch-icon.png',
+       '/siteIcon/favicon-32x32.png',
+       '/siteIcon/favicon-16x16.png',
      ]}
-     sameAs={[
-       'www.company-website-url1.dev',
-       'www.company-website-url2.dev',
-       'www.company-website-url3.dev',
-     ]}
+    //  sameAs={[
+    //    'www.company-website-url1.dev',
+    //    'www.company-website-url2.dev',
+    //    'www.company-website-url3.dev',
+    //  ]}
      openingHours={[
        {
          opens: '10:00',

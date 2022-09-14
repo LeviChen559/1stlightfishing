@@ -24,6 +24,7 @@ export const Wrapper = styled.div({
 
 export const ImageContainer = styled.div({
   marginLeft: "5%",
+  cursor: "pointer",
 })
 
 export const PageContainer = styled.div({

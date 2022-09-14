@@ -39,9 +39,9 @@ export const ImageBox = styled.div<Style>({
         height: 150,
     },
     "@media(max-width:768px)": {
-        flex: 1,
-        width: "90%",
-        height: 250,
+        // flex: 1,
+        width: '80%',
+        height: 'auto',
         marginRight: "5%",
 
     }

@@ -90,9 +90,10 @@ export const TextBox = styled.div<Style>({
     lineHeight:"30px",
     fontSize: "18px",
     color:themePalette.main,
-    padding: " 2.5%",
-    "@media (max-width: 1440px)": {
+    padding: "2.5%",
+    "@media (max-width: 1680px)": {
         fontSize: "16px",
+        paddingRight: " 5%",
     },
     "@media (max-width: 768px)": {
         justifyContent: "space-evenly",

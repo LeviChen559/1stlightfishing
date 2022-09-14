@@ -35,15 +35,15 @@ const Footer:FC=()=> {
           <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/about"> ABOUT</Link></PageItem> :
           <PageItem><Link href="/en/about"> ABOUT</Link></PageItem>
         }
-        {router.pathname === "/en/products" ?
-          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/products"> PRODUCT</Link> </PageItem> :
-          <PageItem><Link href="/en/products"> PRODUCT</Link> </PageItem>}
-        {router.pathname === "/en/blogs" ?
-          <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/blogs"> BLOG</Link></PageItem> :
-          <PageItem ><Link href="/en/blogs"> BLOG</Link></PageItem>}
-        {router.pathname === "/en/services" ?
-          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/services"> SERVICE</Link></PageItem> :
-          <PageItem> <Link href="/en/services"> SERVICE</Link></PageItem>}
+        {router.pathname === "/en/product" ?
+          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/product"> PRODUCT</Link> </PageItem> :
+          <PageItem><Link href="/en/product"> PRODUCT</Link> </PageItem>}
+        {router.pathname === "/en/blog" ?
+          <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/blog"> BLOG</Link></PageItem> :
+          <PageItem ><Link href="/en/blog"> BLOG</Link></PageItem>}
+        {router.pathname === "/en/service" ?
+          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/service"> SERVICE</Link></PageItem> :
+          <PageItem> <Link href="/en/service"> SERVICE</Link></PageItem>}
         {router.pathname === "/en/contact" ?
           <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/contact"> CONTACT</Link></PageItem> :
           <PageItem> <Link href="/en/contact"> CONTACT</Link></PageItem>}
@@ -59,14 +59,14 @@ const Footer:FC=()=> {
           <PageItem><Link href="/en/about">關於我</Link></PageItem>
         }
         {router.pathname === "/en/products" ?
-          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/products">商品</Link> </PageItem> :
-          <PageItem><Link href="/en/products">商品</Link> </PageItem>}
+          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/product">商品</Link> </PageItem> :
+          <PageItem><Link href="/en/product">商品</Link> </PageItem>}
         {router.pathname === "/en/blogs" ?
-          <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/blogs">部落格</Link></PageItem> :
-          <PageItem ><Link href="/en/blogs">部落格</Link></PageItem>}
+          <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/blog">部落格</Link></PageItem> :
+          <PageItem ><Link href="/en/blog">部落格</Link></PageItem>}
         {router.pathname === "/en/services" ?
-          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/services">服務</Link></PageItem> :
-          <PageItem> <Link href="/en/services">服務</Link></PageItem>}
+          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/service">服務</Link></PageItem> :
+          <PageItem> <Link href="/en/service">服務</Link></PageItem>}
         {router.pathname === "/en/contact" ?
           <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/contact">聯絡我</Link></PageItem> :
           <PageItem> <Link href="/en/contact">聯絡我</Link></PageItem>}
@@ -120,7 +120,7 @@ const Footer:FC=()=> {
         <LanguagesZH ><H5 data-comp="en" fontWeight={300} opacity={.25} onClick={() => router.push("/en")}>英文</H5> <H6 data-comp="zh" fontWeight={400}  >中文</H6></LanguagesZH>
       }
       </FlexCol>
-      <FlexRow margin='5%' onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })}><ChangeHistoryIcon/><H5>Top</H5></FlexRow>
+      <FlexRow margin='5%' style={{cursor: 'pointer'}} onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })}><ChangeHistoryIcon sx={{color:'white'}}/><H5>Top</H5></FlexRow>
       <H6 >© Copyright by first light fishing & tackle 2022</H6>
     </Wrapper>
   );

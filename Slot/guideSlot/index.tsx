@@ -42,16 +42,18 @@ const zoomClassSlot: FC<Style> = ({ height, width }) => {
     : 
     <Wrapper >
     <TextBox padding="5%">
-      <H3 color={theme.palette.common.white} fontWeight={400}>Guide</H3>
+      <H3 color={theme.palette.common.white} fontWeight={400}>主要服務</H3>
     </TextBox>
     <TextContainer>
       <ImageBox height={height} width={width}>
-        <Image src="/rainbow.jpeg" alt="rainbow" layout='fill' objectFit='cover' />
+        <Image src="/service/rainbow.jpeg" alt="rainbow" layout='fill' objectFit='cover' 
+       placeholder="blur" blurDataURL="/image-blur-placeholder.png"
+        />
       </ImageBox>
       <TextBox
         flexDirection="column" alignItems="center"
         justifyContent='space-evenly' color={theme.palette.common.white} >
-        <div>  我們除了提供各式專業釣具外更提供了一些專業服務及知識。我們歡迎各位釣友資詢任何本地釣魚的相關問題，在我們的時間及人力資源許可下我們樂意回答任何問題。
+        <div>我們除了提供各式專業釣具外更提供了一些專業服務及知識。我們歡迎各位釣友資詢任何本地釣魚的相關問題，在我們的時間及人力資源許可下我們樂意回答任何問題。
         </div>
         <div>我們也提供繞線服務，專業上線機器，把你的捲線器帶到店裏來，我們會用最短的時間幫你舊線換新線，讓你為下一次的出釣做好準備。
         </div>

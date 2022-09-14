@@ -24,7 +24,8 @@ const ProductSlot: FC = () => {
                 data-aos-duration="500"
                 data-aos-easing="ease-in-out">
                 <FeatureImage>
-                    <Image src="/onsale.png" alt="onsale" layout='fill' />
+                    <Image src="/product/onsale.png" alt="onsale" layout='fill'
+                    placeholder="blur" blurDataURL="/image-blur-placeholder.png" />
                 </FeatureImage>
                 <BasicButtons text="ON SALE" width="185px" background="warning"/>
             </ProductBox>
@@ -34,7 +35,8 @@ const ProductSlot: FC = () => {
                 data-aos-duration="500"
                 data-aos-easing="ease-in-out">
                 <FeatureImage>
-                    <Image src="/bestsale.png" alt="onsale" layout='fill' />
+                    <Image src="/product/bestsale.png" alt="onsale" layout='fill' 
+                    placeholder="blur" blurDataURL="/image-blur-placeholder.png"/>
                 </FeatureImage>
                 <BasicButtons text="BEST SALE" width="185px"/>
             </ProductBox>
@@ -44,7 +46,9 @@ const ProductSlot: FC = () => {
                 data-aos-duration="500"
                 data-aos-easing="ease-in-out" >
                 <FeatureImage>
-                    <Image src="/newitems.png" alt="onsale" layout='fill' />
+                    <Image src="/product/newitems.png" alt="onsale" layout='fill' 
+                    placeholder="blur" blurDataURL="/image-blur-placeholder.png"
+                    />
                 </FeatureImage>
                 <BasicButtons text="NEW ITEMS" width="185px"/>
             </ProductBox>
@@ -54,7 +58,9 @@ const ProductSlot: FC = () => {
                 data-aos-duration="500"
                 data-aos-easing="ease-in-out" >
                 <FeatureImage>
-                    <Image src="/seasonal.png" alt="onsale" layout='fill' />
+                    <Image src="/product/seasonal.png" alt="onsale" layout='fill'
+                    placeholder="blur" blurDataURL="/image-blur-placeholder.png"
+                    />
                 </FeatureImage>
                 <BasicButtons text="SEASONAL" width="185px"/>
             </ProductBox>
@@ -64,7 +70,8 @@ const ProductSlot: FC = () => {
                 data-aos-duration="500"
                 data-aos-easing="ease-in-out">
                 <FeatureImage>
-                    <Image src="/clearance.png" alt="onsale" layout='fill' />
+                    <Image src="/product/clearance.png" alt="onsale" layout='fill'
+                    placeholder="blur" blurDataURL="/image-blur-placeholder.png" />
                 </FeatureImage>
                 <BasicButtons text="CLEARANCE" width="185px"/>
             </ProductBox>
