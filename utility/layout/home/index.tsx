@@ -34,10 +34,13 @@ const Layout: FC<Props> = ({ children,title }: Props) => {
   return <BackgroundContainer>
     <Wrapper>
     <NextSeo
+    title={title}
+    description="Burnaby Fishing Store - Fishing Is Our Life! Here at First Light Tackle, we provide all your essentials and knowledge for local BC fishing."
+    canonical='https://www.happy-cat.ca'
       openGraph={{
         type: 'website',
         url: 'https://www.happy-cat.ca',
-        title: title,
+        title: 'First Light Fishing & Tackle',
         description: "Burnaby Fishing Store - Fishing Is Our Life! Here at First Light Tackle, we provide all your essentials and knowledge for local BC fishing.",
         images: [
           {
@@ -183,11 +186,11 @@ const Layout: FC<Props> = ({ children,title }: Props) => {
     //      geoRadius: '1000',
     //    },
     //  ]}
-     action={{
-       actionName: 'potentialAction',
-       actionType: 'ReviewAction',
-       target: 'https://www.example.com/review/this/business',
-     }}
+    //  action={{
+    //    actionName: 'potentialAction',
+    //    actionType: 'ReviewAction',
+    //    target: 'https://www.example.com/review/this/business',
+    //  }}
     />
       <Head>    
         <link rel="alternate" hrefLang="en-ca" href="https://1stlightfishing.vercel.app/en.html"></link>
