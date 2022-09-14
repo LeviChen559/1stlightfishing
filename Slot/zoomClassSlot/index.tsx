@@ -50,7 +50,7 @@ const ContactSlot: FC<IStyle> = ({ height, width }) => {
     </TextBox>
     <TextContainer>
       <ImageBox height={height} width={width}>
-        <Image src="/zoom.avif" alt="rainbow" layout='fill' objectFit='cover' />
+        <Image src="/service/zoom-min.jpg" alt="rainbow" layout='fill' objectFit='cover' />
       </ImageBox>
       <TextBox
         flexDirection="column" alignItems="center"
@@ -58,13 +58,13 @@ const ContactSlot: FC<IStyle> = ({ height, width }) => {
         <H5 color={theme.palette.background.default}>  我們的講座/專業課程採小班制，名額有限，受漁季，氣候，漁況等因素影響下，時間不適合提早決定，但一定會選在講座/課程時間段裡。地點不定。請有興趣的釣友提早聯繫我們取得資訊。
 
         </H5>
-        <div>
+        <TextBox justifyContent='space-evenly' >
           <H4 color={theme.palette.background.default}>講座/專業課程</H4>
           <H5 color={theme.palette.background.default}>1. 大溫釣魚 (3/20-3/30)</H5>
           <H5 color={theme.palette.background.default}>2. 大溫釣魚 (4/20-4/30)</H5>
           <H5 color={theme.palette.background.default}>3. 溪流三文魚 (9/1-9/10)</H5> 
           <H5 color={theme.palette.background.default}>4. 溪流三文魚 (10/1-10/10)</H5>
-        </div>
+        </TextBox>
       </TextBox>
     </TextContainer>
   </Wrapper>

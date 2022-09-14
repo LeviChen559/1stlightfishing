@@ -25,7 +25,7 @@ const zoomClassSlot: FC<Style> = ({ height, width }) => {
       </TextBox>
       <TextContainer>
         <ImageBox height={height} width={width}>
-          <Image src="/rainbow.jpeg" alt="rainbow" layout='fill' objectFit='cover' />
+          <Image src="/service/rainbow.jpeg" alt="rainbow" layout='fill' objectFit='cover' />
         </ImageBox>
         <TextBox
           flexDirection="column" alignItems="center"
