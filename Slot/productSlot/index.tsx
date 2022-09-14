@@ -89,7 +89,7 @@ const ProductSlot: FC = () => {
                 data-aos-duration="500"
                 data-aos-easing="ease-in-out">
                 <FeatureImage>
-                    <Image src="/onsale.png" alt="onsale" layout='fill' />
+                    <Image src="/product/onsale.png" alt="onsale" layout='fill' />
                 </FeatureImage>
                 <BasicButtons text="特價商品" width="185px" background="warning"/>
             </ProductBox>
@@ -99,7 +99,7 @@ const ProductSlot: FC = () => {
                 data-aos-duration="500"
                 data-aos-easing="ease-in-out">
                 <FeatureImage>
-                    <Image src="/bestsale.png" alt="onsale" layout='fill' />
+                    <Image src="/product/bestsale.png" alt="onsale" layout='fill' />
                 </FeatureImage>
                 <BasicButtons text="熱銷商品" width="185px"/>
             </ProductBox>
@@ -109,7 +109,7 @@ const ProductSlot: FC = () => {
                 data-aos-duration="500"
                 data-aos-easing="ease-in-out" >
                 <FeatureImage>
-                    <Image src="/newitems.png" alt="onsale" layout='fill' />
+                    <Image src="/product/newitems.png" alt="onsale" layout='fill' />
                 </FeatureImage>
                 <BasicButtons text="新鮮貨" width="185px"/>
             </ProductBox>
@@ -119,7 +119,7 @@ const ProductSlot: FC = () => {
                 data-aos-duration="500"
                 data-aos-easing="ease-in-out" >
                 <FeatureImage>
-                    <Image src="/seasonal.png" alt="onsale" layout='fill' />
+                    <Image src="/product/seasonal.png" alt="onsale" layout='fill' />
                 </FeatureImage>
                 <BasicButtons text="季節商品" width="185px"/>
             </ProductBox>
@@ -129,7 +129,7 @@ const ProductSlot: FC = () => {
                 data-aos-duration="500"
                 data-aos-easing="ease-in-out">
                 <FeatureImage>
-                    <Image src="/clearance.png" alt="onsale" layout='fill' />
+                    <Image src="/product/clearance.png" alt="onsale" layout='fill' />
                 </FeatureImage>
                 <BasicButtons text="清倉商品" width="185px"/>
             </ProductBox>
