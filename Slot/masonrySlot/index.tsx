@@ -5,81 +5,88 @@ import ImageListItem from '@mui/material/ImageListItem';
 import {Wrapper} from "./masonrySlot.style"
 import Image from 'next/image'
 import AOS from 'aos';
-import useMediaQuery from '@mui/material/useMediaQuery';interface Props {
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+
+interface Props {
   img:string,
   title:string,
 }
 const itemData = [
   {
-    img: "/imageBank/image1.png",
+    img: "/imageBank/image1.svg",
     title: 'Bed',
   },
   {
-    img: "/imageBank/image3.png",
+    img: "/imageBank/image3.svg",
     title: 'Books',
   },
   {
-    img: "/imageBank/image2.png",
+    img: "/imageBank/image2.svg",
     title: 'Sink',
   },
   {
-    img: "/imageBank/image4.png",
+    img: "/imageBank/image4.svg",
     title: 'Kitchen',
   },
   {
-    img: "/imageBank/image5.png",
+    img: "/imageBank/image5.svg",
     title: 'Blinds',
   },
   {
-    img: "/imageBank/image6.png",
+    img: "/imageBank/image6.svg",
     title: 'Chairs',
   },
   {
-    img: "/imageBank/image7.png",
+    img: "/imageBank/image7.svg",
     title: 'Laptop',
   },
   {
-    img: "/imageBank/image8.png",
+    img: "/imageBank/image8.svg",
     title: 'Doors',
   },
   {
-    img: "/imageBank/image9.png",
+    img: "/imageBank/image9.svg",
     title: 'Coffee',
   },
   {
-    img: "/imageBank/image10.png",
+    img: "/imageBank/image10.svg",
     title: 'Coffee',
   },
   {
-    img: "/imageBank/image11.png",
+    img: "/imageBank/image11.svg",
     title: 'Coffee',
   },
   {
-    img: "/imageBank/image12.png",
+    img: "/imageBank/image12.svg",
     title: 'Coffee',
   },
   {
-    img: "/imageBank/image13.png",
+    img: "/imageBank/image13.svg",
     title: 'Coffee',
   },
   {
-    img: "/imageBank/image14.png",
+    img: "/imageBank/image14.svg",
     title: 'Coffee',
   },
   {
-    img: "/imageBank/image15.png",
+    img: "/imageBank/image15.jpg",
     title: 'Coffee',
   },
   {
-    img: "/imageBank/image16.png",
+    img: "/imageBank/image16.jpg",
     title: 'Coffee',
   },
   {
-    img: "/imageBank/image17.png",
+    img: "/imageBank/image17.svg",
     title: 'Coffee',
   },
   {
-    img: "/imageBank/image18.png",
+    img: "/imageBank/image18.svg",
+    title: 'Coffee',
+  },
+  {
+    img: "/imageBank/image19.svg",
     title: 'Coffee',
   }
 
@@ -89,6 +96,7 @@ const MasonrySlot: FC = () => {
   const matches= useMediaQuery("(max-width: 768px)")
   return (
     <Wrapper>
+      
     {matches?  <ImageList variant="masonry" cols={4} gap={8}>
         {itemData.map((item) => (
           <ImageListItem key={item.img} 
@@ -125,6 +133,9 @@ const MasonrySlot: FC = () => {
           </ImageListItem>
         ))}
       </ImageList>}
+
+
+
     </Wrapper>
   );
 }
