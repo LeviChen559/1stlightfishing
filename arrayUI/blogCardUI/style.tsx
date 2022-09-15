@@ -6,6 +6,7 @@ export const Wrapper = styled.div<IStyle>({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-evenly",
+    padding:"0 5%",
     "@media(max-width:1200px)":{
         flexDirection: "column",
         alignItems: "center",
@@ -13,6 +14,7 @@ export const Wrapper = styled.div<IStyle>({
     },
     "@media(max-width:768px)":{
         height: 600,
+        padding:"5%",
     }
   }, props=>({
     justifyContent:props.justifyContent

@@ -38,7 +38,8 @@ export const H3 = styled.h3<IStyle>({
 
 }, props => ({
     color: props.color,
-    fontWeight: props.fontWeight
+    fontWeight: props.fontWeight,
+    textShadow:props.textShadow
 }))
 export const H4 = styled.h4<IStyle>({
     margin: 0,
@@ -73,6 +74,7 @@ export const H5 = styled.h5<IStyle>({
     color: props.color,
     fontWeight: props.fontWeight,
     opacity: props.opacity,
+    lineHeight: props.lineHeight
 }))
 
 export const H6 = styled.h6<IStyle>({
@@ -130,7 +132,8 @@ export const FlexCol = styled.div<IStyle>({
         alignItems: props.alignItems,
         justifyContent: props.justifyContent,
         width: props.width,
-        height: props.height
+        height: props.height,
+        borderRadius: props.borderRadius,
     }))
 export const FlexRow = styled.div<IStyle>({
     display: "flex",

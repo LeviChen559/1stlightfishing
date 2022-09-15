@@ -1,6 +1,6 @@
 import React,{FC} from 'react'
 import Image from 'next/image'
-import { ImageBox,Props } from './logo.style'
+import { ImageBox,Props } from './style'
 
 const Logo:FC<Props> =({height,width})=> {
   return (

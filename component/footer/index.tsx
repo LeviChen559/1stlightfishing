@@ -4,7 +4,7 @@ import Tab from '@mui/material/Tab';
 import Image from 'next/image';
 import Logo from '../logo';
 import {H6,ImageBox,H5,FlexRow} from "../commonStyle" 
-import {Wrapper,FlexCol,SocialMedia,PageContainer,PageItem,LanguagesEN,LanguagesZH} from "./footer.style"
+import {Wrapper,FlexCol,SocialMedia,PageContainer,PageItem,LanguagesEN,LanguagesZH} from "./style"
 import MenuBar from '../menuBar';
 import { useRouter } from 'next/router';
 import AOS from 'aos';

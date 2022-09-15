@@ -1,6 +1,6 @@
 import React, { FC, useEffect } from 'react'
 import Image from 'next/image'
-import { ImageBox,  Wrapper, TextContainer, TextBox } from './zoomClass.style'
+import { ImageBox,  Wrapper, TextContainer, TextBox } from './style'
 import { H3, H5,H6,H4} from "../../component/commonStyle"
 import BasicButtons from '../../component/button'
 import { theme } from "../../utility/theme"
@@ -50,7 +50,9 @@ const ContactSlot: FC<IStyle> = ({ height, width }) => {
     </TextBox>
     <TextContainer>
       <ImageBox height={height} width={width}>
-        <Image src="/service/zoom-min.jpg" alt="rainbow" layout='fill' objectFit='cover' />
+        <Image src="/service/zoom-min.jpg" alt="rainbow" layout='fill' objectFit='cover'
+         placeholder="blur" blurDataURL="/image-blur-placeholder.png"
+        />
       </ImageBox>
       <TextBox
         flexDirection="column" alignItems="center"

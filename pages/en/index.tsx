@@ -4,7 +4,7 @@ import FeatureSlot from '../../Slot/featureSlot'
 import Layout from '../../utility/layout/home'
 import MasonrySlot from '../../Slot/masonrySlot'
 import ServiceSlot from '../../Slot/serviceSlot'
-import BlogSlot from '../../Slot/blogSlot'
+import BlogSlot from '../../Slot/blogSnapSlot'
 import BrandSlot from '../../Slot/brandsSlot'
 import ProductSlot from '../../Slot/productSlot'
 const Home: NextPage = () => {

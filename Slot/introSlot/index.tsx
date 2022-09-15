@@ -1,6 +1,6 @@
 import React, { FC, useEffect } from 'react'
 import Image from 'next/image'
-import { ImageBox, Style, Wrapper, TextContainer, TextBox } from './introSlot.style'
+import { ImageBox, Style, Wrapper, TextContainer, TextBox } from './style'
 import { H3, H4, H5,H6 } from "../../component/commonStyle"
 import BasicButtons from '../../component/button'
 import { theme } from "../../utility/theme"
@@ -26,16 +26,15 @@ const IntroSlot: FC<Style> = ({ height, width }) => {
        {!router.pathname.includes('/zh') ?
         <TextBox alignItems="center"
           justifyContent='space-evenly' >
-          <H4>
-          Our doors opened on June 2012 in Burnaby, serving the central fishing community in the Lower Mainland.
-          </H4>
-          <H4>
+          <H5>Our doors opened on June 2012 in Burnaby, serving the central fishing community in the Lower Mainland.
+          </H5>
+          <H5>
           First Light Tackle is devotedly operated by Steven Su - an avid sports angler of three decades who is well studied in our pacific west coast geography and ecology. His passion for the sport has no limits and knows no boundaries. From saltwater to freshwater fishing, from gear to fly fishing, on the dock or off the grid, under the sun or in the snow, around the clock from January to December - you will see Steven out there, casting his line and connecting with fish of all kinds.
-          </H4>
-          <H4>
+          </H5>
+          <H5>
           We are not just another retail stop. We are a hub for conversations and stories, and a platform for education on responsible and sustainable fishing. Our vision is to foster a close knit community of nature enthusiasts in beautiful British Columbia, living, loving and… fishing.
           Join us!
-          </H4>
+          </H5>
         </TextBox>
         :
         <TextBox

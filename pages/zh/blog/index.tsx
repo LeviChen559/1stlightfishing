@@ -2,8 +2,7 @@ import React,{FC} from 'react'
 import type { NextPage } from 'next'
 import Layout from '../../../utility/layout/home'
 import VisionSlot from '../../../Slot/visionSlot'
-import BlogCardUI from '../../../arrayUI/blogCardUI'
-import { FlexRow } from '../../../component/commonStyle'
+import BlogSlot from '../../../Slot/blogSlot'
 const blogList = [{
   title: "Hello to the Internet!",
   subheader: "May 12, 2017",
@@ -32,11 +31,8 @@ const blogList = [{
 const  About:NextPage=()=> {
   return <Layout title="First Light Fishing & Tackle/部落格">
     <>
-    <VisionSlot src="/blogs/blogHero.png"/>
-    <FlexRow margin="5%">
-
-    <BlogCardUI justifyContent="flex-start" blogList={blogList}/>
-    </FlexRow>
+    <VisionSlot src="/blogHero-min.jpg"/>
+    <BlogSlot/>
     </>
 
       </Layout>

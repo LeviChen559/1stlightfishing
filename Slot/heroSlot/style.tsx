@@ -33,7 +33,7 @@ export const ImageBox = styled.div({
     position: "relative",
     animation: "fade-in",
     animationTimingFunction: "ease-in",
-    animationDuration: "2s",
+    animationDuration: "1.5s",
     '@keyframes fade-in': {
         '0%': { opacity: 0 },
         '50%': { opacity: .3 },

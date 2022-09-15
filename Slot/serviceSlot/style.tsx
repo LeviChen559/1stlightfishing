@@ -17,7 +17,7 @@ export const Wrapper = styled.div({
 
 
 export const ImageBox = styled.div<IStyle>({
-    width: "100%",
+    width: 1680,
     height: 700,
     position: "relative",
     "@media(max-width:1440px)":{

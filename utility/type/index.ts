@@ -33,4 +33,6 @@ export interface ICard {
     hrefLink?: string;
     border?: string;
     borderRadius?: string;
+    lineHeight?: number;
+    textShadow?: string;
 }

@@ -1,6 +1,6 @@
 import React, { FC, useEffect } from 'react'
 import Image from 'next/image';
-import { Wrapper, } from './brandsSlot.style'
+import { Wrapper, } from './style'
 import { H3, H4, H5, H6, ImageBox } from "../../component/commonStyle"
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';

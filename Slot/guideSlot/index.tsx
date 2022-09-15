@@ -1,6 +1,6 @@
 import React, { FC, useEffect } from 'react'
 import Image from 'next/image'
-import { ImageBox, Style, Wrapper, TextContainer, TextBox } from './guideSlot.style'
+import { ImageBox, Style, Wrapper, TextContainer, TextBox } from './style'
 import { H3, H5 } from "../../component/commonStyle"
 import BasicButtons from '../../component/button'
 import { theme } from "../../utility/theme"

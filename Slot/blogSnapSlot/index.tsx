@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from 'react'
 import Image from 'next/image'
-import {  Wrapper, TextContainer } from './style'
+import { ImageBox, Style, Wrapper, TextContainer, TextBox } from './style'
 import { H3, H4, H5 } from "../../component/commonStyle"
 import BasicButtons from '../../component/button'
 import { theme } from "../../utility/theme"
@@ -9,7 +9,7 @@ import BlogCardUI from '../../arrayUI/blogCardUI'
 import { ICard } from '../../utility/type'
 import axios from 'axios'
 import { useRouter } from 'next/router'
-import { IStyle } from '../../utility/type'
+
 const blogList = [
   {
     id: "01",
@@ -61,7 +61,7 @@ const blogListEN=blogList.filter((blog) => Number(blog.id)<4)
 const blogListZH=blogList.filter((blog) => Number(blog.id)>3)
 
 
-const BlogSlot: FC<IStyle> = ({ height, width }) => {
+const BlogSnapSlot: FC<Style> = ({ height, width }) => {
   const router = useRouter()
   const H5_style = {
     color: theme.palette.background.default,
@@ -72,19 +72,33 @@ const BlogSlot: FC<IStyle> = ({ height, width }) => {
     <Wrapper >
           {!router.pathname.includes("/zh") ?
       <TextContainer>
-          <BlogCardUI blogList={blogListEN}  justifyContent="flex-start"/>
-     
+        <TextBox>
+            <H3 textShadow="3px 3px 5px gray">Blog</H3>
+        </TextBox>
+        <TextBox
+          flexDirection="row" alignItems="center"
+          justifyContent='center' backgroundColor="#EEE5E9" padding="0%">
+          <BlogCardUI blogList={blogListEN} />
+        </TextBox>
       </TextContainer>:
       <TextContainer>
-    
-        <BlogCardUI blogList={blogListZH} justifyContent="flex-start"/>
-     
+      <TextBox>
+          <H3 textShadow="3px 3px 5px gray">部落格</H3>
+      </TextBox>
+      <TextBox
+        flexDirection="row" alignItems="center"
+        justifyContent='center' backgroundColor="#EEE5E9" padding="0%">
+        <BlogCardUI blogList={blogListZH} />
+      </TextBox>
     </TextContainer>
 
           }
+      <ImageBox height={height} width={width}>
+        <Image src="https://images.unsplash.com/photo-1501177205451-70e35058c1a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" objectFit="cover" alt="logo" layout='fill' />
+      </ImageBox>
     </Wrapper>
 
   )
 }
 
-export default BlogSlot
+export default BlogSnapSlot

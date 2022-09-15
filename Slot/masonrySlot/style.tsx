@@ -2,7 +2,7 @@ import styled from "@emotion/styled"
 
 export const Wrapper = styled.div({
     label:"wrapper",
-    width: '100vw',
+    width: 1680,
     height: 500, 
     overflowY: 'auto',
     // margin:"5% 0",

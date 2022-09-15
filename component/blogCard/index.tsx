@@ -33,7 +33,7 @@ const BlogCard: FC<Props> = ({ blogContent, blogList }) => {
         data-aos-delay={blogContent.delay}
         data-aos-duration="500"
         data-aos-easing="ease-in-out"
-        sx={{ maxWidth: 300, borderRadius: 2, backgroundColor: themePalette.main,
+        sx={{width:"30%", maxWidth: 330, borderRadius: 2, backgroundColor: themePalette.main,
          boxShadow: "5px 5px 10px 2px rgba(0,0,0,0.25)",
          margin:"2%" }}>
         <CardHeader
@@ -69,7 +69,7 @@ const BlogCard: FC<Props> = ({ blogContent, blogList }) => {
         data-aos-delay={blogContent.delay}
         data-aos-duration="500"
         data-aos-easing="ease-in-out"
-        sx={{
+        sx={{ width:"90%",
           maxWidth: 375, borderRadius: 2, backgroundColor: themePalette.main, display: "flex",
           justifyContent: 'space-between', margin: 1, boxShadow: "5px 5px 10px 2px rgba(0,0,0,0.25)"
         }}>

@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';;
 import Image from 'next/image';
-import { Wrapper, ImageContainer, PageContainer, PageItem, LanguagesEN,LanguagesZH, Hamberger,WrapperBackground } from './menuBar.style';
+import { Wrapper, ImageContainer, PageContainer, PageItem, LanguagesEN,LanguagesZH, Hamberger,WrapperBackground } from './style';
 import Link from 'next/link';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useRouter } from 'next/router'

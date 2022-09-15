@@ -25,7 +25,7 @@ export const Wrapper = styled.div({
 
 
 export const ImageBox = styled.div<Style>({
-    width: "100%",
+    width: 1680,
     height: 600,
     position: "relative",
     "@media(max-width:1440px)": {

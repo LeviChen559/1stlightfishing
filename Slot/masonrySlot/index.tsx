@@ -2,7 +2,7 @@ import React, { FC,useEffect } from 'react';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import {Wrapper} from "./masonrySlot.style"
+import {Wrapper} from "./style"
 import Image from 'next/image'
 import AOS from 'aos';
 import useMediaQuery from '@mui/material/useMediaQuery';

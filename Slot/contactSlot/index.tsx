@@ -1,6 +1,6 @@
 import React, { FC, useEffect, MouseEvent } from 'react'
 import Image from 'next/image'
-import { ImageBox, Wrapper, TextContainer, TextBox } from './contactSlot.style'
+import { ImageBox, Wrapper, TextContainer, TextBox } from './style'
 import { H3, H5, H6, H4 } from "../../component/commonStyle"
 import BasicButtons from '../../component/button'
 import { theme } from "../../utility/theme"
@@ -68,10 +68,10 @@ const ContactSlot: FC<IStyle> = ({ height, width }) => {
 
       }
       <Divider variant="middle" sx={{ backgroundColor: theme.palette.background.default, width: "70%", maxWidth: 800, margin: 5 }} />
-      <FlexCol alignItems='flex-start' justifyContent='space-evenly' >
-        <H5><PhoneIphoneIcon sx={{ fontSize: 20 }} /> (604) 558-3474</H5>
-        <H5> <EmailIcon sx={{ fontSize: 20 }} /> info@1stlightfishing.com</H5>
-        <H5> <FmdGoodIcon sx={{ fontSize: 20 }} />#3 - 5901 Broadway, Burnaby BC V5B 2Y1</H5>
+      <FlexCol borderRadius="0" alignItems='flex-start' justifyContent='space-evenly' >
+       <FlexRow justifyContent='flex-start' ><PhoneIphoneIcon sx={{ fontSize: 20, marginRight:1 }} /> <H5 lineHeight={1.5}> (604) 558-3474</H5></FlexRow>
+       <FlexRow justifyContent='flex-start'><EmailIcon sx={{ fontSize: 20, marginRight:1 }} /> <H5 lineHeight={1.5}>  info@1stlightfishing.com</H5></FlexRow>
+       <FlexRow justifyContent='flex-start'><FmdGoodIcon sx={{ fontSize: 20, marginRight:1 }} /> <H5 lineHeight={1.5}> #3 - 5901 Broadway, Burnaby BC V5B 2Y1</H5></FlexRow>
       </FlexCol>
 
 

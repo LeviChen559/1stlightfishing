@@ -1,7 +1,7 @@
 import React,{ FC,useEffect} from 'react'
 import BlogCard from '../../component/blogCard'
 import {ICard} from '../../utility/type'
-import {Wrapper} from"./blogCardUI.style"
+import {Wrapper} from"./style"
 interface Props{
     blogList:Array<ICard>;
     justifyContent?:string
