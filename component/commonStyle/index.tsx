@@ -39,7 +39,7 @@ export const H3 = styled.h3<IStyle>({
 }, props => ({
     color: props.color,
     fontWeight: props.fontWeight,
-    textShadow:props.textShadow
+    textShadow: props.textShadow
 }))
 export const H4 = styled.h4<IStyle>({
     margin: 0,
@@ -63,6 +63,7 @@ export const H5 = styled.h5<IStyle>({
     fontWeight: 300,
     fontFamily: "Roboto",
     margin: 0,
+    whiteSpace: "pre-wrap",
     color: theme.palette.common.white,
     '@media (max-width: 1440px)': {
         fontSize: "16px",
@@ -74,7 +75,8 @@ export const H5 = styled.h5<IStyle>({
     color: props.color,
     fontWeight: props.fontWeight,
     opacity: props.opacity,
-    lineHeight: props.lineHeight
+    lineHeight: props.lineHeight,
+    margin: props.margin
 }))
 
 export const H6 = styled.h6<IStyle>({
@@ -89,9 +91,13 @@ export const H6 = styled.h6<IStyle>({
 }))
 
 export const ImageBox = styled.div<IStyle>({
-    width: 130,
-    height: 50,
-    position: "relative"
+    width: 600,
+    height: 350,
+    position: "relative",
+    // "@media(max-width:1200px)":{
+    //     width: "90%",
+    //     height: 300,
+    // }
 },
     props => ({
         width: props.width,
@@ -123,10 +129,9 @@ export const FlexCol = styled.div<IStyle>({
     borderRadius: "10px",
     padding: " 2.5%",
     background: theme.palette.background.default,
-    width:"75%",
+    width: "100%",
     maxWidth: 800,
-    height:125
-
+    height: "100%",
 },
     props => ({
         alignItems: props.alignItems,

@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { FC, useState, useEffect,MouseEventHandler } from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -14,20 +14,22 @@ import { theme, themePalette } from "../../utility/theme";
 import Box from '@mui/material/Box';
 import AOS from 'aos';
 import { useMediaQuery } from '@mui/material';
-import 'aos/dist/aos.css';
-
+import {useRouter} from 'next/router'
 interface Props {
   blogContent: ICard;
-  blogList: Array<ICard>
+  blogList: Array<ICard>;
+  onClick?:MouseEventHandler<HTMLDivElement>
 }
 
-const BlogCard: FC<Props> = ({ blogContent, blogList }) => {
+const BlogCard: FC<Props> = ({ blogContent, blogList, }) => {
+  const router =useRouter()
   useEffect(() => { AOS.init(); },)
   const matches = useMediaQuery('(min-width:1200px)');
 
   return <>
     {matches ?
       <Card
+        onClick={()=>router.push(`/en/blog/article/${blogContent.id}`)}
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-delay={blogContent.delay}
@@ -35,7 +37,7 @@ const BlogCard: FC<Props> = ({ blogContent, blogList }) => {
         data-aos-easing="ease-in-out"
         sx={{width:"30%", maxWidth: 330, borderRadius: 2, backgroundColor: themePalette.main,
          boxShadow: "5px 5px 10px 2px rgba(0,0,0,0.25)",
-         margin:"2%" }}>
+         margin:"2%",cursor:"pointer" }}>
         <CardHeader
           avatar={
             <Avatar sx={{ bgcolor: red[500], }} aria-label="recipe">

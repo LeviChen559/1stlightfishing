@@ -1,11 +1,21 @@
 import { Url, UrlObject } from "url";
 
 export interface ICard {
+    id:string;
     title: string;
     subheader: string;
     image: string;
+    image2: string;
+    image3: string;
+    image4: string;
     description: string;
     delay: number;
+    p1?: string;
+    p2?: string;
+    p3?: string;
+    p4?: string;
+    p5?: string;
+
   }
 
   export interface IStaff {
