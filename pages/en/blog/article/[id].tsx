@@ -1,7 +1,5 @@
 import React, { useEffect, useState, FC } from 'react'
-import type { NextPage, GetServerSideProps, GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
-// import { ICard } from '../../../../utility/type'
 import { FlexCol, FlexRow, H3, ImageBox, TextBox, H5, H6 } from '../../../../component/commonStyle'
 import axios from 'axios'
 import Image from 'next/image'
