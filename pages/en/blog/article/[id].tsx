@@ -1,14 +1,31 @@
 import React, { useEffect, useState, FC } from 'react'
 import type { NextPage, GetServerSideProps, GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
-import { ICard } from '../../../../utility/type'
-import { FlexCol, FlexRow, H3, ImageBox, TextBox, H5,H6 } from '../../../../component/commonStyle'
+// import { ICard } from '../../../../utility/type'
+import { FlexCol, FlexRow, H3, ImageBox, TextBox, H5, H6 } from '../../../../component/commonStyle'
 import axios from 'axios'
 import Image from 'next/image'
 import Layout from '../../../../utility/layout/home'
 import VisionSlot from '../../../../Slot/visionSlot'
 import BasicBreadcrumbs from "../../../../component/breadcrumbs"
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+export interface ICard {
+  id: string;
+  title: string;
+  subheader: string;
+  image: string;
+  image2: string;
+  image3: string;
+  // image4: string;
+  description: string;
+  delay: number;
+  p1?: string;
+  p2?: string;
+  p3?: string;
+  p4?: string;
+  p5?: string;
+
+}
 interface Props {
   data: ICard[]
 }
@@ -37,7 +54,7 @@ const Article: FC<Props> = () => {
       <>
         <VisionSlot src="/blogHero-min.jpg" />
         <TextBox justifyContent='flex-start'>
-        <BasicBreadcrumbs Article={data.title}/>
+          <BasicBreadcrumbs Article={data.title} />
         </TextBox>
         <TextBox>
           <H3>{data.title}</H3>
@@ -62,8 +79,8 @@ const Article: FC<Props> = () => {
             <H5 margin="2.5% 0" lineHeight={1.5}>{data.p5}</H5>
           </FlexCol>
         </FlexRow>
-        <TextBox justifyContent='flex-end' onClick={()=>router.push("/en/blog")} style={{cursor:"pointer"}}>
-         <ArrowBackIosNewIcon sx={{fontSize:"20px",margin:"0 5px"}}/><H5>Previous page</H5>
+        <TextBox justifyContent='flex-end' onClick={() => router.push("/en/blog")} style={{ cursor: "pointer" }}>
+          <ArrowBackIosNewIcon sx={{ fontSize: "20px", margin: "0 5px" }} /><H5>Previous page</H5>
         </TextBox>
       </>
 
