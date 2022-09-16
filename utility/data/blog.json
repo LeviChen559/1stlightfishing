@@ -1,6 +1,6 @@
- [
+[
   {
-    "id":"01",
+    "id": "01",
     "title": "Hello to the Internet!",
     "subheader": "May 12, 2017",
     "image": "/blogs/blog1.png",
@@ -14,43 +14,85 @@
     "p3": "• Fresh content providing insight and resourceful knowledge about varying fishing topics of interest. The content we cover will be entertaining, educational and yet at times refreshing compared to other conventional fishing reads. \n• Some posts may contain updates in local fisheries, some will discuss fish behaviour, or introduce new fishing techniques particularly productive in our waters (it will be difficult to keep Steven from sharing ALL of his secrets!). \n• Meanwhile some of our other blogs might just genuinely geek over new fishing tackle and showcase their effective functions. \n• We will also be taking an active role in social media and events to continue to connect with BC's fishing community and reach out to new and veteran anglers alike. ",
     "p4": "There is a lot more to come, but we don’t want to spoil all the fun and surprise yet! Overall, we’re very excited to get the ball rolling and hope that our content can further grow your passion for recreational fishing. Feel free to visit the shop and come share your fishing stories and adventures with us. Meet as a fellow angler and leave as a friend!",
     "p5": "A big shout out to all of our close friends and fishing companions who have supported us throughout these growing years (you know who you are). All the fish we hooked, roads traveled, and memories we share have developed into all these awesome friendships! First Light Fishing & Tackle is here today because of your support, so we hope this website and it’s contents can be our way of showing you how much we appreciate you guys! Be sure to check out the rest of our blogs, products section, and services to see what we're all about! Stay tuned… more hidden away in our tackle box..."
-    
-    }, {
-      "id": "02",
-      "title": "Story Behind The Vision",
-      "subheader": "May 13, 2017",
-      "image": "/blogs/blog2.png",
-      "description": "Fishing sure can be an unpredictable activity, sometimes it is fast paced and exciting when your rod is fully bent",
-      "delay": 200
-    }, {
-      "id": "03",
-      "title": "CARP BEHAVIOUR 101",
-      "subheader": "May 14, 2017",
-      "image": "/blogs/blog3.png",
-      "description": "At First Light Fishing & Tackle, one of our most favourite fish species to target is carp. Intelligent, adaptable, and",
-      "delay": 300
-    },{
-      "id": "04",
-      "title": "故事的背後及店長簡介!",
-      "subheader": "五月 12, 2017",
-      "image": "/blogs/blog1.png",
-      "description": "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning",
-      "delay": 100
-    },
-    {
-      "id": "05",
-      "title": "新手入門掃盲!",
-      "subheader": "五月 12, 2017",
-      "image": "/blogs/blog2.png",
-      "description": "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning",
-      "delay": 200
-    },
-    {
-      "id": "06",
-      "title": "裝備論!",
-      "subheader": "五月 12, 2017",
-      "image": "/blogs/blog3.png",
-      "description": "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning",
-      "delay": 300
-    }
-  ]
+  },
+  {
+    "id": "02",
+    "title": "Story Behind The Vision",
+    "subheader": "May 13, 2017",
+    "image": "/blogs/blog2.png",
+    "image2": "/blogs/blog1-2.jpg",
+    "image3": "/blogs/blog1-3.jpg",
+    "image4": "/blogs/blog1-4.jpg",
+    "description": "Fishing sure can be an unpredictable activity, sometimes it is fast paced and exciting when your rod is fully bent",
+    "delay": 200,
+    "p1": "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning the shop (along with some discipline to leave our rods alone) and got to launching our website! For our fishing friends and long time customers, we know what you are thinking… it is about time! And of course for new faces to the shop… Welcome to First Light Fishing & Tackle!",
+    "p2": "Our vision is to continue to share our passion in recreational fishing with other anglers and as well as offer our knowledge, products, and services to those fishing in our beautiful waters of British Columbia. Ultimately, we are a hub for those who simply live, love, and fish. Here is the game plan First Light Fishing & Tackle and what everyone can expect from our first steps into the web:",
+    "p3": "• Fresh content providing insight and resourceful knowledge about varying fishing topics of interest. The content we cover will be entertaining, educational and yet at times refreshing compared to other conventional fishing reads. \n• Some posts may contain updates in local fisheries, some will discuss fish behaviour, or introduce new fishing techniques particularly productive in our waters (it will be difficult to keep Steven from sharing ALL of his secrets!). \n• Meanwhile some of our other blogs might just genuinely geek over new fishing tackle and showcase their effective functions. \n• We will also be taking an active role in social media and events to continue to connect with BC's fishing community and reach out to new and veteran anglers alike. ",
+    "p4": "There is a lot more to come, but we don’t want to spoil all the fun and surprise yet! Overall, we’re very excited to get the ball rolling and hope that our content can further grow your passion for recreational fishing. Feel free to visit the shop and come share your fishing stories and adventures with us. Meet as a fellow angler and leave as a friend!",
+    "p5": "A big shout out to all of our close friends and fishing companions who have supported us throughout these growing years (you know who you are). All the fish we hooked, roads traveled, and memories we share have developed into all these awesome friendships! First Light Fishing & Tackle is here today because of your support, so we hope this website and it’s contents can be our way of showing you how much we appreciate you guys! Be sure to check out the rest of our blogs, products section, and services to see what we're all about! Stay tuned… more hidden away in our tackle box..."
+  },
+  {
+    "id": "03",
+    "title": "CARP BEHAVIOUR 101",
+    "subheader": "May 14, 2017",
+    "image": "/blogs/blog3.png",
+    "image2": "/blogs/blog1-2.jpg",
+    "image3": "/blogs/blog1-3.jpg",
+    "image4": "/blogs/blog1-4.jpg",
+    "description": "At First Light Fishing & Tackle, one of our most favourite fish species to target is carp. Intelligent, adaptable, and",
+    "delay": 300,
+    "p1": "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning the shop (along with some discipline to leave our rods alone) and got to launching our website! For our fishing friends and long time customers, we know what you are thinking… it is about time! And of course for new faces to the shop… Welcome to First Light Fishing & Tackle!",
+    "p2": "Our vision is to continue to share our passion in recreational fishing with other anglers and as well as offer our knowledge, products, and services to those fishing in our beautiful waters of British Columbia. Ultimately, we are a hub for those who simply live, love, and fish. Here is the game plan First Light Fishing & Tackle and what everyone can expect from our first steps into the web:",
+    "p3": "• Fresh content providing insight and resourceful knowledge about varying fishing topics of interest. The content we cover will be entertaining, educational and yet at times refreshing compared to other conventional fishing reads. \n• Some posts may contain updates in local fisheries, some will discuss fish behaviour, or introduce new fishing techniques particularly productive in our waters (it will be difficult to keep Steven from sharing ALL of his secrets!). \n• Meanwhile some of our other blogs might just genuinely geek over new fishing tackle and showcase their effective functions. \n• We will also be taking an active role in social media and events to continue to connect with BC's fishing community and reach out to new and veteran anglers alike. ",
+    "p4": "There is a lot more to come, but we don’t want to spoil all the fun and surprise yet! Overall, we’re very excited to get the ball rolling and hope that our content can further grow your passion for recreational fishing. Feel free to visit the shop and come share your fishing stories and adventures with us. Meet as a fellow angler and leave as a friend!",
+    "p5": "A big shout out to all of our close friends and fishing companions who have supported us throughout these growing years (you know who you are). All the fish we hooked, roads traveled, and memories we share have developed into all these awesome friendships! First Light Fishing & Tackle is here today because of your support, so we hope this website and it’s contents can be our way of showing you how much we appreciate you guys! Be sure to check out the rest of our blogs, products section, and services to see what we're all about! Stay tuned… more hidden away in our tackle box..."
+  },
+  {
+    "id": "04",
+    "title": "故事的背後及店長簡介!",
+    "subheader": "五月 12, 2017",
+    "image": "/blogs/blog1.png",
+    "image2": "/blogs/blog1-2.jpg",
+    "image3": "/blogs/blog1-3.jpg",
+    "image4": "/blogs/blog1-4.jpg",
+    "description": "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning",
+    "delay": 100,
+    "p1": "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning the shop (along with some discipline to leave our rods alone) and got to launching our website! For our fishing friends and long time customers, we know what you are thinking… it is about time! And of course for new faces to the shop… Welcome to First Light Fishing & Tackle!",
+    "p2": "Our vision is to continue to share our passion in recreational fishing with other anglers and as well as offer our knowledge, products, and services to those fishing in our beautiful waters of British Columbia. Ultimately, we are a hub for those who simply live, love, and fish. Here is the game plan First Light Fishing & Tackle and what everyone can expect from our first steps into the web:",
+    "p3": "• Fresh content providing insight and resourceful knowledge about varying fishing topics of interest. The content we cover will be entertaining, educational and yet at times refreshing compared to other conventional fishing reads. \n• Some posts may contain updates in local fisheries, some will discuss fish behaviour, or introduce new fishing techniques particularly productive in our waters (it will be difficult to keep Steven from sharing ALL of his secrets!). \n• Meanwhile some of our other blogs might just genuinely geek over new fishing tackle and showcase their effective functions. \n• We will also be taking an active role in social media and events to continue to connect with BC's fishing community and reach out to new and veteran anglers alike. ",
+    "p4": "There is a lot more to come, but we don’t want to spoil all the fun and surprise yet! Overall, we’re very excited to get the ball rolling and hope that our content can further grow your passion for recreational fishing. Feel free to visit the shop and come share your fishing stories and adventures with us. Meet as a fellow angler and leave as a friend!",
+    "p5": "A big shout out to all of our close friends and fishing companions who have supported us throughout these growing years (you know who you are). All the fish we hooked, roads traveled, and memories we share have developed into all these awesome friendships! First Light Fishing & Tackle is here today because of your support, so we hope this website and it’s contents can be our way of showing you how much we appreciate you guys! Be sure to check out the rest of our blogs, products section, and services to see what we're all about! Stay tuned… more hidden away in our tackle box..."
+  },
+  {
+    "id": "05",
+    "title": "新手入門掃盲!",
+    "subheader": "五月 12, 2017",
+    "image": "/blogs/blog2.png",
+    "image2": "/blogs/blog1-2.jpg",
+    "image3": "/blogs/blog1-3.jpg",
+    "image4": "/blogs/blog1-4.jpg",
+    "description": "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning",
+    "delay": 200,
+    "p1": "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning the shop (along with some discipline to leave our rods alone) and got to launching our website! For our fishing friends and long time customers, we know what you are thinking… it is about time! And of course for new faces to the shop… Welcome to First Light Fishing & Tackle!",
+    "p2": "Our vision is to continue to share our passion in recreational fishing with other anglers and as well as offer our knowledge, products, and services to those fishing in our beautiful waters of British Columbia. Ultimately, we are a hub for those who simply live, love, and fish. Here is the game plan First Light Fishing & Tackle and what everyone can expect from our first steps into the web:",
+    "p3": "• Fresh content providing insight and resourceful knowledge about varying fishing topics of interest. The content we cover will be entertaining, educational and yet at times refreshing compared to other conventional fishing reads. \n• Some posts may contain updates in local fisheries, some will discuss fish behaviour, or introduce new fishing techniques particularly productive in our waters (it will be difficult to keep Steven from sharing ALL of his secrets!). \n• Meanwhile some of our other blogs might just genuinely geek over new fishing tackle and showcase their effective functions. \n• We will also be taking an active role in social media and events to continue to connect with BC's fishing community and reach out to new and veteran anglers alike. ",
+    "p4": "There is a lot more to come, but we don’t want to spoil all the fun and surprise yet! Overall, we’re very excited to get the ball rolling and hope that our content can further grow your passion for recreational fishing. Feel free to visit the shop and come share your fishing stories and adventures with us. Meet as a fellow angler and leave as a friend!",
+    "p5": "A big shout out to all of our close friends and fishing companions who have supported us throughout these growing years (you know who you are). All the fish we hooked, roads traveled, and memories we share have developed into all these awesome friendships! First Light Fishing & Tackle is here today because of your support, so we hope this website and it’s contents can be our way of showing you how much we appreciate you guys! Be sure to check out the rest of our blogs, products section, and services to see what we're all about! Stay tuned… more hidden away in our tackle box..."
+  },
+  {
+    "id": "06",
+    "title": "裝備論!",
+    "subheader": "五月 12, 2017",
+    "image": "/blogs/blog3.png",
+    "image2": "/blogs/blog1-2.jpg",
+    "image3": "/blogs/blog1-3.jpg",
+    "image4": "/blogs/blog1-4.jpg",
+    "description": "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning",
+    "delay": 300,
+    "p1": "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning the shop (along with some discipline to leave our rods alone) and got to launching our website! For our fishing friends and long time customers, we know what you are thinking… it is about time! And of course for new faces to the shop… Welcome to First Light Fishing & Tackle!",
+    "p2": "Our vision is to continue to share our passion in recreational fishing with other anglers and as well as offer our knowledge, products, and services to those fishing in our beautiful waters of British Columbia. Ultimately, we are a hub for those who simply live, love, and fish. Here is the game plan First Light Fishing & Tackle and what everyone can expect from our first steps into the web:",
+    "p3": "• Fresh content providing insight and resourceful knowledge about varying fishing topics of interest. The content we cover will be entertaining, educational and yet at times refreshing compared to other conventional fishing reads. \n• Some posts may contain updates in local fisheries, some will discuss fish behaviour, or introduce new fishing techniques particularly productive in our waters (it will be difficult to keep Steven from sharing ALL of his secrets!). \n• Meanwhile some of our other blogs might just genuinely geek over new fishing tackle and showcase their effective functions. \n• We will also be taking an active role in social media and events to continue to connect with BC's fishing community and reach out to new and veteran anglers alike. ",
+    "p4": "There is a lot more to come, but we don’t want to spoil all the fun and surprise yet! Overall, we’re very excited to get the ball rolling and hope that our content can further grow your passion for recreational fishing. Feel free to visit the shop and come share your fishing stories and adventures with us. Meet as a fellow angler and leave as a friend!",
+    "p5": "A big shout out to all of our close friends and fishing companions who have supported us throughout these growing years (you know who you are). All the fish we hooked, roads traveled, and memories we share have developed into all these awesome friendships! First Light Fishing & Tackle is here today because of your support, so we hope this website and it’s contents can be our way of showing you how much we appreciate you guys! Be sure to check out the rest of our blogs, products section, and services to see what we're all about! Stay tuned… more hidden away in our tackle box..."
+  }
+]

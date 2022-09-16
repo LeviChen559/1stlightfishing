@@ -8,6 +8,8 @@ export default async function handler(req: any, res: any) {
   if (req.query.id) {
     lists = bloglist.filter(o => o.id === req.query.id);
   }
+    lists= bloglist
+  // console.log("lists",lists)
   res.status(200).json(lists);
 }
 

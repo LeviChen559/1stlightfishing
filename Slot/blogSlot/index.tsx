@@ -10,61 +10,23 @@ import axios from 'axios'
 import { useRouter } from 'next/router'
 import { IStyle,ICard} from '../../utility/type'
 
-export const blogList:Array<ICard> = [
-  {
-    id:"01",
-    title: "Hello to the Internet!",
-    subheader: "May 12, 2017",
-    image: "/blogs/blog1.png",
-    description: "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning",
-    delay: 100
-  }, {
-    id: "02",
-    title: "Story Behind The Vision",
-    subheader: "May 13, 2017",
-    image: "/blogs/blog2.png",
-    description: "Fishing sure can be an unpredictable activity, sometimes it is fast paced and exciting when your rod is fully bent",
-    delay: 200
-  }, {
-    id: "03",
-    title: "CARP BEHAVIOUR 101",
-    subheader: "May 14, 2017",
-    image: "/blogs/blog3.png",
-    description: "At First Light Fishing & Tackle, one of our most favourite fish species to target is carp. Intelligent, adaptable, and",
-    delay: 300
-  },{
-    id: "04",
-    title: "故事的背後及店長簡介!",
-    subheader: "五月 12, 2017",
-    image: "/blogs/blog1.png",
-    description: "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning",
-    delay: 100
-  },
-  {
-    id: "05",
-    title: "新手入門掃盲!",
-    subheader: "五月 12, 2017",
-    image: "/blogs/blog2.png",
-    description: "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning",
-    delay: 200
-  },
-  {
-    id: "06",
-    title: "裝備論!",
-    subheader: "五月 12, 2017",
-    image: "/blogs/blog3.png",
-    description: "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning",
-    delay: 300
-  },
-]
-
-const blogListEN=blogList.filter((blog) => Number(blog.id)<4)
-const blogListZH=blogList.filter((blog) => Number(blog.id)>3)
 interface Props{
   onClick?:MouseEventHandler<HTMLDivElement>
 }
 
 const BlogSlot: FC<Props> = ({ onClick}) => {
+  const [blogList,setBlogList] =useState <ICard[]>([])
+  useEffect(() => {
+    GetArticle()
+  }, [])
+  const GetArticle = async () => {
+    const res = await axios.get("/api/getBlog");
+      setBlogList(res.data)
+  }
+  console.log("blogList", blogList)
+
+  const blogListEN=blogList.filter((blog) => Number(blog.id)<4)
+  const blogListZH=blogList.filter((blog) => Number(blog.id)>3)
   const router = useRouter()
   const H5_style = {
     color: theme.palette.background.default,
@@ -75,7 +37,7 @@ const BlogSlot: FC<Props> = ({ onClick}) => {
     <Wrapper >
           {!router.pathname.includes("/zh") ?
       <TextContainer>
-          <BlogCardUI blogList={blogListEN}  justifyContent="flex-start"/>
+          <BlogCardUI blogList={blogListEN}  justifyContent="flex-start" onClick={onClick}/>
      
       </TextContainer>:
       <TextContainer>

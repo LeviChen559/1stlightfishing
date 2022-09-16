@@ -1,15 +1,5 @@
 import styled from "@emotion/styled"
-export interface Style {
-    width?: number,
-    height?: number,
-    flex?: number,
-    justifyContent?: string,
-    flexDirection?: "column" | "inherit" | "-moz-initial" | "initial" | "revert" | "unset" | "column-reverse" | "row" | "row-reverse" | undefined,
-    alignItems?: string,
-    backgroundColor?: string,
-    padding?: string,
-
-}
+import { IStyle } from "../../utility/type"
 export const Wrapper = styled.div({
     width: "100%",
     height: "100%",
@@ -24,7 +14,7 @@ export const Wrapper = styled.div({
 })
 
 
-export const ImageBox = styled.div<Style>({
+export const ImageBox = styled.div<IStyle>({
     width: 1680,
     height: 600,
     position: "relative",
@@ -64,7 +54,7 @@ export const TextContainer = styled.div({
 
     }
 })
-export const TextBox = styled.div<Style>({
+export const TextBox = styled.div<IStyle>({
     "&:last-child": { flex: 3.5 },
     flex: 1,
     height: 600,
@@ -86,7 +76,7 @@ export const TextBox = styled.div<Style>({
     justifyContent: props.justifyContent,
     alignItems: props.alignItems,
     height: props.height,
-    backgroundColor: props.backgroundColor,
+    background: props.background,
     flexDirection: props.flexDirection,
     padding: props.padding
 }))  
