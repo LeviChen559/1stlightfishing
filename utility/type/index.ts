@@ -5,7 +5,7 @@ export interface ICard {
     image: string;
     image2: string;
     image3: string;
-    // image4: string;
+    image4: string;
     description: string;
     delay: number;
     p1?: string;

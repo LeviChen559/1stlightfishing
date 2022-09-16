@@ -10,82 +10,28 @@ import { ICard,IStyle } from '../../utility/type'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 
-export const blogList = [
-  {
-    id: "01",
-    title: "Hello to the Internet!",
-    subheader: "May 12, 2017",
-    image: "/blogs/blog1.png",
-    image2: "",
-    image3: "",
-    imag4: "",
-    description: "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning",
-    delay: 100
-  }, {
-    id: "02",
-    title: "Story Behind The Vision",
-    subheader: "May 13, 2017",
-    image: "/blogs/blog2.png",
-    image2: "",
-    image3: "",
-    imag4: "",
-    description: "Fishing sure can be an unpredictable activity, sometimes it is fast paced and exciting when your rod is fully bent",
-    delay: 200
-  }, {
-    id: "03",
-    title: "CARP BEHAVIOUR 101",
-    subheader: "May 14, 2017",
-    image: "/blogs/blog3.png",
-    image2: "",
-    image3: "",
-    imag4: "",
-    description: "At First Light Fishing & Tackle, one of our most favourite fish species to target is carp. Intelligent, adaptable, and",
-    delay: 300
-  },{
-    id: "04",
-    title: "故事的背後及店長簡介!",
-    subheader: "五月 12, 2017",
-    image: "/blogs/blog1.png",
-    image2: "",
-    image3: "",
-    imag4: "",
-    description: "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning",
-    delay: 100
-  },
-  {
-    id: "05",
-    title: "新手入門掃盲!",
-    subheader: "五月 12, 2017",
-    image: "/blogs/blog2.png",
-    image2: "",
-    image3: "",
-    imag4: "",
-    description: "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning",
-    delay: 200
-  },
-  {
-    id: "06",
-    title: "裝備論!",
-    subheader: "五月 12, 2017",
-    image: "/blogs/blog3.png",
-    image2: "",
-    image3: "",
-    imag4: "",
-    description: "Well well well, after five years since our grand opening in 2012, we finally found some time away from manning",
-    delay: 300
-  },
-]
-const blogListEN=blogList.filter((blog) => Number(blog.id)<4)
-const blogListZH=blogList.filter((blog) => Number(blog.id)>3)
 
 
 const BlogSnapSlot: FC<IStyle> = ({ height, width }) => {
+  const [blogList,setBlogList] =useState <ICard[]>([])
+  useEffect(() => {
+    GetArticle()
+  }, [])
+  const GetArticle = async () => {
+    const res = await axios.get("/api/getBlog");
+      setBlogList(res.data)
+  }
+  console.log("blogList", blogList)
+
   const router = useRouter()
   const H5_style = {
     color: theme.palette.background.default,
     background: "rgba(255, 255, 255, 0.8)",
     padding: "2.5%"
   }
+  
+  const blogListEN=blogList.filter((blog) => Number(blog.id)<4)
+  const blogListZH=blogList.filter((blog) => Number(blog.id)>3)
   return (
     <Wrapper >
           {!router.pathname.includes("/zh") ?
