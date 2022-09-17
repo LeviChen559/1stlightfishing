@@ -22,7 +22,7 @@ const ServiceSlot: FC<IStyle> = ({ height, width }) => {
           <H5 style={H5_style}>Whether you and your friends are new to fishing or are experienced anglers... here at First Light Tackle, we provide exciting and rewarding opportunities for everyone to develop their fishing skills further and ultimately share their mutual passion for fishing.</H5>
         </TextBox>
         <TextBox  data-active={true} alignItems="center" justifyContent='flex-end' >
-          <BasicButtons text="JOIN US NOW" handleLinkClick={()=>router.push("/en/service")}/>
+          <BasicButtons text="JOIN US NOW" handleLinkClick={()=>router.push("/en/service")} color="warning"/>
         </TextBox>
       </TextContainer>
       :
@@ -32,7 +32,7 @@ const ServiceSlot: FC<IStyle> = ({ height, width }) => {
         <H5 style={H5_style}>無論您和您的朋友是釣魚新手還是經驗豐富的垂釣者......在 First Light Tackle，我們為每個人提供令人興奮和有益的機會，以進一步發展他們的釣魚技能並最終分享他們對釣魚的共同熱情。</H5>
       </TextBox>
       <TextBox  data-active={true} alignItems="center" justifyContent='flex-end' >
-        <BasicButtons text="加入我們" handleLinkClick={()=>router.push("/zh/service")}/>
+        <BasicButtons text="加入我們" handleLinkClick={()=>router.push("/zh/service")} color="warning"/>
       </TextBox>
     </TextContainer>
     }

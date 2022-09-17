@@ -15,6 +15,7 @@ import Box from '@mui/material/Box';
 import AOS from 'aos';
 import { useMediaQuery } from '@mui/material';
 import {useRouter} from 'next/router'
+import { Opacity } from '@mui/icons-material';
 interface Props {
   blogContent: ICard;
   blogList: Array<ICard>;
@@ -35,9 +36,13 @@ const BlogCard: FC<Props> = ({ blogContent, blogList, }) => {
         data-aos-delay={blogContent.delay}
         data-aos-duration="500"
         data-aos-easing="ease-in-out"
-        sx={{width:"30%", maxWidth: 330, borderRadius: 2, backgroundColor: themePalette.main,
+        sx={[{width:"30%", maxWidth: 330, borderRadius: 2, backgroundColor: themePalette.main,
          boxShadow: "5px 5px 10px 2px rgba(0,0,0,0.25)",
-         margin:"2%",cursor:"pointer" }}>
+         margin:"2%",cursor:"pointer" },
+         {
+          '&:hover': {
+            backgroundColor:"gray"
+}}]}>
         <CardHeader
           avatar={
             <Avatar sx={{ bgcolor: red[500], }} aria-label="recipe">
@@ -66,15 +71,24 @@ const BlogCard: FC<Props> = ({ blogContent, blogList, }) => {
       </Card>
       :
       <Card
+      onClick={()=>router.push(`/en/blog/article/${blogContent.id}`)}
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-delay={blogContent.delay}
         data-aos-duration="500"
         data-aos-easing="ease-in-out"
-        sx={{ width:"90%",
+        sx={[{ width:"90%",
+        height:150,
           maxWidth: 375, borderRadius: 2, backgroundColor: themePalette.main, display: "flex",
           justifyContent: 'space-between', margin: 1, boxShadow: "5px 5px 10px 2px rgba(0,0,0,0.25)"
-        }}>
+          ,cursor:"pointer",   },
+           {
+            '&:hover': {
+              backgroundColor:"gray"
+            },
+          },
+          
+          ]}>
         <Box sx={{ display: 'flex', flexDirection: 'column', }}>
           <CardContent sx={{ flex: '10 auto' }}>
             <Typography component="div" variant="h6">
