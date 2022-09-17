@@ -17,13 +17,17 @@ interface Props{
 const BlogSlot: FC<Props> = ({ onClick}) => {
   const [blogList,setBlogList] =useState <ICard[]>([])
   useEffect(() => {
-    GetArticle()
-  }, [])
-  const GetArticle = async () => {
-    const res = await axios.get("/api/getBlog");
+    let canceled =false;
+    const GetArticle = async () => {
+      const res = await axios.get("/api/getBlog");
+     if (canceled)return; 
       setBlogList(res.data)
-  }
-  console.log("blogList", blogList)
+      console.log("fetching article")
+    }
+    GetArticle()
+    return ()=>{canceled = true}
+  }, [])
+  
 
   const blogListEN=blogList.filter((blog) => Number(blog.id)<4)
   const blogListZH=blogList.filter((blog) => Number(blog.id)>3)

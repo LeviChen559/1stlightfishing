@@ -9,14 +9,15 @@ interface Props{
   width?: string;
   margin?: string;
   handleLinkClick?:MouseEventHandler<HTMLButtonElement>
+  color?: "warning" | "error" | "inherit" | "primary" | "secondary" | "success" | "info" | undefined
 }
 
-const BasicButtons: FC<Props> = ({ text, background, width, margin,handleLinkClick}) => {
+const BasicButtons: FC<Props> = ({ text, background, width, margin,handleLinkClick,color}) => {
   const router = useRouter()
   // const handleLinkClick = () => router.push(href);
   return (
 
-    <Button variant="contained" color='warning' sx={{ background: background, width: width, margin: margin }}
+    <Button variant="contained" color={color} sx={{ background: background, width: width, margin: margin }}
       onClick={handleLinkClick}
     
     >{text}</Button>

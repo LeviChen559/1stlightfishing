@@ -15,13 +15,17 @@ import { useRouter } from 'next/router'
 const BlogSnapSlot: FC<IStyle> = ({ height, width }) => {
   const [blogList,setBlogList] =useState <ICard[]>([])
   useEffect(() => {
+    let cancled =false;
+    const GetArticle = async () => {
+      const res = await axios.get("/api/getBlog");
+      if (cancled) return;
+        setBlogList(res.data)
+        console.log("fetching article")
+    }
     GetArticle()
+   return ()=>{cancled = true;}
   }, [])
-  const GetArticle = async () => {
-    const res = await axios.get("/api/getBlog");
-      setBlogList(res.data)
-  }
-  console.log("blogList", blogList)
+
 
   const router = useRouter()
   const H5_style = {

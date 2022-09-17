@@ -6,7 +6,7 @@ import BasicButtons from '../../component/button'
 import { theme } from "../../utility/theme"
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import { FlexRow, FlexCol } from '../../component/commonStyle'
+import { FlexRow, FlexCol,FlexRowNoChange } from '../../component/commonStyle'
 import Divider from '@mui/material/Divider';
 import { IStyle } from '../../utility/type'
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
@@ -45,10 +45,10 @@ const ContactSlot: FC<IStyle> = ({ height, width }) => {
             backgroundColor: theme.palette.background.default, width: "75%", maxWidth: 800,
             marginBottom: 2, height: 200, overflow: "auto"
           }} />
-          <FlexRow >
+          <FlexRowNoChange >
             <BasicButtons width="100px" text="Cancle" margin="0 2.5%" handleLinkClick={handleSubmit} />
             <BasicButtons width="100px" text="Submit" margin="0 2.5%" handleLinkClick={handleSubmit} />
-          </FlexRow>
+          </FlexRowNoChange>
         </TextContainer>
         :
         <TextContainer>
@@ -60,21 +60,18 @@ const ContactSlot: FC<IStyle> = ({ height, width }) => {
             backgroundColor: theme.palette.background.default, width: "75%", maxWidth: 800,
             marginBottom: 2, height: 200, overflow: "auto"
           }} />
-          <FlexRow >
+          <FlexRowNoChange  flexDirection='row'>
             <BasicButtons width="100px" text="取消" margin="0 2.5%" handleLinkClick={handleSubmit} />
             <BasicButtons width="100px" text="送出" margin="0 2.5%" handleLinkClick={handleSubmit} />
-          </FlexRow>
+          </FlexRowNoChange>
         </TextContainer>
-
       }
       <Divider variant="middle" sx={{ backgroundColor: theme.palette.background.default, width: "70%", maxWidth: 800, margin: 5 }} />
-      <FlexCol borderRadius="0" alignItems='flex-start' justifyContent='space-evenly' >
-       <FlexRow justifyContent='flex-start' ><PhoneIphoneIcon sx={{ fontSize: 20, marginRight:1 }} /> <H5 lineHeight={1.5}> (604) 558-3474</H5></FlexRow>
-       <FlexRow justifyContent='flex-start'><EmailIcon sx={{ fontSize: 20, marginRight:1 }} /> <H5 lineHeight={1.5}>  info@1stlightfishing.com</H5></FlexRow>
-       <FlexRow justifyContent='flex-start'><FmdGoodIcon sx={{ fontSize: 20, marginRight:1 }} /> <H5 lineHeight={1.5}> #3 - 5901 Broadway, Burnaby BC V5B 2Y1</H5></FlexRow>
+      <FlexCol borderRadius="0" alignItems='flex-start' justifyContent='space-evenly' width="75%" maxWidth={800}>
+       <FlexRowNoChange justifyContent='flex-start' ><PhoneIphoneIcon sx={{ fontSize: 20, marginRight:1 }} /> <H5 lineHeight={1.5}> (604) 558-3474</H5></FlexRowNoChange>
+       <FlexRowNoChange justifyContent='flex-start'><EmailIcon sx={{ fontSize: 20, marginRight:1 }} /> <H5 lineHeight={1.5}>  info@1stlightfishing.com</H5></FlexRowNoChange>
+       <FlexRowNoChange justifyContent='flex-start'><FmdGoodIcon sx={{ fontSize: 20, marginRight:1 }} /> <H5 lineHeight={1.5}> #3 - 5901 Broadway, Burnaby BC V5B 2Y1</H5></FlexRowNoChange>
       </FlexCol>
-
-
     </Wrapper>
 
   )

@@ -7,12 +7,13 @@ import ServiceSlot from '../../Slot/serviceSlot'
 import BlogSlot from '../../Slot/blogSnapSlot'
 import BrandSlot from '../../Slot/brandsSlot'
 import ProductSlot from '../../Slot/productSlot'
+import {productList} from '../../utility/data/productList'
 const Home: NextPage = () => {
   return <Layout title="First Light Fishing & Tackle">
     <>
       <HeroSlot />
       <FeatureSlot />
-      <ProductSlot/>
+      <ProductSlot color='warning' productList={productList} title="POPULAR ITEMS"/>
       <BlogSlot />
       <ServiceSlot />
       <MasonrySlot />

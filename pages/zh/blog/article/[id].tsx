@@ -7,23 +7,8 @@ import Layout from '../../../../utility/layout/home'
 import VisionSlot from '../../../../Slot/visionSlot'
 import BasicBreadcrumbs from "../../../../component/breadcrumbs"
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-export interface ICard {
-  id: string;
-  title: string;
-  subheader: string;
-  image: string;
-  image2: string;
-  image3: string;
-  image4: string;
-  description: string;
-  delay: number;
-  p1?: string;
-  p2?: string;
-  p3?: string;
-  p4?: string;
-  p5?: string;
+import { ICard } from '../../../../utility/type'
 
-}
 interface Props {
   data: ICard[]
 }
@@ -33,6 +18,7 @@ const Article: FC<Props> = () => {
   const [data, setData] = useState<ICard>(Object);
 
   useEffect(() => {
+    let canceled =false
     const GetArticle = async () => {
       const res = await axios.get("/api/getBlog", {
         params: {
@@ -40,12 +26,14 @@ const Article: FC<Props> = () => {
         }
       });
       if (res.data[0]) {
+        if(canceled) return;
         setData(res.data[0])
+        console.log("fetching data")
       }
     }
     GetArticle()
+    return ()=>{canceled=true}
   }, [id])
-  console.log("data", data)
 
   return <>
     <Layout title="First Light Fishing & Tackle/Blog">
@@ -58,7 +46,7 @@ const Article: FC<Props> = () => {
           <H3>{data.title}</H3>
         </TextBox>
         <FlexRow alignItems='flex-start'>
-          <FlexCol>
+         {(data.image&& data.image2&& data.image3&& data.image4)&& <FlexCol>
             <ImageBox >
               <Image src={data.image} alt={data.image} layout="fill" objectFit='cover' />
             </ImageBox>
@@ -68,7 +56,7 @@ const Article: FC<Props> = () => {
             <ImageBox >
               <Image src={data.image3} alt={data.image3} layout="fill" objectFit='cover' />
             </ImageBox>
-          </FlexCol>
+          </FlexCol>}
           <FlexCol justifyContent='flex-start'>
             <H5 margin="2.5% 0" lineHeight={1.5}>{data.p1}</H5>
             <H5 margin="2.5% 0" lineHeight={1.5}>{data.p2}</H5>

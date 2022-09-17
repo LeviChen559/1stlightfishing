@@ -22,11 +22,17 @@ export interface ICard {
     intro: string;
     nickname: string;
     id:string
-
+  }
+  export interface IProductCard {
+    id:string;
+    img : string;
+    text : string;
+    delay: string
   }
   export interface IStyle {
-    width?: number,
-    height?: number,
+    width?: number | string,
+    maxWidth?: number,
+    height?: number | string,
     flex?: number,
     flexDirection?: "column" | "inherit" | "-moz-initial" | "initial" | "revert" | "unset" | "column-reverse" | "row" | "row-reverse" | undefined,
     justifyContent?:string,
@@ -41,6 +47,8 @@ export interface ICard {
     hrefLink?: string;
     border?: string;
     borderRadius?: string;
-    lineHeight?: number;
+    lineHeight?: number | string,
     textShadow?: string;
 }
+
+

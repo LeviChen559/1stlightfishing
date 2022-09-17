@@ -47,6 +47,7 @@ export const H4 = styled.h4<IStyle>({
     fontWeight: 300,
     fontFamily: "Roboto",
     marginTop: '10px',
+    whiteSpace: "pre-wrap",
     color: theme.palette.common.white,
     '@media (max-width: 1440px)': {
         fontSize: "18px",
@@ -56,7 +57,9 @@ export const H4 = styled.h4<IStyle>({
     }
 }, props => ({
     color: props.color,
-    fontWeight: props.fontWeight
+    fontWeight: props.fontWeight,
+    lineHeight: props.lineHeight,
+    margin: props.margin,
 }))
 export const H5 = styled.h5<IStyle>({
     fontSize: '18px',
@@ -130,7 +133,6 @@ export const FlexCol = styled.div<IStyle>({
     padding: " 2.5%",
     background: theme.palette.background.default,
     width: "100%",
-    maxWidth: 800,
     height: "100%",
 },
     props => ({
@@ -139,6 +141,7 @@ export const FlexCol = styled.div<IStyle>({
         width: props.width,
         height: props.height,
         borderRadius: props.borderRadius,
+        maxWidth: props.maxWidth
     }))
 export const FlexRow = styled.div<IStyle>({
     display: "flex",
@@ -148,7 +151,9 @@ export const FlexRow = styled.div<IStyle>({
     width: "100%",
     height: "100%",
     margin: "0 0 0 0",
-    // background:theme.palette.background.default,
+    "@media(max-width:960px)":{
+        flexDirection: "column",
+    }
 },
     props => ({
         alignItems: props.alignItems,
@@ -156,4 +161,23 @@ export const FlexRow = styled.div<IStyle>({
         width: props.width,
         height: props.height,
         margin: props.margin,
+        flexDirection: props.flexDirection,
     }))
+
+    export const FlexRowNoChange = styled.div<IStyle>({
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+        height: "100%",
+        margin: "0 0 0 0",
+    },
+        props => ({
+            alignItems: props.alignItems,
+            justifyContent: props.justifyContent,
+            width: props.width,
+            height: props.height,
+            margin: props.margin,
+            flexDirection: props.flexDirection,
+        }))

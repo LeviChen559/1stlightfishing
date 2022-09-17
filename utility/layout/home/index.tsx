@@ -64,7 +64,7 @@ const Layout: FC<Props> = ({ children, title }: Props) => {
           ],
         }}
       />
-      <LocalBusinessJsonLd
+      {/* <LocalBusinessJsonLd
         type="Store"
         id="http://happy-cat.ca"
         name={title}
@@ -191,13 +191,15 @@ const Layout: FC<Props> = ({ children, title }: Props) => {
       //    actionType: 'ReviewAction',
       //    target: 'https://www.example.com/review/this/business',
       //  }}
-      />
+      /> */}
       <Head>
         <link rel="alternate" hrefLang="en-ca" href="https://1stlightfishing.vercel.app/en.html"></link>
         <link rel="alternate" hrefLang="zh-tw" href="https://1stlightfishing.vercel.app/zh.html"></link>
         <link rel="apple-touch-icon" sizes="180x180" href="/siteIcon/apple-touch-icon.png"></link>
         <link rel="icon" type="image/png" sizes="32x32" href="/siteIcon/favicon-32x32.png"></link>
         <link rel="icon" type="image/png" sizes="16x16" href="/siteIcon/favicon-16x16.png"></link>
+        <link rel="shortcut icon" href="#"></link>
+        <link rel="icon" href="data:;base64,="></link>
       </Head>
       <StickyBox style={{ width: '100vw', zIndex: 90, height: 100, }}>
         <Header>
