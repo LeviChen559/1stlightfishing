@@ -56,6 +56,7 @@ export const PageItem = styled.div<Props>({
   margin: "10px 5px",
   borderBottom: "0px",
   width:75,
+  height:30,
   textAlign: "center",
   '&:hover': {
     borderBottom: "1px solid white"

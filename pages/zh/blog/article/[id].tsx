@@ -40,7 +40,7 @@ const Article: FC<Props> = () => {
       <>
         <VisionSlot src="/blogHero-min.jpg" />
         <TextBox justifyContent='flex-start'>
-          <BasicBreadcrumbs Article={data.title} />
+          <BasicBreadcrumbs parentPage='Blog' href="/zh/blog"  Article={data.title} />
         </TextBox>
         <TextBox>
           <H3>{data.title}</H3>

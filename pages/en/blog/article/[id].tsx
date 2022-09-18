@@ -8,6 +8,7 @@ import Layout from '../../../../utility/layout/home'
 import VisionSlot from '../../../../Slot/visionSlot'
 import BasicBreadcrumbs from "../../../../component/breadcrumbs"
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import IconButton from '@mui/material/IconButton';
 interface Props {
   data: ICard[]
 }
@@ -44,7 +45,7 @@ const Article: FC<Props> = () => {
         {data.map((blog) => {
           return <>
             <TextBox justifyContent='flex-start'>
-              <BasicBreadcrumbs Article={blog.title} />
+              <BasicBreadcrumbs parentPage='Blog' href="/en/blog" Article={blog.title} />
             </TextBox>
             <TextBox>
               <H3>{blog.title}</H3>
@@ -58,40 +59,44 @@ const Article: FC<Props> = () => {
                       <Image src={blog.image} alt={blog.image} layout="fill" objectFit='cover' />
                     </ImageBox>
                     </FlexRow>
-                <FlexRow width="95%">
-                    <H4 margin="2.5% 0%" lineHeight={2}>{blog.p1}</H4>
-                </FlexRow>
                   </FlexCol>
-                  <FlexRow width="90%">
-                    <ImageBox>
+                  <FlexCol width="95%" alignItems='flex-start' >
+                    <H4 lineHeight={2}>{blog.p1}</H4>
+                    <H4 lineHeight={2}>{blog.p2}</H4>
+                    <H4 margin=" 2.5% 0" lineHeight={2}>{blog.p3}</H4>
+                    <H4 lineHeight={2}>{blog.p4}</H4>
+                    <H4 lineHeight={2}>{blog.p5}</H4>
+                    <H4 lineHeight={2}>{blog.p6}</H4>
+                    <H4 lineHeight={2}>{blog.p7}</H4>
+                    <H4 lineHeight={1.5}>{blog.p8}</H4>
+                  </FlexCol>
+               
+                    <ImageBox width="90%">
                       <Image src={blog.image2} alt={blog.image2} layout="fill" objectFit='cover' />
                     </ImageBox>
-                  <FlexRow alignItems='flex-start' >
-                    <H4 margin="0% 5%" lineHeight={2}>{blog.p2}</H4>
-                  </FlexRow>
-                  </FlexRow>
-                  <FlexRow width="90%">
-                    <H4 margin="2.5% 0" lineHeight={1.5}>{blog.p3}</H4>
-                    </FlexRow>
-                  <FlexRow width="90%">
-                    <FlexRow margin="0 0">
-                    <ImageBox >
+                
+               
+                    <H4 margin="2.5% 5%" lineHeight={1.8}>{blog.p9}</H4>
+            
+                    <ImageBox width="90%">
                       <Image src={blog.image3} alt={blog.image3} layout="fill" objectFit='cover' />
                     </ImageBox>
-                    </FlexRow>
-                    <H4 margin="2.5% 5%" lineHeight={1.8}>{blog.p4}</H4>
-                  </FlexRow>
-                  <FlexRow width="90%">
-                    <H4 margin="2.5% 0" lineHeight={1.5}>{blog.p5}</H4>
-                  </FlexRow>
+              
+                 
+                  <FlexCol width="90%">
+                    <H4 margin="2.5% 0" lineHeight={1.5}>{blog.p10}</H4>
+                    <H4 margin="2.5% 0" lineHeight={1.5}>{blog.p11}</H4>
+                    <H4 margin="2.5% 0" lineHeight={1.5}>{blog.p12}</H4>
+                  </FlexCol>
 
                 </FlexCol>}
             </FlexRow>
           </>
         })
         }
-        <TextBox justifyContent='flex-end' onClick={() => router.push("/en/blog")} style={{ cursor: "pointer" }}>
-          <ArrowBackIosNewIcon sx={{ fontSize: "20px", margin: "0 5px" }} /><H5>Previous page</H5>
+        <TextBox justifyContent='flex-end' width="75%" alignItems='center' onClick={() => router.push("/en/blog")} style={{ cursor: "pointer" }}>
+
+         <IconButton><ArrowBackIosNewIcon /></IconButton> <H5>Previous page</H5>
         </TextBox>
       </>
 

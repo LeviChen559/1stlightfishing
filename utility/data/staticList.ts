@@ -1,3 +1,40 @@
+export const socialList = [
+    {
+        id: "01",
+        src: "/socialMedia/line.png",
+        delay: "0",
+        name:"line"
+    },
+    {
+        id: "02",
+        src: "/socialMedia/facebook.png",
+        delay: "100",
+        name:"facebook"
+    },
+    {
+        id: "03",
+        src: "/socialMedia/whatsapp.png",
+        delay: "200",
+        name:"whatsapp"
+    },
+    {
+        id: "04",
+        src: "/socialMedia/wechat.png",
+        delay: "300",
+        name:"wecaht"
+
+    },
+    {
+        id: "05",
+        src: "/socialMedia/email.png",
+        delay: "400",
+        name:"email"
+
+    },
+
+
+]
+
 export const productList = [
     {
         id: "01",
@@ -98,7 +135,7 @@ export const targetProductList = [
         img: "/product/crap.jpeg",
         text: "CARP&COARSE",
         delay: "300",
-        href: "crap" 
+        href: "crap"
     },
     {
         id: "05",
@@ -131,7 +168,7 @@ export const targetProductList = [
     {
         id: "09",
         img: "/product/crap.jpeg",
-        text: "台釣釣具",
+        text: "臺釣釣具",
         delay: "300",
         href: "crap"
     },

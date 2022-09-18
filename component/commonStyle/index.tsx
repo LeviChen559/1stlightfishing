@@ -94,18 +94,30 @@ export const H6 = styled.h6<IStyle>({
 }))
 
 export const ImageBox = styled.div<IStyle>({
-    width: 600,
-    height: 350,
+    width: 1000,
+    height: 550,
     position: "relative",
-    // "@media(max-width:1200px)":{
-    //     width: "90%",
-    //     height: 300,
-    // }
+    "@media(max-width:768px)":{
+        // height: "50%",
+    }
 },
     props => ({
         width: props.width,
         height: props.height,
     }))
+    export const ImageProjecter = styled.div<IStyle>({
+        width: 600,
+        height: 550,
+        position: "relative",       
+        "@media(max-width:768px)":{
+            height: 300,
+        }
+    },
+        props => ({
+            width: props.width,
+            height: props.height,
+            animationDelay: props.animationDelay,
+        }))
 export const TextBox = styled.div<IStyle>({
     width: "100%",
     // height:"100%",
@@ -134,6 +146,9 @@ export const FlexCol = styled.div<IStyle>({
     background: theme.palette.background.default,
     width: "100%",
     height: "100%",
+    "@media(max-width:768px)":{
+        margin:"2.5% 0"
+    }
 },
     props => ({
         alignItems: props.alignItems,
@@ -153,6 +168,7 @@ export const FlexRow = styled.div<IStyle>({
     margin: "0 0 0 0",
     "@media(max-width:960px)":{
         flexDirection: "column",
+
     }
 },
     props => ({
@@ -162,6 +178,7 @@ export const FlexRow = styled.div<IStyle>({
         height: props.height,
         margin: props.margin,
         flexDirection: props.flexDirection,
+        position: props.position,
     }))
 
     export const FlexRowNoChange = styled.div<IStyle>({

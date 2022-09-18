@@ -7,10 +7,12 @@ import {H6,ImageBox,H5,FlexRow} from "../commonStyle"
 import {Wrapper,FlexCol,SocialMedia,PageContainer,PageItem,LanguagesEN,LanguagesZH} from "./style"
 import MenuBar from '../menuBar';
 import { useRouter } from 'next/router';
+import { socialList } from '../../utility/data/staticList';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from 'next/link';
 import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
+
 const Footer:FC=()=> {
   const [value, setValue] = useState('HOME');
   const router = useRouter();
@@ -50,69 +52,39 @@ const Footer:FC=()=> {
       </PageContainer>
       :
       <PageContainer >
-        {router.pathname === "/en" ?
-          <PageItem borderBottom="2px solid #03a9f4"><Link href="/en">首頁</Link></PageItem> :
-          <PageItem ><Link href="/en">首頁</Link></PageItem>
+        {router.pathname === "/zh" ?
+          <PageItem borderBottom="2px solid #03a9f4"><Link href="/zh">首頁</Link></PageItem> :
+          <PageItem ><Link href="/zh">首頁</Link></PageItem>
         }
         {router.pathname === "/en/about" ?
-          <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/about"> 關於我</Link></PageItem> :
-          <PageItem><Link href="/en/about">關於我</Link></PageItem>
+          <PageItem borderBottom="2px solid #03a9f4"><Link href="/zh/about"> 關於我</Link></PageItem> :
+          <PageItem><Link href="/zh/about">關於我</Link></PageItem>
         }
-        {router.pathname === "/en/products" ?
-          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/product">商品</Link> </PageItem> :
-          <PageItem><Link href="/en/product">商品</Link> </PageItem>}
-        {router.pathname === "/en/blogs" ?
-          <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/blog">部落格</Link></PageItem> :
-          <PageItem ><Link href="/en/blog">部落格</Link></PageItem>}
-        {router.pathname === "/en/services" ?
-          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/service">服務</Link></PageItem> :
-          <PageItem> <Link href="/en/service">服務</Link></PageItem>}
-        {router.pathname === "/en/contact" ?
-          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/contact">聯絡我</Link></PageItem> :
-          <PageItem> <Link href="/en/contact">聯絡我</Link></PageItem>}
+        {router.pathname === "/zh/products" ?
+          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/zh/product">商品</Link> </PageItem> :
+          <PageItem><Link href="/zh/product">商品</Link> </PageItem>}
+        {router.pathname === "/zh/blogs" ?
+          <PageItem borderBottom="2px solid #03a9f4"><Link href="/zh/blog">部落格</Link></PageItem> :
+          <PageItem ><Link href="/zh/blog">部落格</Link></PageItem>}
+        {router.pathname === "/zh/services" ?
+          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/zh/service">服務</Link></PageItem> :
+          <PageItem> <Link href="/zh/service">服務</Link></PageItem>}
+        {router.pathname === "/zh/contact" ?
+          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/zh/contact">聯絡我</Link></PageItem> :
+          <PageItem> <Link href="/zh/contact">聯絡我</Link></PageItem>}
       </PageContainer>
 }
         <SocialMedia>
-          <ImageBox width={30} height={30}
+        {socialList.map(social => {
+          return <ImageBox width={30} height={30} key={social.id} 
            data-aos="fade-up"
            data-aos-offset="100"
-           data-aos-delay="50"
+           data-aos-delay={social.delay}
            data-aos-duration="500"
            data-aos-easing="ease-in-out">
-          <Image src="/socialMedia/line.png" alt="Line" layout='fill'/>
+          <Image src={social.src} alt={social.name} layout='fill'/>
           </ImageBox>
-          <ImageBox width={30} height={30}
-              data-aos="fade-up"
-              data-aos-offset="100"
-              data-aos-delay="100"
-              data-aos-duration="500"
-              data-aos-easing="ease-in-out">
-          <Image src="/socialMedia/facebook.png" alt="Line" layout='fill'/>
-          </ImageBox>
-          <ImageBox width={30} height={30}
-              data-aos="fade-up"
-              data-aos-offset="100"
-              data-aos-delay="150"
-              data-aos-duration="500"
-              data-aos-easing="ease-in-out">
-          <Image src="/socialMedia/whatsapp.png" alt="Line" layout='fill'/>
-          </ImageBox>
-          <ImageBox width={30} height={30}
-              data-aos="fade-up"
-              data-aos-offset="100"
-              data-aos-delay="200"
-              data-aos-duration="500"
-              data-aos-easing="ease-in-out">
-          <Image src="/socialMedia/wechat.png" alt="Line" layout='fill'/>
-          </ImageBox>
-          <ImageBox width={30} height={30}
-              data-aos="fade-up"
-              data-aos-offset="100"
-              data-aos-delay="250"
-              data-aos-duration="500"
-              data-aos-easing="ease-in-out">
-          <Image src="/socialMedia/email.png" alt="Line" layout='fill'/>
-          </ImageBox>
+        }) }
         </SocialMedia>
         {!router.pathname.includes("/zh")?
         <LanguagesEN ><H5 data-comp="en" fontWeight={400}>EN</H5> <H5 data-comp="zh" fontWeight={300} opacity={0.25} onClick={() => router.push("/zh")}>ZH</H5></LanguagesEN>

@@ -12,6 +12,7 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
+
 interface Props {
   Home_en: string,
   Home_zh: string,
@@ -92,7 +93,7 @@ const MenuBar: FC<MenuBarProps> = ({opacity}) => {
         {router.pathname === "/en/contact" ?
           <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/contact">{menuText.Contact_en}</Link></PageItem> :
           <PageItem> <Link href="/en/contact">{menuText.Contact_en}</Link></PageItem>}
-        <PageItem ><a  href="/en/contact" onClick={() => { router.push("/en/contact") }}><ShoppingCartIcon /></a> </PageItem>
+        <PageItem ><div  onClick={() => { router.push("/en/cart") }}><ShoppingCartIcon /></div> </PageItem>
         <LanguagesEN ><H6 data-comp="en" fontWeight={400}>EN</H6> <H6 data-comp="zh" fontWeight={300} opacity={.5} onClick={() => router.push("/zh")}>ZH</H6></LanguagesEN>
       </PageContainer>:
        <PageContainer >
@@ -122,7 +123,7 @@ const MenuBar: FC<MenuBarProps> = ({opacity}) => {
        {router.pathname === "/zh/contact" ?
          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/zh/contact">{menuText.Contact_zh}</Link></PageItem> :
          <PageItem> <Link href="/zh/contact">{menuText.Contact_zh}</Link></PageItem>}
-       <PageItem ><a  href="/zh/contact" onClick={() => { router.push("/en/contact") }}><ShoppingCartIcon /></a> </PageItem>
+       <PageItem ><div  onClick={() => { router.push("/zh/cart") }}><ShoppingCartIcon /></div> </PageItem>
        <LanguagesZH ><H6 data-comp="en" fontWeight={300} opacity={.5} onClick={() => router.push("/en")}>英文</H6> <H6 data-comp="zh" fontWeight={400}  >中文</H6></LanguagesZH>
      </PageContainer>
       

@@ -52,7 +52,10 @@ export const FeatureImage = styled.div({
     margin: "5% 0%",
     position: "relative",
     boxShadow: "5px 5px 5px 5px rgba(0,0,0,0.15)",
-  
+    cursor:"pointer",
+    "&:hover":{
+        opacity: 0.5,
+    }
 })
 export const ProductBox = styled.div({
     display: "flex",
