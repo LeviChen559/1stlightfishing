@@ -44,7 +44,7 @@ const Popular: FC<Props> = () => {
       <>
         <VisionSlot src="/product-min.jpg" />
         <LottieAnimation src="/construction.json" />
-       <PreviousPage hrefLink="/en/product"/>
+       <PreviousPage hrefLink="/en/product" text="previous page"/>
 
 </>
     </Layout>
