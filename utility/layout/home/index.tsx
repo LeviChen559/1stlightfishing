@@ -2,7 +2,7 @@ import React, { FC, useState, useEffect } from 'react'
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import MenuBar from '../../../component/menuBar'
 import Footer from '../../../component/footer'
-import { BackgroundContainer, Wrapper, Header, Content } from './home.style'
+import { BackgroundContainer, Wrapper, Header, Content } from './style'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import StickyBox from "react-sticky-box";
@@ -12,9 +12,10 @@ import { LocalBusinessJsonLd, NextSeo } from 'next-seo';
 interface Props {
   children: JSX.Element,
   title: string
+  description: string
 };
 
-const Layout: FC<Props> = ({ children, title }: Props) => {
+const Layout: FC<Props> = ({ children, title,description }) => {
   const [bgcolor, setBgcolor] = useState<string>(theme.palette.background.default)
   const [opacity, setOpacity] = useState<number>(0)
   const listenScrollEvent = () => {
@@ -35,7 +36,7 @@ const Layout: FC<Props> = ({ children, title }: Props) => {
     <Wrapper>
       <NextSeo
         title={title}
-        description="Burnaby Fishing Store - Fishing Is Our Life! Here at First Light Tackle, we provide all your essentials and knowledge for local BC fishing."
+        description={description}
         canonical='https://www.happy-cat.ca'
         openGraph={{
           type: 'website',

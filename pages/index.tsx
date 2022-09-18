@@ -11,7 +11,9 @@ import ProductSlot from '../Slot/productSlot'
 import {productList} from '../utility/data/staticList'
 
 const Home: NextPage = () => {
-  return <Layout title="First Light Fishing & Tackle/Home">
+  return <Layout title="First Light Fishing & Tackle/Home"
+                 description="Burnaby Fishing Store - Fishing Is Our Life! Here at First Light Tackle, we provide all your essentials and knowledge for local BC fishing." 
+  >
 
     <>
       <HeroSlot />

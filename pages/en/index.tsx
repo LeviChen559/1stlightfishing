@@ -7,13 +7,16 @@ import ServiceSlot from '../../Slot/serviceSlot'
 import BlogSlot from '../../Slot/blogSnapSlot'
 import BrandSlot from '../../Slot/brandsSlot'
 import ProductSlot from '../../Slot/productSlot'
-import {productList} from '../../utility/data/staticList'
+import { productList } from '../../utility/data/staticList'
 const Home: NextPage = () => {
-  return <Layout title="First Light Fishing & Tackle">
+  return <Layout title="First Light Fishing & Tackle"
+    description="Burnaby Fishing Store - Fishing Is Our Life! Here at First Light Tackle, we provide all your essentials and knowledge for local BC fishing."
+
+  >
     <>
       <HeroSlot />
       <FeatureSlot />
-      <ProductSlot parentPage='popular' color='warning' productList={productList} title="POPULAR ITEMS"/>
+      <ProductSlot parentPage='popular' color='warning' productList={productList} title="POPULAR ITEMS" />
       <BlogSlot />
       <ServiceSlot />
       <MasonrySlot />

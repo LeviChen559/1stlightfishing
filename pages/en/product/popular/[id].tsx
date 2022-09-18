@@ -40,7 +40,9 @@ const Popular: FC<Props> = () => {
   }, [id])
 
   return <>
-    <Layout title="First Light Fishing & Tackle/PopularItems">
+    <Layout title="First Light Fishing & Tackle/PopularItems"
+  description="Burnaby Fishing Store - Fishing Is Our Life! Here at First Light Tackle, we provide all your essentials and knowledge for local BC fishing." 
+  >
       <>
         <VisionSlot src="/product-min.jpg" />
         <LottieAnimation src="/construction.json" />
