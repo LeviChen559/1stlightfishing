@@ -133,7 +133,7 @@ export const targetProductList = [
     {
         id: "04",
         img: "/product/crap.jpeg",
-        text: "CARP&COARSE",
+        text: "CARP & COARSE",
         delay: "300",
         href: "crap"
     },

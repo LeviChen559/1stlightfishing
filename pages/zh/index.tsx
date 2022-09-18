@@ -14,7 +14,7 @@ const Home: NextPage = () => {
     <>
     <HeroSlot />
       <FeatureSlot />
-      <ProductSlot parentPage='popular' color='warning' title="POPULAR ITEMS" productList={productList}/>
+      <ProductSlot parentPage='popular' color='warning' title="我們的熱銷商品" productList={productList}/>
       <BlogSlot />
       <ServiceSlot />
       <MasonrySlot />

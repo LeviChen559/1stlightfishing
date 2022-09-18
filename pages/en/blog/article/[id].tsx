@@ -8,7 +8,7 @@ import Layout from '../../../../utility/layout/home'
 import VisionSlot from '../../../../Slot/visionSlot'
 import BasicBreadcrumbs from "../../../../component/breadcrumbs"
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import IconButton from '@mui/material/IconButton';
+import { IconButton } from '@mui/material'
 interface Props {
   data: ICard[]
 }

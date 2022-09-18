@@ -9,7 +9,7 @@ import VisionSlot from '../../../../Slot/visionSlot'
 import BasicBreadcrumbs from "../../../../component/breadcrumbs"
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import LottieAnimation from '../../../../component/lottieAnimation'
-import IconButton from "@mui/material/iconButton"
+import { IconButton } from '@mui/material'
 interface Props {
   data: IProductIntro[]
 }

@@ -8,7 +8,7 @@ import VisionSlot from '../../../../Slot/visionSlot'
 import BasicBreadcrumbs from "../../../../component/breadcrumbs"
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { ICard } from '../../../../utility/type'
-
+import { IconButton } from '@mui/material'
 interface Props {
   data: ICard[]
 }
@@ -66,7 +66,7 @@ const Article: FC<Props> = () => {
           </FlexCol>
         </FlexRow>
         <TextBox justifyContent='flex-end' onClick={() => router.push("/en/blog")} style={{ cursor: "pointer" }}>
-          <ArrowBackIosNewIcon sx={{ fontSize: "20px", margin: "0 5px" }} /><H5>Previous page</H5>
+        <IconButton><ArrowBackIosNewIcon /></IconButton><H5>前一頁</H5>
         </TextBox>
       </>
 

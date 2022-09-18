@@ -156,7 +156,8 @@ export const FlexCol = styled.div<IStyle>({
         width: props.width,
         height: props.height,
         borderRadius: props.borderRadius,
-        maxWidth: props.maxWidth
+        maxWidth: props.maxWidth,
+        padding:props.padding
     }))
 export const FlexRow = styled.div<IStyle>({
     display: "flex",
