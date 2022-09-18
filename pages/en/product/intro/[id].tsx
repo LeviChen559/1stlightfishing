@@ -55,7 +55,9 @@ const Intro: FC<Props> = () => {
   }
 
   return <>
-    <Layout title="First Light Fishing & Tackle/ProductIntro">
+    <Layout title="First Light Fishing & Tackle/ProductIntro"
+  description="Burnaby Fishing Store - Fishing Is Our Life! Here at First Light Tackle, we provide all your essentials and knowledge for local BC fishing." 
+  >
       <>
         <VisionSlot src="/product-min.jpg" />
         {productListEN.map((product) => {
