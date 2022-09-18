@@ -12,7 +12,8 @@ import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { IconButton } from '@mui/material'
-import Button from '@mui/material/Button';
+import PreviousPage from"../../../../component/previousPage"
+
 interface Props {
   data: IProductIntro[]
 }
@@ -41,14 +42,14 @@ const Intro: FC<Props> = () => {
   const productListEN = data ? data.filter((product: IProductIntro) => Number(product.id) < 6) : []
   const changePage = (type: string): void => {
     if (type === "dec" && page > 1) {
-      setPage(pre => pre - 1)
+      setPage(current => current - 1)
     } else if (type === "inc" && page < 3) {
-      setPage(pre => pre + 1)
+      setPage(current => current + 1)
     }
-    else if (type === "dec" && page === 0) {
+    else if (type === "dec" && page === 1) {
       setPage(3)
     }
-    else if (type === "inc" && page === 3) {
+    else if (type === "inc" && page ===3) {
       setPage(1)
     }
   }
@@ -86,8 +87,8 @@ const Intro: FC<Props> = () => {
                       </ImageProjecter>
                     </FlexRow>
                     <FlexRowNoChange maxWidth={300} width="70%" justifyContent="space-between" >
-                      <IconButton>  <ArrowBackIosNewIcon onClick={() => changePage("dec")} /></IconButton>
-                      <IconButton>  <ArrowForwardIosIcon onClick={() => changePage("inc")} /></IconButton>
+                      <IconButton onClick={() => changePage("dec")}>  <ArrowBackIosNewIcon  /></IconButton>
+                      <IconButton onClick={() => changePage("inc")}>  <ArrowForwardIosIcon  /></IconButton>
                     </FlexRowNoChange>
                     <FlexCol width="95%" >
                       <H4 margin="1% 0%" lineHeight={1.5} key="productIntro1">{product.intro1}</H4>
@@ -105,9 +106,7 @@ const Intro: FC<Props> = () => {
           </div>
         })
         }
-        <FlexRowNoChange width="80%" justifyContent='flex-end' alignItems='center' onClick={() => router.push("/en/product")} style={{ cursor: "pointer" }}>
-          <IconButton><ArrowBackIosNewIcon /></IconButton> <H5>Previous page</H5>
-        </FlexRowNoChange>
+       <PreviousPage hrefLink="/en/product" text="previous page"/>
       </>
 
     </Layout>

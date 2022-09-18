@@ -1,12 +1,10 @@
 import React, { FC, useEffect, MouseEvent } from 'react'
-import Image from 'next/image'
 import { ImageBox, Wrapper, TextContainer, TextBox } from './style'
 import { H3, H5, H6, H4 } from "../../component/commonStyle"
 import BasicButtons from '../../component/button'
 import { theme } from "../../utility/theme"
-import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import { FlexRow, FlexCol, FlexRowNoChange } from '../../component/commonStyle'
+import {  FlexCol, FlexRowNoChange } from '../../component/commonStyle'
 import Divider from '@mui/material/Divider';
 import { IStyle } from '../../utility/type'
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
@@ -22,10 +20,7 @@ const ContactSlot: FC<IStyle> = ({ height, width }) => {
   }
   const handleSubmit = (event: MouseEvent<HTMLButtonElement>): void => {
     event.preventDefault();
-
-
   }
-
   return (
     <Wrapper >
       <TextBox >
@@ -44,7 +39,7 @@ const ContactSlot: FC<IStyle> = ({ height, width }) => {
           }} InputLabelProps={{
             style: { color: theme.palette.background.default, },
           }} />
-          <TextField required id="filled-basic" label="Subline" variant="outlined" type='email' sx={{
+          <TextField required id="filled-basic" label="Subject" variant="outlined" type='email' sx={{
             backgroundColor: theme.palette.common.white,
              input: { color: theme.palette.background.default },
             width: "75%", maxWidth: 800, marginBottom: 2

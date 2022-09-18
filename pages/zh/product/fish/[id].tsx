@@ -9,7 +9,7 @@ import VisionSlot from '../../../../Slot/visionSlot'
 import BasicBreadcrumbs from "../../../../component/breadcrumbs"
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import LottieAnimation from '../../../../component/lottieAnimation'
-import { IconButton } from '@mui/material'
+import PreviousPage from '../../../../component/previousPage'
 interface Props {
   data: IProductIntro[]
 }
@@ -42,11 +42,8 @@ const Popular: FC<Props> = () => {
       <>
         <VisionSlot src="/product-min.jpg" />
         <LottieAnimation src="/construction.json"/>
-        <TextBox width="80%" justifyContent='flex-end' alignItems='center' onClick={() => router.push("/en/product")} style={{ cursor: "pointer" }}>
-          <IconButton><ArrowBackIosNewIcon /></IconButton><H5>Previous page</H5>
-        </TextBox>
+      <PreviousPage hrefLink='/zh/product'text="上一頁"/>
       </>
-
     </Layout>
   </>
 }

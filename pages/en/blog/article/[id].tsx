@@ -9,6 +9,7 @@ import VisionSlot from '../../../../Slot/visionSlot'
 import BasicBreadcrumbs from "../../../../component/breadcrumbs"
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { IconButton } from '@mui/material'
+import PreviousPage from '../../../../component/previousPage'
 interface Props {
   data: ICard[]
 }
@@ -94,10 +95,7 @@ const Article: FC<Props> = () => {
           </>
         })
         }
-        <TextBox justifyContent='flex-end' width="75%" alignItems='center' onClick={() => router.push("/en/blog")} style={{ cursor: "pointer" }}>
-
-         <IconButton><ArrowBackIosNewIcon /></IconButton> <H5>Previous page</H5>
-        </TextBox>
+        <PreviousPage hrefLink="/en/blog" text="previous page"/>
       </>
 
     </Layout>
