@@ -9,13 +9,14 @@ import { IStyle } from '../../utility/type'
 import { useRouter } from 'next/router'
 const ServiceSlot: FC<IStyle> = ({ height, width }) => {
   const router = useRouter()
+  const {locale}= useRouter()
   const H5_style = { color: theme.palette.background.default, 
                       background: "rgba(255, 255, 255, 0.8)",
                     padding:"2.5%" }
 
   return (
     <Wrapper >
-      {!router.pathname.includes("/zh")?
+      {!locale?.includes("zh")?
       <TextContainer>
         <TextBox >
           <H3 textShadow="3px 3px 5px gray" >Service</H3>

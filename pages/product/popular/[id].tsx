@@ -1,15 +1,16 @@
 import React, { useEffect, useState, FC } from 'react'
 import { useRouter } from 'next/router'
-import { FlexCol, FlexRow, H3, ImageBox, TextBox, H5, H6,H4 } from '../../../../component/commonStyle'
-import { IProductIntro } from '../../../../utility/type'
+import { FlexCol, FlexRow, H3, ImageBox, TextBox, H5, H6, H4 } from '../../../component/commonStyle'
+import { IProductIntro } from '../../../utility/type'
 import axios from 'axios'
 import Image from 'next/image'
-import Layout from '../../../../utility/layout/home'
-import VisionSlot from '../../../../Slot/visionSlot'
-import BasicBreadcrumbs from "../../../../component/breadcrumbs"
+import Layout from '../../../utility/layout/home'
+import VisionSlot from '../../../Slot/visionSlot'
+import BasicBreadcrumbs from "../../../component/breadcrumbs"
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import LottieAnimation from '../../../../component/lottieAnimation'
-import PreviousPage from '../../../../component/previousPage'
+import LottieAnimation from '../../../component/lottieAnimation'
+import { IconButton } from '@mui/material'
+import PreviousPage from"../../../component/previousPage"
 interface Props {
   data: IProductIntro[]
 }
@@ -30,8 +31,8 @@ const Popular: FC<Props> = () => {
         if (canceled) return;
         const dataArray: any = (res.data).filter((product: any) => product.id == id)
         setData(dataArray)
-        console.log("fetching data",res)
-       
+        console.log("fetching data", res)
+
       }
     }
     GetArticle()
@@ -39,13 +40,14 @@ const Popular: FC<Props> = () => {
   }, [id])
 
   return <>
-    <Layout title="First Light Fishing & Tackle/熱銷商品"
-  description="大溫地區華人首選專業釣魚店 - 釣魚是我們的生活！ 在 First Light Tackle，我們為您提供不列顛哥倫比亞省當地捕魚的所有必需品和知識。" 
-    >
+    <Layout title="First Light Fishing & Tackle/PopularItems"
+  description="Burnaby Fishing Store - Fishing Is Our Life! Here at First Light Tackle, we provide all your essentials and knowledge for local BC fishing." 
+  >
       <>
         <VisionSlot src="/product-min.jpg" />
-        <LottieAnimation src="/construction.json"/>
-      <PreviousPage hrefLink='/zh/product' text="上一頁"/>
+        <LottieAnimation src="/construction.json" />
+        <PreviousPage />
+
       </>
 
     </Layout>

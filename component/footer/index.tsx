@@ -15,7 +15,8 @@ import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
 
 const Footer:FC=()=> {
   const [value, setValue] = useState('HOME');
-  const router = useRouter();
+  const router = useRouter()
+  const{locale,asPath,locales}=useRouter()
   useEffect(()=>{
     AOS.init()
   },[])
@@ -27,7 +28,7 @@ const Footer:FC=()=> {
     <Wrapper >
       <FlexCol>
       <Logo height={45} width={95}/>
-      {!router.pathname.includes("/zh")?
+      {!locale?.includes("zh")?
       <PageContainer >
         {router.pathname === "/en" ?
           <PageItem borderBottom="2px solid #03a9f4"><Link href="/en">HOME</Link></PageItem> :
@@ -86,11 +87,25 @@ const Footer:FC=()=> {
           </ImageBox>
         }) }
         </SocialMedia>
-        {!router.pathname.includes("/zh")?
-        <LanguagesEN ><H5 data-comp="en" fontWeight={400}>EN</H5> <H5 data-comp="zh" fontWeight={300} opacity={0.25} onClick={() => router.push("/zh")}>ZH</H5></LanguagesEN>
-        :
-        <LanguagesZH ><H5 data-comp="en" fontWeight={300} opacity={.25} onClick={() => router.push("/en")}>英文</H5> <H6 data-comp="zh" fontWeight={400}  >中文</H6></LanguagesZH>
-      }
+          
+          <LanguagesZH >
+        {locales?.map((language:string,i:number) =>{
+          return <>
+          {language===locale? 
+          <H5  color="orange" fontWeight={400}  ><Link key={i} locale={language} href={asPath}>
+            {language==="en"? "EN" : "中文" } 
+            </Link></H5> 
+            :
+            <H5  fontWeight={300} opacity={.25} ><Link key={i} locale={language} href={asPath}>
+            {language==="en"? "EN" : "中文" } 
+            </Link></H5> 
+            }
+          </>
+        }
+        )}
+          </LanguagesZH>
+
+          
       </FlexCol>
       <FlexRow margin='5%' style={{cursor: 'pointer'}} onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })}><ChangeHistoryIcon sx={{color:'white'}}/><H5>Top</H5></FlexRow>
       <H6 >© Copyright by first light fishing & tackle 2022</H6>

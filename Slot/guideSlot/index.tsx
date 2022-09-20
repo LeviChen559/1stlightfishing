@@ -6,11 +6,11 @@ import BasicButtons from '../../component/button'
 import { theme } from "../../utility/theme"
 import BlogCard from '../../component/blogCard'
 import BlogCardUI from '../../arrayUI/blogCardUI'
-import {useRouter} from"next/router"
+import { useRouter } from 'next/router'
 
 
-const zoomClassSlot: FC<Style> = ({ height, width }) => {
-  const router = useRouter()
+const GuideSlot: FC<Style> = ({ height, width }) => {
+  const {locale} = useRouter()
   const H5_style = {
     color: theme.palette.background.default,
     background: "rgba(255, 255, 255, 0.8)",
@@ -18,7 +18,7 @@ const zoomClassSlot: FC<Style> = ({ height, width }) => {
   }
 
   return <>
-    {!router.pathname.includes("/zh")?
+    {!locale?.includes("zh")?
     <Wrapper >
       <TextBox padding="5%">
         <H3 color={theme.palette.common.white} fontWeight={400}>Guide</H3>
@@ -68,4 +68,4 @@ const zoomClassSlot: FC<Style> = ({ height, width }) => {
   </>
 }
 
-export default zoomClassSlot
+export default GuideSlot

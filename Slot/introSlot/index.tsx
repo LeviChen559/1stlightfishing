@@ -11,6 +11,7 @@ import { useRouter } from 'next/router'
 
 const IntroSlot: FC<Style> = ({ height, width }) => {
   const router = useRouter()
+  const {locale}= useRouter()
   const H5_style = {
     color: theme.palette.background.default,
     background: "rgba(255, 255, 255, 0.8)",
@@ -23,7 +24,7 @@ const IntroSlot: FC<Style> = ({ height, width }) => {
         <ImageBox height={height} width={width}>
           <Image src="/introImage.png" objectFit="contain" alt="logo" layout='fill' />
         </ImageBox>
-       {!router.pathname.includes('/zh') ?
+       {!locale?.includes('zh') ?
         <TextBox alignItems="center"
           justifyContent='space-evenly' >
           <H5>Our doors opened on June 2012 in Burnaby, serving the central fishing community in the Lower Mainland.

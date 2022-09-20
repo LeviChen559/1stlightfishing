@@ -20,19 +20,19 @@ interface Props {
 }
 
 const ProductSlot: FC<Props> = ({ productList, title, color,  parentPage }) => {
-
-    const productListEN = productList ? productList.filter((product: IProductCard) => Number(product.id) < 6) : []
-    const productListZH = productList ? productList.filter((product: IProductCard) => Number(product.id) > 5) : []
+    const {locale} =useRouter()
+    const productListLocale = productList ? productList.filter((product: IProductCard) => product.locale==locale) : []
+  
 
     useEffect(() => { AOS.init(); },)
     const router = useRouter()
     return <Wrapper>
-        {!router.pathname.includes('/zh') ?
+        {!locale?.includes('zh') ?
             <>
                 <H3>{title}</H3>
                 <H4>Some of our most loved products.</H4>
                 <ProductBoxs>
-                    {productListEN.map((product) => {
+                    {productListLocale.map((product) => {
                         return <ProductBox data-aos="fade-up" key={product.id} 
                             onClick={() => router.push(`/en/product/${parentPage}/${product.href}`)}
                             data-aos-offset="200"
@@ -55,7 +55,7 @@ const ProductSlot: FC<Props> = ({ productList, title, color,  parentPage }) => {
                 <H3>{title}</H3>
                 <H4>我們的熱門與話題商品</H4>
                 <ProductBoxs>
-                    {productListZH.map((product) => {
+                    {productListLocale.map((product) => {
                         return <ProductBox data-aos="fade-up" key={product.id}
                             onClick={() => router.push(`/zh/product/${parentPage}/${product.href}`)}
                             data-aos-offset="200"

@@ -14,6 +14,7 @@ import { useRouter } from 'next/router'
 
 const BlogSnapSlot: FC<IStyle> = ({ height, width }) => {
   const [blogList,setBlogList] =useState <ICard[]>([])
+  const {locale}=useRouter()
   useEffect(() => {
     let cancled =false;
     const GetArticle = async () => {
@@ -34,11 +35,11 @@ const BlogSnapSlot: FC<IStyle> = ({ height, width }) => {
     padding: "2.5%"
   }
   
-  const blogListEN=blogList.filter((blog) => Number(blog.id)<4)
-  const blogListZH=blogList.filter((blog) => Number(blog.id)>3)
+  const blogListLocale=blogList.filter((blog) => blog.locale==locale)
+  // const blogListZH=blogList.filter((blog) => Number(blog.id)>3)
   return (
     <Wrapper >
-          {!router.pathname.includes("/zh") ?
+          {!locale?.includes("zh") ? 
       <TextContainer>
         <TextBox>
             <H3 textShadow="3px 3px 5px gray">Blog</H3>
@@ -46,7 +47,7 @@ const BlogSnapSlot: FC<IStyle> = ({ height, width }) => {
         <TextBox
           flexDirection="row" alignItems="center"
           justifyContent='center' background="#EEE5E9" padding="0%">
-          <BlogCardUI blogList={blogListEN} />
+          <BlogCardUI blogList={blogListLocale} />
         </TextBox>
       </TextContainer>:
       <TextContainer>
@@ -56,7 +57,7 @@ const BlogSnapSlot: FC<IStyle> = ({ height, width }) => {
       <TextBox
         flexDirection="row" alignItems="center"
         justifyContent='center' background="#EEE5E9" padding="0%">
-        <BlogCardUI blogList={blogListZH} />
+        <BlogCardUI blogList={blogListLocale} />
       </TextBox>
     </TextContainer>
 

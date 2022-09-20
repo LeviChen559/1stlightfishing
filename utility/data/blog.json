@@ -1,6 +1,7 @@
 [
   {
     "id": "01",
+    "locale": "en",
     "title": "Hello to the Internet!",
     "subheader": "May 12, 2017",
     "image": "/blogs/blog1.jpeg",
@@ -22,6 +23,7 @@
   },
   {
     "id": "02",
+    "locale": "en",
     "title": "Story Behind The Vision",
     "subheader": "May 13, 2017",
     "image": "/blogs/blog2.jpeg",
@@ -45,6 +47,7 @@
   },
   {
     "id": "03",
+    "locale": "en",
     "title": "CARP BEHAVIOUR 101",
     "subheader": "May 14, 2017",
     "image": "/blogs/blog3.jpeg",
@@ -69,6 +72,7 @@
   },
   {
     "id": "04",
+    "locale": "zh",
     "title": "故事的背後及店長簡介!",
     "subheader": "五月 12, 2017",
     "image": "/blogs/blog1.jpeg",
@@ -85,6 +89,7 @@
   },
   {
     "id": "05",
+    "locale": "zh",
     "title": "新手入門掃盲!",
     "subheader": "五月 12, 2017",
     "image": "/blogs/blog2.jpeg",
@@ -101,6 +106,7 @@
   },
   {
     "id": "06",
+    "locale": "zh",
     "title": "裝備論!",
     "subheader": "五月 12, 2017",
     "image": "/blogs/blog3.jpeg",

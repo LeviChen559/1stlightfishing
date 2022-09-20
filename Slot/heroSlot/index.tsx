@@ -8,10 +8,11 @@ import 'aos/dist/aos.css';
 import styles from '../../styles/home.module.scss'
 import { useRouter } from 'next/router'
 import { theme } from '../../utility/theme'
-
+import { ILocale } from '../../utility/type';
 const HeroSlot: FC = () => {
   useEffect(() => { AOS.init(); },)
   const router = useRouter()
+  const { locale, locales, asPath } = useRouter();
 
   return <Wrapper>
     <ImageBox >
@@ -19,7 +20,7 @@ const HeroSlot: FC = () => {
         priority={true} placeholder="blur" blurDataURL="/image-blur-placeholder.png"
       />
     </ImageBox>
-    {!router.pathname.includes('/zh') ?
+    {!locale?.includes("zh") ?
       <TextContainer>
         <H5 >Come to meet us</H5>
         <H1 data-aos="fade-up"

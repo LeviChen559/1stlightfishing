@@ -91,6 +91,7 @@ export const H6 = styled.h6<IStyle>({
 }, props => ({
     opacity: props.opacity,
     fontWeight: props.fontWeight,
+    color: props.color,
 }))
 
 export const ImageBox = styled.div<IStyle>({

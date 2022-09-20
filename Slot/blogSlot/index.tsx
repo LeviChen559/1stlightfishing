@@ -8,14 +8,16 @@ import BlogCard from '../../component/blogCard'
 import BlogCardUI from '../../arrayUI/blogCardUI'
 import axios from 'axios'
 import { useRouter } from 'next/router'
-import { IStyle,ICard} from '../../utility/type'
+import { IStyle,ICard,ILocale} from '../../utility/type'
 
 interface Props{
   onClick?:MouseEventHandler<HTMLDivElement>
+  locale?:ILocale
 }
 
 const BlogSlot: FC<Props> = ({ onClick}) => {
   const [blogList,setBlogList] =useState <ICard[]>([])
+  const {locale,locales,asPath} =useRouter()
   useEffect(() => {
     let canceled =false;
     const GetArticle = async () => {
@@ -29,8 +31,8 @@ const BlogSlot: FC<Props> = ({ onClick}) => {
   }, [])
   
 
-  const blogListEN=blogList.filter((blog) => Number(blog.id)<4)
-  const blogListZH=blogList.filter((blog) => Number(blog.id)>3)
+  const blogListSelect=blogList.filter((blog) =>blog.locale==locale)
+  // const blogListZH=blogList.filter((blog) => Number(blog.id)>3)
   const router = useRouter()
   const H5_style = {
     color: theme.palette.background.default,
@@ -39,15 +41,12 @@ const BlogSlot: FC<Props> = ({ onClick}) => {
   }
   return (
     <Wrapper >
-          {!router.pathname.includes("/zh") ?
+          {!locale?.includes("zh") ?
       <TextContainer>
-          <BlogCardUI blogList={blogListEN}  justifyContent="flex-start" onClick={onClick}/>
-     
+          <BlogCardUI blogList={blogListSelect}  justifyContent="flex-start" onClick={onClick}/>
       </TextContainer>:
       <TextContainer>
-    
-        <BlogCardUI blogList={blogListZH} justifyContent="flex-start" onClick={onClick}/>
-     
+        <BlogCardUI blogList={blogListSelect} justifyContent="flex-start" onClick={onClick}/>
     </TextContainer>
 
           }

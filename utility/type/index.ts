@@ -1,6 +1,7 @@
 export interface ICard {
   id: string;
   title: string;
+  locale: string;
   subheader: string;
   image: string;
   image2: string;
@@ -32,6 +33,7 @@ export interface IStaff {
 }
 export interface IProductCard {
   id: string;
+  locale: string;
   img: string;
   text: string;
   delay: string;
@@ -39,6 +41,7 @@ export interface IProductCard {
 }
 export interface IProductIntro {
   id: string;
+  locale: string;
   img1: string;
   img2: string;
   img3: string;
@@ -71,5 +74,12 @@ export interface IStyle {
   textShadow?: string;
   animationDelay?:string;
   position?: "relative" | "absolute" | "fixed" 
+
+}
+
+export interface ILocale{
+  locale:string;
+  locales :string[];
+  asPath:string;
 
 }

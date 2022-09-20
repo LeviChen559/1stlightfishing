@@ -1,15 +1,15 @@
 import React, { useEffect, useState, FC } from 'react'
 import { useRouter } from 'next/router'
-import { FlexCol, FlexRow, H3, ImageBox, TextBox, H5, H6,H4 } from '../../../../component/commonStyle'
-import { ICard } from '../../../../utility/type'
+import { FlexCol, FlexRow, H3, ImageBox, TextBox, H5, H6,H4 } from '../../../component/commonStyle'
+import { ICard } from '../../../utility/type'
 import axios from 'axios'
 import Image from 'next/image'
-import Layout from '../../../../utility/layout/home'
-import VisionSlot from '../../../../Slot/visionSlot'
-import BasicBreadcrumbs from "../../../../component/breadcrumbs"
+import Layout from '../../../utility/layout/home'
+import VisionSlot from '../../../Slot/visionSlot'
+import BasicBreadcrumbs from "../../../component/breadcrumbs"
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { IconButton } from '@mui/material'
-import PreviousPage from '../../../../component/previousPage'
+import PreviousPage from '../../../component/previousPage'
 interface Props {
   data: ICard[]
 }

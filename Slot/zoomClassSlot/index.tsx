@@ -9,8 +9,9 @@ import BlogCardUI from '../../arrayUI/blogCardUI'
 import {useRouter} from "next/router"
 import { IStyle } from '../../utility/type'
 
-const ContactSlot: FC<IStyle> = ({ height, width }) => {
+const ZoomClassSlot: FC<IStyle> = ({ height, width }) => {
   const router = useRouter()
+  const{locale}= useRouter()
   const H5_style = {
     color: theme.palette.background.default,
     background: "rgba(255, 255, 255, 0.8)",
@@ -18,7 +19,7 @@ const ContactSlot: FC<IStyle> = ({ height, width }) => {
   }
 
   return <>
-  {!router.pathname.includes("/zh")?
+  {!locale?.includes("zh")?
     <Wrapper >
       <TextBox padding="5%">
         <H3 color={theme.palette.background.default} fontWeight={400}>Zoom Classes</H3>
@@ -74,4 +75,4 @@ const ContactSlot: FC<IStyle> = ({ height, width }) => {
     </>
 }
 
-export default ContactSlot
+export default ZoomClassSlot

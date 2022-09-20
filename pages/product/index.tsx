@@ -1,9 +1,9 @@
 import React,{FC} from 'react'
 import type { NextPage } from 'next'
-import Layout from '../../../utility/layout/home'
-import VisionSlot from '../../../Slot/visionSlot'
-import ProductSlot from '../../../Slot/productSlot'
-import { productList,targetProductList } from '../../../utility/data/staticList'
+import Layout from '../../utility/layout/home'
+import VisionSlot from '../../Slot/visionSlot'
+import ProductSlot from '../../Slot/productSlot'
+import { productList,targetProductList } from '../../utility/data/staticList'
 import { useRouter } from 'next/router'
 const  Products:NextPage=()=> {
   const router =useRouter()

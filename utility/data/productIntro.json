@@ -1,6 +1,7 @@
  [
     {
         "id": "01",
+        "locale":"en",
         "href": "freshwater",
         "title": "FRESH WATER",
         "img1": "/product/introImg1-1.jpeg",
@@ -14,6 +15,7 @@
     },
     {
         "id": "02",
+        "locale":"en",
         "href": "saltwater",
         "title": "SALT WATER",
         "img1": "/product/introImg2-1.jpeg",
@@ -27,6 +29,7 @@
     },
     {
         "id": "03",
+        "locale":"en",
         "href": "flyfishing",
         "title": "FLY FISHING",
         "img1": "/product/introImg3-1.jpeg",
@@ -40,6 +43,7 @@
     },
     {
         "id": "04",
+        "locale":"en",
         "href": "crap",
         "title": "CRAP & COARSE",
         "img1": "/product/introImg4-1.jpeg",
@@ -52,6 +56,7 @@
         "intro5":""
     },{
         "id": "05",
+        "locale":"en",
         "href": "tools",
         "title": "APPAREL & ACCESSORIES",
         "img1": "/product/introImg5-1.jpeg",
@@ -65,6 +70,7 @@
     },
     {
         "id": "06",
+        "locale":"zh",
         "href": "freshwater",
         "title": "淡水釣具",
         "img1": "/product/introImg1-1.jpeg",
@@ -78,6 +84,7 @@
     },
     {
         "id": "07",
+        "locale":"zh",
         "href": "saltwater",
         "title": "海水釣具",
         "img1": "/product/introImg2-1.jpeg",
@@ -91,6 +98,7 @@
     },
     {
         "id": "08",
+        "locale":"zh",
         "href": "flyfishing",
         "title": "飛繩釣具",
         "img1": "/product/introImg3-1.jpeg",
@@ -104,6 +112,7 @@
     },
     {
         "id": "09",
+        "locale":"zh",
         "href": "crap",
         "title": "臺釣釣具",
         "img1": "/product/introImg4-1.jpeg",
@@ -116,6 +125,7 @@
         "intro5":"我們也有歐式拋竿沉底釣法所需的裝備，鯉魚拋竿，游動式紡車輪，餌籠，特式鉛錐，頭髮線組，鯉魚餌丸子 等等。"
     },{
         "id": "10",
+        "locale":"zh",
         "href": "tools",
         "title": "裝備與配件",
         "img1": "/product/introImg5-1.jpeg",

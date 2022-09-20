@@ -9,8 +9,9 @@ import { useRouter } from 'next/router'
 const FeatureSlot: FC = () => {
     useEffect(() => { AOS.init(); },)
     const router = useRouter()
+    const{locale}=useRouter()
     return <Wrapper>
-          {!router.pathname.includes('/zh') ?
+          {!locale?.includes("zh") ?
         <H3> WHAT WE DO</H3>
         :
         <H3> 我們的服務</H3>
@@ -24,7 +25,7 @@ const FeatureSlot: FC = () => {
                 <FeatureImage>
                     <AutoStoriesIcon sx={{ fontSize: 40 }} />
                 </FeatureImage>
-                {!router.pathname.includes('/zh') ?
+                {!locale?.includes("zh")  ?
                     <>
                         <H5 style={{ marginBottom: "2.5%" }}>NEW STORIES!</H5>
                         <H6>What’s biting? Get updated about different fisheries and trending fishing news.</H6>
@@ -43,7 +44,7 @@ const FeatureSlot: FC = () => {
                 <FeatureImage>
                     <StorefrontIcon sx={{ fontSize: 40 }} />
                 </FeatureImage>
-                {!router.pathname.includes('/zh') ?
+                {!locale?.includes("zh") ?
                     <>
                         <H5 style={{ marginBottom: "2.5%" }}>WHAT’S IN STORE?</H5>
                         <H6>Come to check out our gears for all your fishing needs and wants!</H6>
@@ -61,7 +62,7 @@ const FeatureSlot: FC = () => {
                 <FeatureImage>
                     <PhishingIcon sx={{ fontSize: 40 }} />
                 </FeatureImage>
-                {!router.pathname.includes('/zh') ?
+                {!locale?.includes("zh") ?
                     <>
                         <H5 style={{ marginBottom: "2.5%" }}>YOUR NEXT ADVENTURE!</H5>
                         <H6>Looking for an awesome fishing trip? We got you covered.</H6>

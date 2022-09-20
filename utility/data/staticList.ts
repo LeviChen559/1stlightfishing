@@ -38,6 +38,7 @@ export const socialList = [
 export const productList = [
     {
         id: "01",
+        locale:"en",
         img: "/product/onsale.png",
         text: "ON SALE",
         delay: "0",
@@ -45,6 +46,7 @@ export const productList = [
     },
     {
         id: "02",
+        locale:"en",
         img: "/product/bestsale.png",
         text: "BEST SALE",
         delay: "100",
@@ -52,6 +54,7 @@ export const productList = [
     },
     {
         id: "03",
+        locale:"en",
         img: "/product/newitems.png",
         text: "NEW ITEMS",
         delay: "200",
@@ -59,6 +62,7 @@ export const productList = [
     },
     {
         id: "04",
+        locale:"en",
         img: "/product/seasonal.png",
         text: "SEASONAL",
         delay: "300",
@@ -66,6 +70,7 @@ export const productList = [
     },
     {
         id: "05",
+        locale:"en",
         img: "/product/clearance.png",
         text: "CLEARANCE",
         delay: "400",
@@ -73,6 +78,7 @@ export const productList = [
     },
     {
         id: "06",
+        locale:"zh",
         img: "/product/onsale.png",
         text: "特價商品",
         delay: "0",
@@ -80,6 +86,7 @@ export const productList = [
     },
     {
         id: "07",
+        locale:"zh",
         img: "/product/bestsale.png",
         text: "熱賣商品",
         delay: "100",
@@ -87,6 +94,7 @@ export const productList = [
     },
     {
         id: "08",
+        locale:"zh",
         img: "/product/newitems.png",
         text: "新鮮貨",
         delay: "200",
@@ -94,6 +102,7 @@ export const productList = [
     },
     {
         id: "09",
+        locale:"zh",
         img: "/product/seasonal.png",
         text: "季節商品",
         delay: "300",
@@ -101,6 +110,7 @@ export const productList = [
     },
     {
         id: "10",
+        locale:"zh",
         img: "/product/clearance.png",
         text: "清倉貨",
         delay: "400",
@@ -111,6 +121,7 @@ export const productList = [
 export const targetProductList = [
     {
         id: "01",
+        locale:"en",
         img: "/product/freshwater.jpg",
         text: "FRESH WATER",
         delay: "0",
@@ -118,6 +129,7 @@ export const targetProductList = [
     },
     {
         id: "02",
+        locale:"en",
         img: "/product/saltwater.jpeg",
         text: "SALT WATER",
         delay: "100",
@@ -125,6 +137,7 @@ export const targetProductList = [
     },
     {
         id: "03",
+        locale:"en",
         img: "/product/flyfishing.jpg",
         text: "FLY FISHING",
         delay: "200",
@@ -132,6 +145,7 @@ export const targetProductList = [
     },
     {
         id: "04",
+        locale:"en",
         img: "/product/crap.jpeg",
         text: "CARP & COARSE",
         delay: "300",
@@ -139,6 +153,7 @@ export const targetProductList = [
     },
     {
         id: "05",
+        locale:"en",
         img: "/product/tools.jpg",
         text: "APPAREL&ACCESSORIES",
         delay: "400",
@@ -146,6 +161,7 @@ export const targetProductList = [
     },
     {
         id: "06",
+        locale:"zh",
         img: "/product/freshwater.jpg",
         text: "淡水漁具",
         delay: "0",
@@ -153,6 +169,7 @@ export const targetProductList = [
     },
     {
         id: "07",
+        locale:"zh",
         img: "/product/saltwater.jpeg",
         text: "海水漁具",
         delay: "100",
@@ -160,6 +177,7 @@ export const targetProductList = [
     },
     {
         id: "08",
+        locale:"zh",
         img: "/product/flyfishing.jpg",
         text: "飛蠅釣具",
         delay: "200",
@@ -167,6 +185,7 @@ export const targetProductList = [
     },
     {
         id: "09",
+        locale:"zh",
         img: "/product/crap.jpeg",
         text: "臺釣釣具",
         delay: "300",
@@ -174,6 +193,7 @@ export const targetProductList = [
     },
     {
         id: "10",
+        locale:"zh",
         img: "/product/tools.jpg",
         text: "服裝/其它",
         delay: "400",

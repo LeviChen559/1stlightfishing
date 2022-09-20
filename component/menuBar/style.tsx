@@ -58,14 +58,14 @@ export const PageItem = styled.div<Props>({
   })
 )
 
-export const LanguagesEN = styled.div({
+export const Languages = styled.div({
 
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-evenly",
   alignItems: "center",
   cursor: 'pointer',
-  '&:hover [data-comp="zh"]' :{
+  '&:hover' :{
     color: "orange"
   },
   
