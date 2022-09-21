@@ -30,47 +30,47 @@ const Footer:FC=()=> {
       <Logo height={45} width={95}/>
       {!locale?.includes("zh")?
       <PageContainer >
-        {router.pathname === "/en" ?
+        {asPath === "/" ?
           <PageItem borderBottom="2px solid #03a9f4"><Link href="/en">HOME</Link></PageItem> :
           <PageItem ><Link href="/en">HOME</Link></PageItem>
         }
-        {router.pathname === "/en/about" ?
-          <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/about"> ABOUT</Link></PageItem> :
-          <PageItem><Link href="/en/about"> ABOUT</Link></PageItem>
+        {asPath === "/about" ?
+          <PageItem borderBottom="2px solid #03a9f4"><Link href="/about"> ABOUT</Link></PageItem> :
+          <PageItem><Link href="/about"> ABOUT</Link></PageItem>
         }
-        {router.pathname === "/en/product" ?
-          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/product"> PRODUCT</Link> </PageItem> :
-          <PageItem><Link href="/en/product"> PRODUCT</Link> </PageItem>}
-        {router.pathname === "/en/blog" ?
-          <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/blog"> BLOG</Link></PageItem> :
-          <PageItem ><Link href="/en/blog"> BLOG</Link></PageItem>}
-        {router.pathname === "/en/service" ?
-          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/service"> SERVICE</Link></PageItem> :
-          <PageItem> <Link href="/en/service"> SERVICE</Link></PageItem>}
-        {router.pathname === "/en/contact" ?
-          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/contact"> CONTACT</Link></PageItem> :
-          <PageItem> <Link href="/en/contact"> CONTACT</Link></PageItem>}
+        {asPath === "/product" ?
+          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/product"> PRODUCT</Link> </PageItem> :
+          <PageItem><Link href="/product"> PRODUCT</Link> </PageItem>}
+        {asPath === "/blog" ?
+          <PageItem borderBottom="2px solid #03a9f4"><Link href="/blog"> BLOG</Link></PageItem> :
+          <PageItem ><Link href="/blog"> BLOG</Link></PageItem>}
+        {asPath === "/service" ?
+          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/service"> SERVICE</Link></PageItem> :
+          <PageItem> <Link href="/service"> SERVICE</Link></PageItem>}
+        {asPath === "/contact" ?
+          <PageItem borderBottom="2px solid #03a9f4"> <Link href="/contact"> CONTACT</Link></PageItem> :
+          <PageItem> <Link href="/contact"> CONTACT</Link></PageItem>}
       </PageContainer>
       :
       <PageContainer >
-        {router.pathname === "/zh" ?
+        {asPath === "/zh" ?
           <PageItem borderBottom="2px solid #03a9f4"><Link href="/zh">首頁</Link></PageItem> :
           <PageItem ><Link href="/zh">首頁</Link></PageItem>
         }
-        {router.pathname === "/en/about" ?
+        {asPath === "/en/about" ?
           <PageItem borderBottom="2px solid #03a9f4"><Link href="/zh/about"> 關於我</Link></PageItem> :
           <PageItem><Link href="/zh/about">關於我</Link></PageItem>
         }
-        {router.pathname === "/zh/products" ?
+        {asPath === "/zh/products" ?
           <PageItem borderBottom="2px solid #03a9f4"> <Link href="/zh/product">商品</Link> </PageItem> :
           <PageItem><Link href="/zh/product">商品</Link> </PageItem>}
-        {router.pathname === "/zh/blogs" ?
+        {asPath === "/zh/blogs" ?
           <PageItem borderBottom="2px solid #03a9f4"><Link href="/zh/blog">部落格</Link></PageItem> :
           <PageItem ><Link href="/zh/blog">部落格</Link></PageItem>}
-        {router.pathname === "/zh/services" ?
+        {asPath === "/zh/services" ?
           <PageItem borderBottom="2px solid #03a9f4"> <Link href="/zh/service">服務</Link></PageItem> :
           <PageItem> <Link href="/zh/service">服務</Link></PageItem>}
-        {router.pathname === "/zh/contact" ?
+        {asPath === "/zh/contact" ?
           <PageItem borderBottom="2px solid #03a9f4"> <Link href="/zh/contact">聯絡我</Link></PageItem> :
           <PageItem> <Link href="/zh/contact">聯絡我</Link></PageItem>}
       </PageContainer>
@@ -90,7 +90,7 @@ const Footer:FC=()=> {
           
           <LanguagesZH >
         {locales?.map((language:string,i:number) =>{
-          return <>
+          return <div key={i}>
           {language===locale? 
           <H5  color="orange" fontWeight={400}  ><Link key={i} locale={language} href={asPath}>
             {language==="en"? "EN" : "中文" } 
@@ -100,7 +100,7 @@ const Footer:FC=()=> {
             {language==="en"? "EN" : "中文" } 
             </Link></H5> 
             }
-          </>
+          </div>
         }
         )}
           </LanguagesZH>

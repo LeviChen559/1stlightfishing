@@ -1,23 +1,26 @@
 import React, { useEffect, useState, FC } from 'react'
 import { useRouter } from 'next/router'
 import { FlexCol, FlexRow, H3, ImageBox, TextBox, H5, H6, H4 } from '../../../component/commonStyle'
-import { IProductIntro } from '../../../utility/type'
+import { IProductIntro, IHead } from '../../../utility/type'
 import axios from 'axios'
-import Image from 'next/image'
 import Layout from '../../../utility/layout/home'
 import VisionSlot from '../../../Slot/visionSlot'
-import BasicBreadcrumbs from "../../../component/breadcrumbs"
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import LottieAnimation from '../../../component/lottieAnimation'
-import { IconButton } from '@mui/material'
-import PreviousPage from"../../../component/previousPage"
+import PreviousPage from "../../../component/previousPage"
+import type { NextPage } from 'next'
+
 interface Props {
   data: IProductIntro[]
 }
-const Popular: FC<Props> = () => {
+const Popular: NextPage<Props> = () => {
   const router = useRouter()
+  const {locale}=useRouter()
   const { id } = router.query;
   const [data, setData] = useState<IProductIntro[]>([]);
+  const [headData, setHeadData] = useState<IHead>({
+    title: "",
+    description: ""
+  })
 
   useEffect(() => {
     let canceled = false
@@ -39,18 +42,30 @@ const Popular: FC<Props> = () => {
     return () => { canceled = true }
   }, [id])
 
+
   return <>
-    <Layout title="First Light Fishing & Tackle/PopularItems"
-  description="Burnaby Fishing Store - Fishing Is Our Life! Here at First Light Tackle, we provide all your essentials and knowledge for local BC fishing." 
-  >
+  {!locale?.includes("zh")?
+  
+      <Layout title="PopularItems | First Light Fishing & Tackle"
+        description= "Burnaby Fishing Store - Fishing Is Our Life! Here at First Light Tackle, we provide all your essentials and knowledge for local BC fishing."
+      >
+        <>
+          <VisionSlot src="/product-min.jpg" />
+          <LottieAnimation src="/construction.json" />
+          <PreviousPage />
+        </>
+      </Layout>
+      :
+      <Layout title="熱銷產品 | First Light Fishing & Tackle"
+      description= "Burnaby Fishing Store - Fishing Is Our Life! Here at First Light Tackle, we provide all your essentials and knowledge for local BC fishing."
+    >
       <>
         <VisionSlot src="/product-min.jpg" />
         <LottieAnimation src="/construction.json" />
         <PreviousPage />
-
       </>
-
     </Layout>
+}
   </>
 }
 

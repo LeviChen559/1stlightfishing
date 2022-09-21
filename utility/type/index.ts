@@ -2,6 +2,7 @@ export interface ICard {
   id: string;
   title: string;
   locale: string;
+  href: string;
   subheader: string;
   image: string;
   image2: string;
@@ -82,4 +83,9 @@ export interface ILocale{
   locales :string[];
   asPath:string;
 
+}
+
+export interface IHead{
+  title: string;
+  description:string
 }

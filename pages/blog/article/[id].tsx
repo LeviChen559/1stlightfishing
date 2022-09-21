@@ -1,24 +1,24 @@
 import React, { useEffect, useState, FC } from 'react'
 import { useRouter } from 'next/router'
-import { FlexCol, FlexRow, H3, ImageBox, TextBox, H5, H6,H4 } from '../../../component/commonStyle'
-import { ICard } from '../../../utility/type'
+import { FlexCol, FlexRow, H3, ImageBox, TextBox, H5, H6, H4 } from '../../../component/commonStyle'
+import { ICard,IHead } from '../../../utility/type'
 import axios from 'axios'
 import Image from 'next/image'
 import Layout from '../../../utility/layout/home'
 import VisionSlot from '../../../Slot/visionSlot'
 import BasicBreadcrumbs from "../../../component/breadcrumbs"
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import { IconButton } from '@mui/material'
+import type { NextPage } from 'next'
 import PreviousPage from '../../../component/previousPage'
+
 interface Props {
   data: ICard[]
 }
-const Article: FC<Props> = () => {
+const Article: NextPage<Props> = () => {
   const router = useRouter()
   const { id } = router.query;
   const [data, setData] = useState<ICard[]>([]);
+  const{locale} = useRouter();
 
-  console.log("id", typeof (id))
   useEffect(() => {
     let canceled = false
     const GetArticle = async () => {
@@ -29,23 +29,26 @@ const Article: FC<Props> = () => {
       });
       if (res.data[0]) {
         if (canceled) return;
-        const dataArray: any = (res.data).filter((blog: any) => blog.id == id)
+        const dataArray: any = (res.data).filter((blog: any) => blog.href == id)
         setData(dataArray)
-        console.log("fetching data")
+        console.log("fetching",data)
 
       }
     }
     GetArticle()
     return () => { canceled = true }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id])
 
+
+
   return <>
-    <Layout title="First Light Fishing & Tackle/Blog"
-  description="Burnaby Fishing Store - Fishing Is Our Life! Here at First Light Tackle, we provide all your essentials and knowledge for local BC fishing." 
-  >
+    <Layout title="First Light Fishing & Tackle | Blog"
+      description="Burnaby Fishing Store - Fishing Is Our Life! Here at First Light Tackle, we provide all your essentials and knowledge for local BC fishing."
+    >
       <>
-        <VisionSlot src="/blogHero-min.jpg" />
         {data.map((blog) => {
+        <VisionSlot src="/blogHero-min.jpg" />
           return <>
             <TextBox justifyContent='flex-start'>
               <BasicBreadcrumbs parentPage='Blog' href="/en/blog" Article={blog.title} />
@@ -58,9 +61,9 @@ const Article: FC<Props> = () => {
                 <FlexCol>
                   <FlexCol>
                     <FlexRow>
-                    <ImageBox  width="95%">
-                      <Image src={blog.image} alt={blog.image} layout="fill" objectFit='cover' />
-                    </ImageBox>
+                      <ImageBox width="95%">
+                        <Image src={blog.image} alt={blog.image} layout="fill" objectFit='cover' />
+                      </ImageBox>
                     </FlexRow>
                   </FlexCol>
                   <FlexCol width="95%" alignItems='flex-start' >
@@ -73,31 +76,25 @@ const Article: FC<Props> = () => {
                     <H4 lineHeight={2}>{blog.p7}</H4>
                     <H4 lineHeight={1.5}>{blog.p8}</H4>
                   </FlexCol>
-               
-                    <ImageBox width="90%">
-                      <Image src={blog.image2} alt={blog.image2} layout="fill" objectFit='cover' />
-                    </ImageBox>
-                
-               
-                    <H4 margin="2.5% 5%" lineHeight={1.8}>{blog.p9}</H4>
-            
-                    <ImageBox width="90%">
-                      <Image src={blog.image3} alt={blog.image3} layout="fill" objectFit='cover' />
-                    </ImageBox>
-              
-                 
+                  <ImageBox width="90%">
+                    <Image src={blog.image2} alt={blog.image2} layout="fill" objectFit='cover' />
+                  </ImageBox>
+                  <H4 margin="2.5% 5%" lineHeight={1.8}>{blog.p9}</H4>
+
+                  <ImageBox width="90%">
+                    <Image src={blog.image3} alt={blog.image3} layout="fill" objectFit='cover' />
+                  </ImageBox>
                   <FlexCol width="90%">
                     <H4 margin="2.5% 0" lineHeight={1.5}>{blog.p10}</H4>
                     <H4 margin="2.5% 0" lineHeight={1.5}>{blog.p11}</H4>
                     <H4 margin="2.5% 0" lineHeight={1.5}>{blog.p12}</H4>
                   </FlexCol>
-
                 </FlexCol>}
             </FlexRow>
           </>
         })
         }
-        <PreviousPage hrefLink="/en/blog" text="previous page"/>
+        <PreviousPage hrefLink="/en/blog" text="previous page" />
       </>
 
     </Layout>

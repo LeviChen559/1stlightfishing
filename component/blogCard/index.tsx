@@ -30,7 +30,7 @@ const BlogCard: FC<Props> = ({ blogContent, blogList, }) => {
   return <>
     {matches ?
       <Card
-        onClick={()=>router.push(`/en/blog/article/${blogContent.id}`)}
+        onClick={()=>router.push(`/en/blog/article/${blogContent.href}`)}
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-delay={blogContent.delay}
@@ -71,7 +71,7 @@ const BlogCard: FC<Props> = ({ blogContent, blogList, }) => {
       </Card>
       :
       <Card
-      onClick={()=>router.push(`/en/blog/article/${blogContent.id}`)}
+      onClick={()=>router.push(`/en/blog/article/${blogContent.href}`)}
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-delay={blogContent.delay}

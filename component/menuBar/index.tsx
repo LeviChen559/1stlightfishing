@@ -68,36 +68,36 @@ const MenuBar: FC<MenuBarProps> = ({ opacity }) => {
         </ImageContainer>
         {!locale?.includes("zh") ?
           <PageContainer >
-            {router.pathname === "/en" ?
-              <PageItem borderBottom="2px solid #03a9f4"><Link href="/en">{menuText.Home_en}</Link></PageItem> :
-              <PageItem ><Link href="/en">{menuText.Home_en}</Link></PageItem>
+            {asPath === "/" ?
+              <PageItem borderBottom="2px solid #03a9f4"><Link href="/">{menuText.Home_en}</Link></PageItem> :
+              <PageItem ><Link href="/">{menuText.Home_en}</Link></PageItem>
             }
-            {router.pathname === "/en/about" ?
-              <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/about">{menuText.About_en}</Link></PageItem>
+            {asPath === "/about" ?
+              <PageItem borderBottom="2px solid #03a9f4"><Link href="/about">{menuText.About_en}</Link></PageItem>
               :
-              <PageItem><Link href="/en/about">{menuText.About_en}</Link></PageItem>
+              <PageItem><Link href="/about">{menuText.About_en}</Link></PageItem>
             }
-            {router.pathname === "/en/product" ?
-              <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/product">{menuText.Product_en}</Link></PageItem>
+            {asPath === "/product" ?
+              <PageItem borderBottom="2px solid #03a9f4"><Link href="/product">{menuText.Product_en}</Link></PageItem>
               :
-              <PageItem><Link href="/en/product">{menuText.Product_en}</Link></PageItem>
+              <PageItem><Link href="/product">{menuText.Product_en}</Link></PageItem>
             }
-            {router.pathname === "/en/blog" ?
-              <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/blog">{menuText.Blog_en}</Link></PageItem> :
-              <PageItem ><Link href="/en/blog">{menuText.Blog_en}</Link></PageItem>
+            {asPath === "/blog" ?
+              <PageItem borderBottom="2px solid #03a9f4"><Link href="/blog">{menuText.Blog_en}</Link></PageItem> :
+              <PageItem ><Link href="/blog">{menuText.Blog_en}</Link></PageItem>
             }
 
-            {router.pathname === "/en/service" ?
-              <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/service">{menuText.Service_en}</Link></PageItem> :
-              <PageItem> <Link href="/en/service">{menuText.Service_en}</Link></PageItem>}
+            {asPath === "/service" ?
+              <PageItem borderBottom="2px solid #03a9f4"> <Link href="/service">{menuText.Service_en}</Link></PageItem> :
+              <PageItem> <Link href="/service">{menuText.Service_en}</Link></PageItem>}
 
-            {router.pathname === "/en/contact" ?
-              <PageItem borderBottom="2px solid #03a9f4"> <Link href="/en/contact">{menuText.Contact_en}</Link></PageItem> :
-              <PageItem> <Link href="/en/contact">{menuText.Contact_en}</Link></PageItem>}
+            {asPath === "/contact" ?
+              <PageItem borderBottom="2px solid #03a9f4"> <Link href="/contact">{menuText.Contact_en}</Link></PageItem> :
+              <PageItem> <Link href="/contact">{menuText.Contact_en}</Link></PageItem>}
             <PageItem ><div onClick={() => { router.push("/en/cart") }}><ShoppingCartIcon /></div> </PageItem>
             <Languages>
               {locales?.map((language: string, i: number) => {
-                return <>
+                return <div key={i}>
               {language === locale  ?
                     <H5 color="orange" fontWeight={400}  ><Link key={i} locale={language} href={asPath}>
                        {language==="en"&&"EN"}
@@ -107,7 +107,7 @@ const MenuBar: FC<MenuBarProps> = ({ opacity }) => {
                         {language==="zh"&&"中文"}
                       </Link></H6>
                   }
-                </>
+                </div>
               }
               )}
             </Languages>
@@ -142,7 +142,7 @@ const MenuBar: FC<MenuBarProps> = ({ opacity }) => {
             <PageItem ><div onClick={() => { router.push("/zh/cart") }}><ShoppingCartIcon /></div> </PageItem>
             <Languages>
               {locales?.map((language: string, i: number) => {
-                return <>
+                return <div key={i}>
                   {language === locale  ?
                     <H6 color="orange" fontWeight={400}  ><Link key={i} locale={language} href={asPath}>
                       {language==="zh"&&"中文"}
@@ -152,7 +152,7 @@ const MenuBar: FC<MenuBarProps> = ({ opacity }) => {
                         {language==="en"&&"EN"}
                       </Link></H5>
                   }
-                </>
+                </div>
               }
               )}
             </Languages>
@@ -211,32 +211,32 @@ const MenuBar: FC<MenuBarProps> = ({ opacity }) => {
               anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
               <MenuItem sx={{ fontSize: 14 }}>
-                <Link href="/en/">
+                <Link href="/">
                   HOME
                 </Link>
               </MenuItem>
               <MenuItem sx={{ fontSize: 14 }}>
-                <Link href="/en/about">
+                <Link href="/about">
                   ABOUT
                 </Link>
               </MenuItem >
               <MenuItem sx={{ fontSize: 14 }}>
-                <Link href="/en/product">
+                <Link href="/product">
                   PRODUCT
                 </Link>
               </MenuItem>
               <MenuItem sx={{ fontSize: 14 }}>
-                <Link href="/en/blog">
+                <Link href="/blog">
                   BLOG
                 </Link>
               </MenuItem>
               <MenuItem sx={{ fontSize: 14 }}>
-                <Link href="/en/service">
+                <Link href="/service">
                   SERVICE
                 </Link>
               </MenuItem>
               <MenuItem sx={{ fontSize: 14 }}>
-                <Link href="/en/contact">
+                <Link href="/contact">
                   CONTACT
                 </Link>
               </MenuItem>

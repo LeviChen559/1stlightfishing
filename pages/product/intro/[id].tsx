@@ -1,28 +1,30 @@
 import React, { useEffect, useState, FC } from 'react'
 import { useRouter } from 'next/router'
 import { FlexCol, FlexRow, H3, ImageBox, TextBox, H5, H6, H4, ImageProjecter, FlexRowNoChange } from '../../../component/commonStyle'
-import { IProductIntro } from '../../../utility/type'
+import { IProductIntro, IHead } from '../../../utility/type'
 import axios from 'axios'
 import Image from 'next/image'
 import Layout from '../../../utility/layout/home'
 import VisionSlot from '../../../Slot/visionSlot'
 import BasicBreadcrumbs from "../../../component/breadcrumbs"
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { IconButton } from '@mui/material'
-import PreviousPage from"../../../component/previousPage"
-
+import PreviousPage from "../../../component/previousPage"
+import type { NextPage } from 'next'
 interface Props {
-  data: IProductIntro[]
+  data: IProductIntro[];
+  locale: string;
 }
-const Intro: FC<Props> = () => {
+
+const Intro: NextPage<Props> = () => {
   const router = useRouter()
-  const {locale}= useRouter()
+  const { locale,locales } = useRouter()
   const { id } = router.query;
   const [data, setData] = useState<IProductIntro[]>([]);
   const [page, setPage] = useState<number>(1)
+ 
+
   useEffect(() => {
     let canceled = false
     const GetArticle = async () => {
@@ -35,12 +37,13 @@ const Intro: FC<Props> = () => {
         if (canceled) return;
         const dataArray: any = (res.data).filter((product: any) => product.href == id)
         setData(dataArray)
+        console.log("fetchProduct")
       }
     }
     GetArticle()
     return () => { canceled = true }
   }, [id])
-  const productListLocale = data ? data.filter((product: IProductIntro) => product.locale==locale) : []
+  const productListLocale = data ? data.filter((product: IProductIntro) => product.locale == locale) : []
   const changePage = (type: string): void => {
     if (type === "dec" && page > 1) {
       setPage(current => current - 1)
@@ -50,15 +53,15 @@ const Intro: FC<Props> = () => {
     else if (type === "dec" && page === 1) {
       setPage(3)
     }
-    else if (type === "inc" && page ===3) {
+    else if (type === "inc" && page === 3) {
       setPage(1)
     }
   }
-
+  
   return <>
-    <Layout title="First Light Fishing & Tackle/ProductIntro"
-  description="Burnaby Fishing Store - Fishing Is Our Life! Here at First Light Tackle, we provide all your essentials and knowledge for local BC fishing." 
-  >
+    <Layout title="First Light Fishing & Tackle | ProductIntro"
+      description="Burnaby Fishing Store - Fishing Is Our Life! Here at First Light Tackle, we provide all your essentials and knowledge for local BC fishing."
+    >
       <>
         <VisionSlot src="/product-min.jpg" />
         {productListLocale.map((product) => {
@@ -90,8 +93,8 @@ const Intro: FC<Props> = () => {
                       </ImageProjecter>
                     </FlexRow>
                     <FlexRowNoChange maxWidth={300} width="70%" justifyContent="space-between" >
-                      <IconButton onClick={() => changePage("dec")}>  <ArrowBackIosNewIcon  /></IconButton>
-                      <IconButton onClick={() => changePage("inc")}>  <ArrowForwardIosIcon  /></IconButton>
+                      <IconButton onClick={() => changePage("dec")}>  <ArrowBackIosNewIcon /></IconButton>
+                      <IconButton onClick={() => changePage("inc")}>  <ArrowForwardIosIcon /></IconButton>
                     </FlexRowNoChange>
                     <FlexCol width="95%" >
                       <H4 margin="1% 0%" lineHeight={1.5} key="productIntro1">{product.intro1}</H4>
@@ -109,7 +112,7 @@ const Intro: FC<Props> = () => {
           </div>
         })
         }
-       <PreviousPage />
+        <PreviousPage />
       </>
 
     </Layout>

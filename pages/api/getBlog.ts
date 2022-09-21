@@ -7,7 +7,7 @@ const blogHandler = async (req: any, res: any) => {
 
   var lists: Array<ICard> = []
   if (req.query.id) {
-    lists = bloglist.filter(o => o.id === req.query.id);
+    lists = bloglist.filter(o => o.href === req.query.id);
   }
   lists = bloglist
   // console.log("lists",lists)
