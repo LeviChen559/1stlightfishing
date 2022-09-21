@@ -27,6 +27,7 @@ const Staff:FC<Props>=({staffContent,staffList})=> {
           src={staffContent.img}
           alt={staffContent.name}
           objectFit="cover"
+          placeholder="blur" blurDataURL="/image-blur-placeholder.png"
         />
         <CardContent>
           <Box sx={{display:"flex", flexDirection:"row", justifyContent:"flex-start",alignItems:"flex-end",}}>
@@ -52,6 +53,7 @@ const Staff:FC<Props>=({staffContent,staffList})=> {
         src={staffContent.img}
         alt={staffContent.name}
         objectFit="cover"
+        placeholder="blur" blurDataURL="/image-blur-placeholder.png"
       />
       <CardContent>
         <Box sx={{display:"flex", flexDirection:"row", justifyContent:"flex-start",alignItems:"flex-end",}}>
