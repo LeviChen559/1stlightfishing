@@ -17,7 +17,8 @@ export const H1 = styled.h1<IStyle>({
     }
 }, props => ({
     color: props.color,
-    fontWeight: props.fontWeight
+    fontWeight: props.fontWeight,
+    textShadow: props.textShadow,
 }))
 export const H2 = styled.h2<IStyle>({
     margin: 0,
@@ -79,7 +80,8 @@ export const H5 = styled.h5<IStyle>({
     fontWeight: props.fontWeight,
     opacity: props.opacity,
     lineHeight: props.lineHeight,
-    margin: props.margin
+    margin: props.margin,
+    textAlign: props.textAlign
 }))
 
 export const H6 = styled.h6<IStyle>({

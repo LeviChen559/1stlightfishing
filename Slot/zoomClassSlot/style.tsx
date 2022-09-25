@@ -10,8 +10,7 @@ export const Wrapper = styled.div({
     alignItems: "center",
     justifyContent: "center",
     background: "#EEE5E9",
-    margin: "0",
-    padding:"0 0 5% 0",
+    margin:"80px 0 0 0",
     "@media(max-width:768px)": {
         // height: 450,
     }

@@ -7,22 +7,26 @@ export const Wrapper = styled.div({
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    // margin: "5% 0",
-    "@media(max-width:768px)": {
-       
+    margin:"80px 0 0 0",
+    //  padding: "0 2.5%",
+    "@media(max-width:1440px)": {
+        width: "95%",
     }
 })
 
 
 export const ImageBox = styled.div<IStyle>({
-    width: 1680,
-    height: 600,
+    borderRadius:"10px",
+    overflow: "hidden",
+    flex:.5,
+    height: 700,
     position: "relative",
     "@media(max-width:1440px)": {
-        // width: "90%"
+        flex:.75,
     },
     "@media(max-width:768px)": {
-        // height: 450,
+       width:"100%",
+        height: 200,
     }
 
 },
@@ -33,15 +37,11 @@ export const ImageBox = styled.div<IStyle>({
 
 
 export const TextContainer = styled.div({
-    position: "absolute",
-    zIndex: 50,
     width: 1680,
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-start",
-    // padding: "2.5% 0 0 2.5%",
-   
     "@media (max-width: 1680px)": {
         width: "100%",
     },
@@ -50,25 +50,25 @@ export const TextContainer = styled.div({
         alignItems: "center",
         justifyContent: "space-between",
         width: "100%",
-        height: 700,
+        height:700,
 
     }
 })
 export const TextBox = styled.div<IStyle>({
-    "&:last-child": { flex: 3.5 },
+    // "&:last-child": { flex: 1.5 },
     flex: 1,
-    height: 600,
+    height: 700,
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "flex-start",
-    padding: " 5% 0 0 5%",
+    margin: "0 0 0 0",
     "@media (max-width: 768px)": {
         justifyContent: "space-evenly",
         alignItems: "center",
         width: "100%",
         padding: 0 ,
-        height: 550,
+        height: 500,
       
     }
 }, props => ({

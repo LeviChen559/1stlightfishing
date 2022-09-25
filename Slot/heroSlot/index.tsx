@@ -23,7 +23,8 @@ const HeroSlot: FC = () => {
     {!locale?.includes("zh") ?
       <TextContainer>
         <H5 >Come to meet us</H5>
-        <H1 data-aos="fade-up"
+        <H1 textShadow='5px 5px 5px rgba(0, 0, 0,0.5)'
+          data-aos="fade-up"
           data-aos-offset="200"
           data-aos-delay="1000"
           data-aos-duration="1250"
@@ -37,7 +38,9 @@ const HeroSlot: FC = () => {
       :
       <TextContainer>
         <H5 >拜訪我們</H5>
-        <H1 data-aos="fade-up"
+        <H1 
+        textShadow='5px 5px 5px rgba(0, 0, 0,0.5)'
+          data-aos="fade-up"
           data-aos-offset="200"
           data-aos-delay="1500"
           data-aos-duration="1250"

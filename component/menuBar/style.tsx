@@ -18,7 +18,8 @@ export const Wrapper = styled.div({
   justifyContent: "space-between",
   alignItems: "center",
   "@media(max-width:768px)":{
-    height: 60,
+    height: 50,
+    marginTop: 50,
   }
 })
 

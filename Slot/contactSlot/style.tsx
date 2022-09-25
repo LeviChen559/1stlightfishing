@@ -10,8 +10,7 @@ export const Wrapper = styled.div({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#EEE5E9",
-    margin: "0",
-    padding:"0 0 5% 0",
+    padding:"0 0 80px 0",
     "@media(max-width:768px)": {
         // height: 450,
     }
@@ -59,6 +58,7 @@ export const TextBox = styled.div<IStyle>({
     fontSize: "18px",
     color:themePalette.main,
     padding: " 2.5%",
+    margin:"80px 0 0 0",
     "@media (max-width: 1440px)": {
         fontSize: "16px",
     },

@@ -75,6 +75,8 @@ export interface IStyle {
   textShadow?: string;
   animationDelay?:string;
   position?: "relative" | "absolute" | "fixed" 
+  gridRow?:string;
+  textAlign?: "center" | "left"|"right"
 
 }
 

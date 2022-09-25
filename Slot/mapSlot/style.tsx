@@ -1,17 +1,7 @@
 import styled from "@emotion/styled"
 import {theme, themePalette} from"../../utility/theme"
-export interface Style {
-    width?: number,
-    height?: number,
-    flex?: number,
-    justifyContent?: string,
-    flexDirection?: "column" | "inherit" | "-moz-initial" | "initial" | "revert" | "unset" | "column-reverse" | "row" | "row-reverse" | undefined,
-    alignItems?: string,
-    backgroundColor?: string,
-    padding?: string,
-    color?: string,
+import { IStyle } from "../../utility/type"
 
-}
 export const Wrapper = styled.div({
     width: "100vw",
     height: "100%",
@@ -21,13 +11,14 @@ export const Wrapper = styled.div({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#EEE5E9",
+    margin:"80px 0 0 0",
     "@media(max-width:768px)": {
         // height: 450,
     }
 })
 
 
-export const ImageBox = styled.div<Style>({
+export const ImageBox = styled.div<IStyle>({
     flex:1.5,
     width: 600,
     height: 450,
@@ -79,9 +70,9 @@ export const TextContainer = styled.div({
 
     }
 })
-export const TextBox = styled.div<Style>({
+export const TextBox = styled.div<IStyle>({
     flex:1,
-    height: "100%",
+    height: 450,
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -102,7 +93,7 @@ export const TextBox = styled.div<Style>({
     justifyContent: props.justifyContent,
     alignItems: props.alignItems,
     height: props.height,
-    backgroundColor: props.backgroundColor,
+    background: props.background,
     flexDirection: props.flexDirection,
     padding: props.padding,
     color: props.color

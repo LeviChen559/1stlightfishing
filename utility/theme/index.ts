@@ -9,6 +9,7 @@ interface PaletteColor {
 }
 export const themePalette ={
   main:'#233D4D',
+  light:'#EEE5E9'
 }
 
 

@@ -20,7 +20,7 @@ const GuideSlot: FC<Style> = ({ height, width }) => {
   return <>
     {!locale?.includes("zh")?
     <Wrapper >
-      <TextBox padding="5%">
+      <TextBox padding="2.5%">
         <H3 color={theme.palette.common.white} fontWeight={400}>Guide</H3>
       </TextBox>
       <TextContainer>
@@ -41,7 +41,7 @@ const GuideSlot: FC<Style> = ({ height, width }) => {
     </Wrapper>
     : 
     <Wrapper >
-    <TextBox padding="5%">
+    <TextBox padding="2.5%">
       <H3 color={theme.palette.common.white} fontWeight={400}>主要服務</H3>
     </TextBox>
     <TextContainer>

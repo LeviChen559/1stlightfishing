@@ -4,27 +4,31 @@ import { IStyle } from "../../utility/type"
 
 export const Wrapper = styled.div({
     width: "100%",
-    height: 600,
+    height: 700,
     overflow: "hidden",
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    // margin:"5% 0",
+    margin:"80px 0 0 0",
     "@media(max-width:768px)":{
-        height: 450,
+        height: "100%",
     }
   })
 
 
 export const ImageBox = styled.div<IStyle>({
-    width: 1680,
+    // width: 1680,
+    flex:1.75,
     height: 700,
     position: "relative",
+    borderRadius: "10px",
+    overflow: "hidden",
     "@media(max-width:1440px)":{
-        // width: "90%"
+        flex:1,
     },
     "@media(max-width:768px)":{
-        height: 450,
+        height: 350,
+        width:"100%"
     }
     
 },
@@ -36,51 +40,43 @@ export const ImageBox = styled.div<IStyle>({
 
  export const TextContainer = styled.div({
     label:"TextContainer",
-    position: "absolute",
-    zIndex: 50,
     width:1680,
     height:600,
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-start",
-    paddingTop: "2.5% 0 0 2.5%",
     "@media (max-width: 1440px)":{
-        width:"90%",
+        width:"95%",
     },
     "@media (max-width: 768px)":{
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-between",
-        height:350,
-        marginTop:100
+        height:600,
     }
  })    
  export const TextBox = styled.div<IStyle>({
-    width: "100%",
-    height:500,
+    flex:1,
+    // width: "100%",
+    height:700,
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "flex-start",
-    padding:" 5% 0 0 5%",
+    
     H3:{
-        // color:themePalette.main,
         fontWeight: 400
      },
     '&[data-active="true"]':{
-        width:600,
-        padding:0,
+        // width:600,
+        padding:"2.5%",
     },
     "@media (max-width: 768px)":{
         justifyContent: "space-evenly",
         alignItems: "center",
         padding: 0 ,
         height:250,
-        '&[data-active="true"]':{
-            height:100,
-            width:"100%",
-        },
         
     }
  },props=>({

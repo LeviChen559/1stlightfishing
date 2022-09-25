@@ -1,15 +1,15 @@
 import React, { FC, useEffect } from 'react'
 import Image from 'next/image'
-import { ImageBox, Style, Wrapper, TextContainer, TextBox } from './mapSlot.style'
+import { ImageBox,  Wrapper, TextContainer, TextBox } from './style'
 import { H3, H5 } from "../../component/commonStyle"
 import BasicButtons from '../../component/button'
 import { theme } from "../../utility/theme"
 import BlogCard from '../../component/blogCard'
 import BlogCardUI from '../../arrayUI/blogCardUI'
 import { useRouter } from 'next/router'
+import { IStyle } from '../../utility/type'
 
-
-const MapSlot: FC<Style> = ({ height, width }) => {
+const MapSlot: FC<IStyle> = ({ height, width }) => {
   const router = useRouter()
   const H5_style = {
     color: theme.palette.background.default,

@@ -29,8 +29,8 @@ const ProductSlot: FC<Props> = ({ productList, title, color,  parentPage }) => {
     return <Wrapper>
         {!locale?.includes('zh') ?
             <>
-                <H3>{title}</H3>
-                <H4>Some of our most loved products.</H4>
+                <H3 textShadow="3px 3px 5px rgba(0, 0, 0,0.5)">{title}</H3>
+                <H5 margin="20px 0 0 0">Some of our most loved products.</H5>
                 <ProductBoxs>
                     {productListLocale.map((product) => {
                         return <ProductBox data-aos="fade-up" key={product.id} 
@@ -41,9 +41,11 @@ const ProductSlot: FC<Props> = ({ productList, title, color,  parentPage }) => {
                             data-aos-easing="ease-in-out">
                             <FeatureImage key={product.id}>
                                 <Image key={product.img} src={product.img} alt="onsale" layout='fill'
-                                    placeholder="blur" blurDataURL="/image-blur-placeholder.png" objectFit='cover' />
+                                    placeholder="blur" blurDataURL="/image-blur-placeholder.png" objectFit='cover' 
+                                  
+                                    />
                             </FeatureImage >
-                            <BasicButtons key={product.text} text={product.text} width="185px" color={color} />
+                            <BasicButtons key={product.text} text={product.text} width="225px" color={color} />
                         </ProductBox>
 
                     })}
@@ -52,8 +54,8 @@ const ProductSlot: FC<Props> = ({ productList, title, color,  parentPage }) => {
             </>
             :
             <>
-                <H3>{title}</H3>
-                <H4>我們的熱門與話題商品</H4>
+                <H3 textShadow="3px 3px 5px rgba(0, 0, 0,0.5)">{title}</H3>
+                <H5 margin="20px 0 0 0">我們的熱門與話題商品</H5>
                 <ProductBoxs>
                     {productListLocale.map((product) => {
                         return <ProductBox data-aos="fade-up" key={product.id}
