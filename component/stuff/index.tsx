@@ -1,4 +1,4 @@
-import React,{FC} from 'react';
+import React,{FC,memo} from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -75,4 +75,4 @@ const Staff:FC<Props>=({staffContent,staffList})=> {
   </>;
 }
 
-export default Staff
+export default memo(Staff)

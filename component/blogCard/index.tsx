@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect,MouseEventHandler } from 'react';
+import React, { FC, useState, useEffect,MouseEventHandler,memo } from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -16,6 +16,7 @@ import AOS from 'aos';
 import { useMediaQuery } from '@mui/material';
 import {useRouter} from 'next/router'
 import { Opacity } from '@mui/icons-material';
+import{H4} from '../commonStyle'
 interface Props {
   blogContent: ICard;
   blogList: Array<ICard>;
@@ -91,9 +92,9 @@ const BlogCard: FC<Props> = ({ blogContent, blogList, }) => {
           ]}>
         <Box sx={{ display: 'flex', flexDirection: 'column', }}>
           <CardContent sx={{ flex: '10 auto' }}>
-            <Typography component="div" variant="h6">
+            <H4>
               {blogContent.title}
-            </Typography>
+            </H4>
             <Typography variant="subtitle2" color="text.secondary" component="div">
               {blogContent.subheader}
             </Typography>
@@ -110,4 +111,4 @@ const BlogCard: FC<Props> = ({ blogContent, blogList, }) => {
   </>;
 }
 
-export default BlogCard
+export default memo(BlogCard)

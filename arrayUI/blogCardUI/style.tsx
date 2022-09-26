@@ -13,8 +13,8 @@ export const Wrapper = styled.div<IStyle>({
        
     },
     "@media(max-width:768px)":{
-        height: 600,
-        padding:"5%",
+        height: 550,
+        padding:"2.5%",
     }
   }, props=>({
     justifyContent:props.justifyContent

@@ -36,7 +36,12 @@ export const H3 = styled.h3<IStyle>({
     fontWeight: 400,
     fontFamily: 'Philosopher',
     color: theme.palette.common.white,
-
+    '@media (max-width: 1440px)': {
+        fontSize: "32px",
+    },
+    '@media (max-width: 768px)': {
+        fontSize: "24px",
+    }
 }, props => ({
     color: props.color,
     fontWeight: props.fontWeight,

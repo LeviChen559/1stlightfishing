@@ -7,38 +7,43 @@ export const Wrapper = styled.div({
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    margin:"80px 0 0 0",
+    margin: "80px 0 0 0",
     //  padding: "0 2.5%",
     "@media(max-width:1440px)": {
         width: "95%",
+
     }
 })
 
 
 export const ImageBox = styled.div<IStyle>({
-    borderRadius:"10px",
+    label: "ImageBox",
+    borderRadius: "10px",
     overflow: "hidden",
-    flex:.5,
+    flex: .5,
     height: 700,
     position: "relative",
     "@media(max-width:1440px)": {
-        flex:.75,
+        flex: .75,
     },
     "@media(max-width:768px)": {
-       width:"100%",
-        height: 200,
+        // height: 100,
+        flex: .4,
+        width: "100%",
+
     }
 
 },
     props => ({
-        width: props.width,
-        height: props.height,
+        // width: props.width,
+        // height: props.height,
     }))
 
 
 export const TextContainer = styled.div({
     width: 1680,
     display: "flex",
+    height: "100%",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-start",
@@ -50,7 +55,7 @@ export const TextContainer = styled.div({
         alignItems: "center",
         justifyContent: "space-between",
         width: "100%",
-        height:700,
+        height: 900,
 
     }
 })
@@ -67,9 +72,6 @@ export const TextBox = styled.div<IStyle>({
         justifyContent: "space-evenly",
         alignItems: "center",
         width: "100%",
-        padding: 0 ,
-        height: 500,
-      
     }
 }, props => ({
     flex: props.flex,

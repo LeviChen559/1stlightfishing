@@ -60,7 +60,7 @@ export const TextContainer = styled.div({
         alignItems: "center",
         justifyContent: "space-between",
         width: "100%",
-        height: 700,
+        height: 900,
         // "&:first-child": {
         //     height: 200
         // },

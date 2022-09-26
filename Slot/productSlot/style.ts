@@ -45,7 +45,8 @@ export const ProductBoxs = styled.div({
 },
   "@media(max-width:500px)   ":{
     flexDirection: "column",
-    flexWrap: "wrap",
+    // flexWrap: "wrap",
+    width: "100%",
 }
 })
 export const FeatureImage = styled.div({

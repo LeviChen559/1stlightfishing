@@ -70,7 +70,13 @@ export const PageItem = styled.div<Props>({
     fontSize: "12px",
     width:60,
     margin: "10px 1%",
+  },
+  "@media(max-width:360px)": {
+    fontSize: "10px",
+    width:50,
+    margin: "10px 0%",
   }
+
 },
   props => ({
     borderBottom: props.borderBottom
