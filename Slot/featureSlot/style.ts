@@ -7,8 +7,7 @@ export const Wrapper = styled.div({
     justifyContent: "space-evenly",
     width: "100vw",
     height: '100%',
-    margin:"80px 0 0 0",
-    padding:"2.5% 0",
+    padding:"5% 0 2.5% 0",
     background:themePalette.light,
     "@media(max-width:768px)": {
         height: "100%",

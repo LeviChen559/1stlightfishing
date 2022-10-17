@@ -11,6 +11,7 @@ import ProductSlot from '../Slot/productSlot'
 import { productList } from '../utility/data/staticList'
 import { useRouter } from 'next/router';
 import { ILocale,IHead} from '../utility/type';
+import NewsSlot from '../Slot/newsSlot';
 
 const Home: NextPage<ILocale> = () => {
   const { locale, locales, asPath } = useRouter();
@@ -25,6 +26,7 @@ const Home: NextPage<ILocale> = () => {
         <>
           <HeroSlot />
           <FeatureSlot />
+          <NewsSlot/>
           <ProductSlot parentPage='popular' color='warning' title="POPULAR ITEMS" productList={productList} />
           <BlogSlot />
           <ServiceSlot />

@@ -6,7 +6,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useRouter } from 'next/router'
 import { theme } from '../../utility/theme'
 import { H6, H5 } from '../commonStyle';
-import Logo from '../logo';
+import MemoizedLogo from '../logo';
 import Menu from '@mui/material/Menu';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
@@ -64,7 +64,7 @@ const MenuBar: FC<MenuBarProps> = ({ opacity }) => {
       <WrapperBackground opacity={opacity} />
       <Wrapper>
         <ImageContainer onClick={() => router.push("/")}>
-          <Logo />
+          <MemoizedLogo />
         </ImageContainer>
         {!locale?.includes("zh") ?
           <PageContainer >

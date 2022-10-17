@@ -1,4 +1,4 @@
-import React, { FC, useEffect, MouseEvent } from 'react'
+import React, { FC, useEffect, MouseEvent,MouseEventHandler,useState,useRef } from 'react'
 import { ImageBox, Wrapper, TextContainer, TextBox } from './style'
 import { H3, H5, H6, H4 } from "../../component/commonStyle"
 import BasicButtons from '../../component/button'
@@ -12,18 +12,54 @@ import EmailIcon from '@mui/icons-material/Email';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import { useRouter } from 'next/router'
 
+interface IContact{
+  email?:string;
+  subject?:string;
+  name?:string;
+  phone?:string;
+  message?:string;
+}
 
-const ContactSlot: FC<IStyle> = ({ height, width }) => {
-  const router = useRouter()
+
+const ContactSlot: FC = ({}) => {
+  
   const { locale } = useRouter()
-  const H5_style = {
-    color: theme.palette.background.default,
-    background: "rgba(255, 255, 255, 0.8)",
-    padding: "2.5%"
-  }
+  
+
+
+  const [data,setData] = useState<IContact>( {
+    email:"",
+    subject:"",
+    phone:"",
+    name:"",
+    message:""
+  })
+
+
   const handleSubmit = (event: MouseEvent<HTMLButtonElement>): void => {
     event.preventDefault();
+    console.log('Sending');
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    
+    
+ 
+    
+    setData(({...data,name:"",subject:"",phone:"",message:"",email:""}))
+    console.log("data",data)
   }
+  const handleCancle = (event: MouseEvent<HTMLButtonElement>): void => {
+    event.preventDefault();
+    setData(({...data,name:"",subject:"",phone:"",message:"",email:""}))
+  }
+
+
   return (
     <Wrapper >
       <TextBox >
@@ -34,36 +70,60 @@ const ContactSlot: FC<IStyle> = ({ height, width }) => {
         }
       </TextBox>
       {!locale?.includes("zh") ?
+      
         <TextContainer>
-          <TextField required id="outlined-basic" label="E-mail" variant="outlined" sx={{
+         
+          <TextField required id="outlined-basic" label="E-mail" variant="outlined"
+          value={data.email}
+          onChange={(e)=>{setData({...data,email:e.target.value})}} 
+         
+          
+          sx={{
             backgroundColor: theme.palette.common.white,
             input: { color: theme.palette.background.default },
             width: "75%", maxWidth: 800, marginBottom: 2
           }} InputLabelProps={{
             style: { color: theme.palette.background.default, },
           }} />
-          <TextField required id="filled-basic" label="Subject" variant="outlined" type='email' sx={{
+          <TextField required id="filled-basic" label="Subject" variant="outlined" type='email'
+           value={data.subject}
+           onChange={(e)=>{setData({...data,subject:e.target.value})}} 
+          
+          sx={{
             backgroundColor: theme.palette.common.white,
             input: { color: theme.palette.background.default },
             width: "75%", maxWidth: 800, marginBottom: 2
           }} InputLabelProps={{
             style: { color: theme.palette.background.default, }
           }} />
-          <TextField id="filled-basic" label="Phone" type='number' variant="outlined" sx={{
+          <TextField id="filled-basic" label="Phone" type='number' variant="outlined" 
+           value={data.phone}
+           onChange={(e)=>{setData({...data,phone:e.target.value})}} 
+         
+
+          sx={{
             backgroundColor: theme.palette.common.white,
             input: { color: theme.palette.background.default },
             width: "75%", maxWidth: 800, marginBottom: 2
           }} InputLabelProps={{
             style: { color: theme.palette.background.default, }
           }} />
-          <TextField required id="filled-basic" label="Name" type='text' variant="outlined" sx={{
+          <TextField required id="filled-basic" label="Name" type='text' variant="outlined" 
+           value={data.name}
+           onChange={(e)=>{setData({...data,name:e.target.value})}} 
+         
+          sx={{
             backgroundColor: theme.palette.common.white,
             input: { color: theme.palette.background.default },
             width: "75%", maxWidth: 800, marginBottom: 2
           }} InputLabelProps={{
             style: { color: theme.palette.background.default, }
           }} />
-          <TextField multiline required id="standard-basic" label="Message" variant="outlined" rows={3} sx={{
+          <TextField multiline required id="standard-basic" label="Message" variant="outlined" rows={3} 
+           value={data.message}
+           onChange={(e)=>{setData({...data,message:e.target.value})}} 
+         
+          sx={{
             backgroundColor: theme.palette.common.white, input: { color: theme.palette.background.default },
             width: "75%", maxWidth: 800,
           }} InputLabelProps={{
@@ -72,41 +132,56 @@ const ContactSlot: FC<IStyle> = ({ height, width }) => {
             inputProps={{ style: { color: theme.palette.background.default } }}
           />
           <FlexRowNoChange margin="2.5% 0 0 0">
-            <BasicButtons width="100px" text="Cancle" margin="0 2.5%" handleLinkClick={handleSubmit} />
+            <BasicButtons width="100px" text="Cancle" margin="0 2.5%" handleLinkClick={handleCancle} />
             <BasicButtons width="100px" text="Submit" margin="0 2.5%" handleLinkClick={handleSubmit} />
           </FlexRowNoChange>
         </TextContainer>
         :
         <TextContainer>
-          <TextField required id="outlined-basic" label="信箱" variant="outlined" sx={{
+          <TextField required id="outlined-basic" label="信箱" variant="outlined" 
+           value={data.email}
+           onChange={(e)=>{setData({...data,email:e.target.value})}} 
+          sx={{
             backgroundColor: theme.palette.common.white,
             input: { color: theme.palette.background.default },
             width: "75%", maxWidth: 800, marginBottom: 2
           }} InputLabelProps={{
             style: { color: theme.palette.background.default, },
           }} />
-          <TextField required id="filled-basic" label="主旨" variant="outlined" type='email' sx={{
+          <TextField required id="filled-basic" label="主旨" variant="outlined" type='email' 
+           value={data.subject}
+           onChange={(e)=>{setData({...data,subject:e.target.value})}} 
+          sx={{
             backgroundColor: theme.palette.common.white,
             input: { color: theme.palette.background.default },
             width: "75%", maxWidth: 800, marginBottom: 2
           }} InputLabelProps={{
             style: { color: theme.palette.background.default, }
           }} />
-          <TextField id="filled-basic" label="電話" type='number' variant="outlined" sx={{
+          <TextField id="filled-basic" label="電話" type='number' variant="outlined" 
+           value={data.phone}
+           onChange={(e)=>{setData({...data,phone:e.target.value})}} 
+          sx={{
             backgroundColor: theme.palette.common.white,
             input: { color: theme.palette.background.default },
             width: "75%", maxWidth: 800, marginBottom: 2
           }} InputLabelProps={{
             style: { color: theme.palette.background.default, }
           }} />
-          <TextField required id="filled-basic" label="姓名" type='text' variant="outlined" sx={{
+          <TextField required id="filled-basic" label="姓名" type='text' variant="outlined" 
+           value={data.name}
+           onChange={(e)=>{setData({...data,name:e.target.value})}} 
+          sx={{
             backgroundColor: theme.palette.common.white,
             input: { color: theme.palette.background.default },
             width: "75%", maxWidth: 800, marginBottom: 2
           }} InputLabelProps={{
             style: { color: theme.palette.background.default, }
           }} />
-          <TextField multiline required id="standard-basic" label="訊息" variant="outlined" rows={3} sx={{
+          <TextField multiline required id="standard-basic" label="訊息" variant="outlined" rows={3} 
+           value={data.message}
+           onChange={(e)=>{setData({...data,message:e.target.value})}} 
+          sx={{
             backgroundColor: theme.palette.common.white, input: { color: theme.palette.background.default },
             width: "75%", maxWidth: 800,
           }} InputLabelProps={{
@@ -115,7 +190,7 @@ const ContactSlot: FC<IStyle> = ({ height, width }) => {
             inputProps={{ style: { color: theme.palette.background.default } }}
           />
           <FlexRowNoChange margin="2.5% 0 0 0">
-            <BasicButtons width="100px" text="清除" margin="0 2.5%" handleLinkClick={handleSubmit} />
+            <BasicButtons width="100px" text="清除" margin="0 2.5%" handleLinkClick={handleCancle} />
             <BasicButtons width="100px" text="送出" margin="0 2.5%" handleLinkClick={handleSubmit} />
           </FlexRowNoChange>
         </TextContainer>

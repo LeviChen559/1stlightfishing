@@ -1,9 +1,7 @@
 import styled from "@emotion/styled"
-export interface Props {
-    width?: number,
-    height?: number,
-}
-export const ImageBox = styled.div<Props>({
+import { IStyle } from "../../utility/type"
+
+export const ImageBox = styled.div<IStyle>({
     width: 130,
     height: 50,
     position: "relative",

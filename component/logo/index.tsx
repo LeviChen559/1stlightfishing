@@ -1,9 +1,10 @@
-import React,{FC,memo} from 'react'
+import React,{FC,memo,useMemo} from 'react'
 import Image from 'next/image'
-import { ImageBox,Props } from './style'
+import { ImageBox } from './style'
+import {IStyle} from"../../utility/type"
 
-const Logo:FC<Props> =({height,width})=> {
-  console.log("Logo")
+const Logo:FC<IStyle> =({height,width})=> {
+  console.count("render logo")
   return (
     <ImageBox height={height} width={width}>
     <Image src="/logo.svg" objectFit="contain" alt="logo" layout='fill'  />
@@ -12,5 +13,5 @@ const Logo:FC<Props> =({height,width})=> {
 };
 
 // Logo.displayName = 'Logo';
-
-export default Logo
+const MemoizedLogo = memo(Logo);
+export default MemoizedLogo

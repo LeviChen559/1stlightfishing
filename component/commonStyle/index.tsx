@@ -45,7 +45,8 @@ export const H3 = styled.h3<IStyle>({
 }, props => ({
     color: props.color,
     fontWeight: props.fontWeight,
-    textShadow: props.textShadow
+    textShadow: props.textShadow,
+    margin: props.margin
 }))
 export const H4 = styled.h4<IStyle>({
     margin: 0,
@@ -60,6 +61,7 @@ export const H4 = styled.h4<IStyle>({
     },
     '@media (max-width: 768px)': {
         fontSize: "14px",
+        fontWeight: 500,
     }
 }, props => ({
     color: props.color,

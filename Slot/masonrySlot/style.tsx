@@ -17,7 +17,7 @@ export const Masonry = styled.div({
     label: "Masonry",
     maxWidth: "100%",
     height: "100%",
-    margin: "60px auto",
+    margin: "50px auto",
     padding: "20px",
     display: "grid",
     gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",

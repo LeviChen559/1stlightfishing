@@ -2,7 +2,7 @@ import React,{useEffect,FC,useState} from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Image from 'next/image';
-import Logo from '../logo';
+import MemoizedLogo from '../logo';
 import {H6,ImageBox,H5,FlexRow} from "../commonStyle" 
 import {Wrapper,FlexCol,SocialMedia,PageContainer,PageItem,LanguagesEN,LanguagesZH} from "./style"
 import MenuBar from '../menuBar';
@@ -27,7 +27,7 @@ const Footer:FC=()=> {
   return (
     <Wrapper >
       <FlexCol>
-      <Logo height={45} width={95}/>
+      <MemoizedLogo height={45} width={95}/>
       {!locale?.includes("zh")?
       <PageContainer >
         {asPath === "/" ?
