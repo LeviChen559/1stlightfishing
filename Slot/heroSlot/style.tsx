@@ -59,7 +59,6 @@ export const TextContainer = styled.div({
     marginTop: "7.5%",
     '@media (max-width: 1680px)': {
         width: "35%",
-        marginRight: "5%",
     },
     '@media (max-width: 1440px)': {
         width: "30%",

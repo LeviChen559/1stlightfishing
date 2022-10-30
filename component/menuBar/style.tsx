@@ -8,6 +8,7 @@ type Props = {
 }
 
 export const Wrapper = styled.div({
+  label:"Wrapper",
   position: "absolute",
   marginTop: 100,
   zIndex: 100,

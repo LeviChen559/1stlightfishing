@@ -16,7 +16,7 @@ const HeroSlot: FC = () => {
 
   return <Wrapper>
     <ImageBox >
-      <Image src="/hero2-min.png" objectFit="cover" alt="hero image" layout="fill"
+      <Image src="/hero-min.png" objectFit="cover" alt="hero image" layout="fill"
         priority={true} placeholder="blur" blurDataURL="/image-blur-placeholder.png"
       />
     </ImageBox>
