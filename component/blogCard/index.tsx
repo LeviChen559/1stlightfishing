@@ -25,7 +25,7 @@ interface Props {
 
 const BlogCard: FC<Props> = ({ blogContent, blogList, }) => {
   const router =useRouter()
-  useEffect(() => { AOS.init(); },)
+  // useEffect(() => { AOS.init(); },[])
   const matches = useMediaQuery('(min-width:1200px)');
 
   return <>

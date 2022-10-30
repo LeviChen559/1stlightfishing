@@ -17,9 +17,9 @@ const Footer:FC=()=> {
   const [value, setValue] = useState('HOME');
   const router = useRouter()
   const{locale,asPath,locales}=useRouter()
-  useEffect(()=>{
-    AOS.init()
-  },[])
+  // useEffect(()=>{
+  //   AOS.init()
+  // },[])
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };

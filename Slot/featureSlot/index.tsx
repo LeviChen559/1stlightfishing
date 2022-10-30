@@ -8,7 +8,7 @@ import { themePalette } from '../../utility/theme';
 import AOS from 'aos';
 import { useRouter } from 'next/router'
 const FeatureSlot: FC = () => {
-    useEffect(() => { AOS.init(); },)
+    // useEffect(() => { AOS.init(); },[])
     const router = useRouter()
     const{locale}=useRouter()
     return <Wrapper>

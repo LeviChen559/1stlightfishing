@@ -10,7 +10,7 @@ import { useRouter } from 'next/router'
 import { theme } from '../../utility/theme'
 import { ILocale } from '../../utility/type';
 const HeroSlot: FC = () => {
-  useEffect(() => { AOS.init(); },)
+  // useEffect(() => { AOS.init(); },[])
   const router = useRouter()
   const { locale, locales, asPath } = useRouter();
 

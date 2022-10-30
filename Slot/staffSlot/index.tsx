@@ -42,7 +42,7 @@ const staffList=[{
 
 const StaffSlot: FC = () => {
     const router= useRouter()
-    useEffect(() => { AOS.init(); },)
+    useEffect(() => { AOS.init(); },[])
     return <Wrapper>
        <TextBox>
        {router.pathname.includes("/en")?

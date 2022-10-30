@@ -24,7 +24,7 @@ const ProductSlot: FC<Props> = ({ productList, title, color,  parentPage }) => {
     const productListLocale = productList ? productList.filter((product: IProductCard) => product.locale==locale) : []
   
 
-    useEffect(() => { AOS.init(); },)
+    // useEffect(() => { AOS.init(); },[])
     const router = useRouter()
     return <Wrapper>
         {!locale?.includes('zh') ?
