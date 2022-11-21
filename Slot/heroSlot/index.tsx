@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { Wrapper, ImageBox, TextContainer, ButtonContainer } from './style'
 import { H1, H4, H5 } from '../../component/commonStyle'
 import BasicButtons from '../../component/button'
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styles from '../../styles/home.module.scss'
 import { useRouter } from 'next/router'
@@ -29,8 +28,8 @@ const HeroSlot: FC = () => {
           data-aos-delay="1000"
           data-aos-duration="1250"
           data-aos-easing="ease-in-out">LIVE. LOVE. FISH.</H1>
-        <H4 >First Light Fishing & Tackle</H4>
-        <H4 >Best Fishing Store in Burnaby</H4>
+        <H4 textShadow='3px 3px 3px rgba(0, 0, 0,0.25)'>First Light Fishing & Tackle</H4>
+        <H4 textShadow='3px 3px 3px rgba(0, 0, 0,0.25)'>Best Fishing Store in Burnaby</H4>
         <ButtonContainer>
           <BasicButtons text="Explore Now" handleLinkClick={()=>router.push("/en/about")} color="warning"/>
         </ButtonContainer>
@@ -45,8 +44,8 @@ const HeroSlot: FC = () => {
           data-aos-delay="1500"
           data-aos-duration="1250"
           data-aos-easing="ease-in-out">有愛也有漁，這就是生活</H1>
-        <H4 >First Light Fishing & Tackle</H4>
-        <H4 >大溫地區最專業釣魚店</H4>
+        <H4 textShadow='3px 3px 3px rgba(0, 0, 0,0.25)'>First Light Fishing & Tackle</H4>
+        <H4 textShadow='3px 3px 3px rgba(0, 0, 0,0.25)'>大溫地區最專業釣魚店</H4>
         <ButtonContainer>
           <BasicButtons text="開始探索" handleLinkClick={()=>router.push("/zh/about")} color="warning"/>
         </ButtonContainer>

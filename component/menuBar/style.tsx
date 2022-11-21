@@ -12,7 +12,7 @@ export const Wrapper = styled.div({
   position: "absolute",
   marginTop: 100,
   zIndex: 100,
-  width: "100%",
+  width: "95%",
   height: 100,
   display: "flex",
   flexDirection: "row",
@@ -25,7 +25,7 @@ export const Wrapper = styled.div({
 })
 
 export const ImageContainer = styled.div({
-  marginLeft: "5%",
+  // marginLeft: "5%",
   cursor: "pointer",
 })
 
@@ -36,7 +36,7 @@ export const PageContainer = styled.div({
   flexDirection: "row",
   justifyContent: "space-evenly",
   alignItems: "center",
-  marginRight: "5%",
+  // marginRight: "5%",
   '@media(min-width: 960px)': {
     color: 'orange'
   },
@@ -89,7 +89,7 @@ export const Hamberger = styled.div({
   display: "none",
   "@media(max-width:768px)":{
     display: "flex",
-    marginRight: "10%",
+    // marginRight: "10%",
   }
 
 })

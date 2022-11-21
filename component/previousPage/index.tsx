@@ -21,7 +21,7 @@ const PreviousPage: FC<IStyle> = ({ hrefLink, text }) => {
 <IconButton onClick={() => router.push("/zh/product")} style={{ cursor: "pointer" }}>
     <ArrowBackIosNewIcon />
 </IconButton>
-<H5 onClick={() => router.push("/zh/product")} style={{ cursor: "pointer" }}>上一頁</H5>
+<H5 onClick={() => router.push("/zh/product")} style={{ cursor: "pointer"}}>上一頁</H5>
 </TextBox>
 
 

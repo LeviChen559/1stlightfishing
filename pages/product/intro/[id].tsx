@@ -67,7 +67,9 @@ const Intro: NextPage<Props> = () => {
         {productListLocale.map((product) => {
           return <div key="">
             <TextBox justifyContent='flex-start' key={product.title + "BasicBreadcrumbs"} >
-              <BasicBreadcrumbs parentPage='Product' href="/en/product" Article={product.title} />
+            {!locale?.includes("zh")?
+              <BasicBreadcrumbs parentPage='Product' href="/en/product" Article={product.title} />:
+              <BasicBreadcrumbs parentPage='產品' href="/zh/product" Article={product.title} />}
             </TextBox>
             <TextBox key={product.title + 1}>
               <H3 >{product.title}</H3>

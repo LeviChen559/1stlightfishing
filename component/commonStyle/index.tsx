@@ -55,6 +55,7 @@ export const H4 = styled.h4<IStyle>({
     fontFamily: "Roboto",
     marginTop: '10px',
     whiteSpace: "pre-wrap",
+    textShadow: '0px 0px 0px rgba(0,0,0,0.25)',
     color: theme.palette.common.white,
     '@media (max-width: 1440px)': {
         fontSize: "18px",
@@ -68,6 +69,7 @@ export const H4 = styled.h4<IStyle>({
     fontWeight: props.fontWeight,
     lineHeight: props.lineHeight,
     margin: props.margin,
+    textShadow: props.textShadow
 }))
 export const H5 = styled.h5<IStyle>({
     fontSize: '18px',
@@ -81,7 +83,10 @@ export const H5 = styled.h5<IStyle>({
     },
     '@media (max-width: 768px)': {
         fontSize: "12px",
-    }
+    },
+    '&:hover' :{
+        fontWeight:700
+      },
 }, props => ({
     color: props.color,
     fontWeight: props.fontWeight,

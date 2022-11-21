@@ -48,7 +48,6 @@ interface MenuBarProps {
 
 const MenuBar: FC<MenuBarProps> = ({ opacity }) => {
 
-
   const router = useRouter();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -113,30 +112,30 @@ const MenuBar: FC<MenuBarProps> = ({ opacity }) => {
             </Languages>
           </PageContainer> :
           <PageContainer >
-            {router.pathname === "/zh" ?
+            {asPath === "/" ?
               <PageItem borderBottom="2px solid #03a9f4"><Link href="/zh">{menuText.Home_zh}</Link></PageItem> :
               <PageItem ><Link href="/zh">{menuText.Home_zh}</Link></PageItem>
             }
-            {router.pathname === "/zh/about" ?
+            {asPath === "/about" ?
               <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/about">{menuText.About_zh}</Link></PageItem>
               :
               <PageItem><Link href="/zh/about">{menuText.About_zh}</Link></PageItem>
             }
-            {router.pathname === "/zh/product" ?
+            {asPath === "/product" ?
               <PageItem borderBottom="2px solid #03a9f4"><Link href="/zh/product">{menuText.Product_zh}</Link></PageItem>
               :
               <PageItem><Link href="/zh/product">{menuText.Product_zh}</Link></PageItem>
             }
-            {router.pathname === "/zh/blog" ?
+            {asPath === "/blog" ?
               <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/blog">{menuText.Blog_zh}</Link></PageItem> :
               <PageItem ><Link href="/zh/blog">{menuText.Blog_zh}</Link></PageItem>
             }
 
-            {router.pathname === "/zh/service" ?
+            {asPath === "/service" ?
               <PageItem borderBottom="2px solid #03a9f4"><Link href="/en/service">{menuText.Service_zh}</Link></PageItem> :
               <PageItem><Link href="/zh/service">{menuText.Service_zh}</Link></PageItem>}
 
-            {router.pathname === "/zh/contact" ?
+            {asPath === "/contact" ?
               <PageItem borderBottom="2px solid #03a9f4"> <Link href="/zh/contact">{menuText.Contact_zh}</Link></PageItem> :
               <PageItem> <Link href="/zh/contact">{menuText.Contact_zh}</Link></PageItem>}
             <PageItem ><div onClick={() => { router.push("/zh/cart") }}><ShoppingCartIcon /></div> </PageItem>
@@ -157,9 +156,6 @@ const MenuBar: FC<MenuBarProps> = ({ opacity }) => {
               )}
             </Languages>
           </PageContainer>
-
-
-
         }
         <Hamberger>
           <Tooltip title="Account settings">
@@ -174,7 +170,7 @@ const MenuBar: FC<MenuBarProps> = ({ opacity }) => {
               <MenuIcon sx={{ width: 32, height: 32, color: "white" }} />
             </IconButton>
           </Tooltip>
-          {!router.pathname.includes("/zh") ?
+          {!locale?.includes("zh") ?
             <Menu
               anchorEl={anchorEl}
               id="account-menu"
@@ -209,7 +205,7 @@ const MenuBar: FC<MenuBarProps> = ({ opacity }) => {
               }}
               transformOrigin={{ horizontal: 'right', vertical: 'top' }}
               anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-            >
+            > 
               <MenuItem sx={{ fontSize: 14 }}>
                 <Link href="/">
                   HOME
@@ -241,7 +237,7 @@ const MenuBar: FC<MenuBarProps> = ({ opacity }) => {
                 </Link>
               </MenuItem>
             </Menu>
-            :
+           :
             <Menu
               anchorEl={anchorEl}
               id="account-menu"
@@ -308,7 +304,6 @@ const MenuBar: FC<MenuBarProps> = ({ opacity }) => {
                 </Link>
               </MenuItem>
             </Menu>
-
           }
         </Hamberger>
 
